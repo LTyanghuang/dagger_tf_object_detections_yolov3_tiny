@@ -1,0 +1,970 @@
+Tue, 11 Jan 2022 07:21:40 WARNING From train.py:138: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+Tue, 11 Jan 2022 07:21:40 WARNING From train.py:152: map_and_batch (from tensorflow.python.data.experimental.ops.batching) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Dataset.map(map_func, num_parallel_calls)` followed by `tf.data.Dataset.batch(batch_size, drop_remainder)`. Static tf.data optimizations will take care of using the fused implementation.
+Tue, 11 Jan 2022 07:21:40 WARNING From train.py:151: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+Tue, 11 Jan 2022 07:21:40 WARNING From train.py:162: DatasetV1.make_initializable_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_initializable_iterator(dataset)`.
+Tue, 11 Jan 2022 07:21:40 WARNING From train.py:169: The name tf.data.Iterator is deprecated. Please use tf.compat.v1.data.Iterator instead.
+
+Tue, 11 Jan 2022 07:21:40 WARNING From train.py:169: DatasetV1.output_types (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.compat.v1.data.get_output_types(dataset)`.
+Tue, 11 Jan 2022 07:21:40 WARNING From train.py:170: DatasetV1.output_shapes (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.compat.v1.data.get_output_shapes(dataset)`.
+Tue, 11 Jan 2022 07:21:40 WARNING From train.py:196: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+Tue, 11 Jan 2022 07:21:41 WARNING From /home/ubuntu/huangyang/t4_spacework/lt_code_sdk/solution/object_detection/YOLOv3_tiny_TensorFlow/utils/layer_utils.py:128: The name tf.image.resize_nearest_neighbor is deprecated. Please use tf.compat.v1.image.resize_nearest_neighbor instead.
+
+Tue, 11 Jan 2022 07:21:41 WARNING From /home/ubuntu/anaconda3/envs/tf15_keras/lib/python3.6/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+Tue, 11 Jan 2022 07:21:41 WARNING From /home/ubuntu/huangyang/t4_spacework/lt_code_sdk/solution/object_detection/YOLOv3_tiny_TensorFlow/model/yolov3_tiny.py:292: The name tf.log is deprecated. Please use tf.math.log instead.
+
+Tue, 11 Jan 2022 07:21:42 WARNING From train.py:223: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+Tue, 11 Jan 2022 07:21:42 WARNING From train.py:226: The name tf.summary.scalar is deprecated. Please use tf.compat.v1.summary.scalar instead.
+
+Tue, 11 Jan 2022 07:21:42 WARNING From train.py:232: The name tf.GraphKeys is deprecated. Please use tf.compat.v1.GraphKeys instead.
+
+Tue, 11 Jan 2022 07:21:42 WARNING From /home/ubuntu/huangyang/t4_spacework/lt_code_sdk/solution/object_detection/YOLOv3_tiny_TensorFlow/utils/misc_utils.py:114: The name tf.train.exponential_decay is deprecated. Please use tf.compat.v1.train.exponential_decay instead.
+
+Tue, 11 Jan 2022 07:21:42 WARNING From /home/ubuntu/huangyang/t4_spacework/lt_code_sdk/solution/object_detection/YOLOv3_tiny_TensorFlow/utils/misc_utils.py:129: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
+
+Tue, 11 Jan 2022 07:21:42 WARNING From train.py:249: The name tf.get_collection is deprecated. Please use tf.compat.v1.get_collection instead.
+
+Tue, 11 Jan 2022 07:21:45 WARNING From train.py:260: The name tf.summary.merge_all is deprecated. Please use tf.compat.v1.summary.merge_all instead.
+
+Tue, 11 Jan 2022 07:21:45 WARNING From train.py:261: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+Tue, 11 Jan 2022 07:21:55 INFO Epoch: 0, global_step: 50, lr: 0.00005000, total_loss: 296.5673, loss_xy: 0.3845, loss_wh: 1.9964, loss_conf: 293.3308, loss_class: 0.8555
+Tue, 11 Jan 2022 07:22:01 INFO Epoch: 0, global_step: 100, lr: 0.00005000, total_loss: 155.3963, loss_xy: 0.6157, loss_wh: 2.4678, loss_conf: 151.3492, loss_class: 0.9637
+Tue, 11 Jan 2022 07:22:07 INFO Epoch: 0, global_step: 150, lr: 0.00005000, total_loss: 135.0798, loss_xy: 0.7247, loss_wh: 2.6239, loss_conf: 130.7597, loss_class: 0.9715
+Tue, 11 Jan 2022 07:22:14 INFO Epoch: 0, global_step: 200, lr: 0.00005000, total_loss: 92.4702, loss_xy: 0.4993, loss_wh: 1.3846, loss_conf: 90.0197, loss_class: 0.5665
+Tue, 11 Jan 2022 07:22:20 INFO Epoch: 0, global_step: 250, lr: 0.00005000, total_loss: 81.7991, loss_xy: 0.5484, loss_wh: 1.6344, loss_conf: 78.9893, loss_class: 0.6270
+Tue, 11 Jan 2022 07:22:26 INFO Epoch: 0, global_step: 300, lr: 0.00005000, total_loss: 84.7902, loss_xy: 0.3950, loss_wh: 0.5776, loss_conf: 83.4247, loss_class: 0.3929
+Tue, 11 Jan 2022 07:22:32 INFO Epoch: 0, global_step: 350, lr: 0.00005000, total_loss: 63.1523, loss_xy: 0.5109, loss_wh: 1.1574, loss_conf: 61.0298, loss_class: 0.4541
+Tue, 11 Jan 2022 07:22:38 INFO Epoch: 0, global_step: 400, lr: 0.00005000, total_loss: 56.7483, loss_xy: 0.4023, loss_wh: 0.7623, loss_conf: 55.1959, loss_class: 0.3878
+Tue, 11 Jan 2022 07:22:44 INFO Epoch: 1, global_step: 450, lr: 0.00100000, total_loss: 21.9142, loss_xy: 0.4733, loss_wh: 1.1809, loss_conf: 20.1101, loss_class: 0.1499
+Tue, 11 Jan 2022 07:22:50 INFO Epoch: 1, global_step: 500, lr: 0.00100000, total_loss: 14.1503, loss_xy: 0.1980, loss_wh: 1.4703, loss_conf: 12.4565, loss_class: 0.0255
+Tue, 11 Jan 2022 07:22:50 INFO ===> batch recall: 0.0000, batch precision: 0.0000 <===
+Tue, 11 Jan 2022 07:22:56 INFO Epoch: 1, global_step: 550, lr: 0.00100000, total_loss: 14.5552, loss_xy: 0.5048, loss_wh: 1.1124, loss_conf: 12.8921, loss_class: 0.0459
+Tue, 11 Jan 2022 07:23:03 INFO Epoch: 1, global_step: 600, lr: 0.00100000, total_loss: 15.0324, loss_xy: 0.7264, loss_wh: 1.1707, loss_conf: 13.0931, loss_class: 0.0422
+Tue, 11 Jan 2022 07:23:09 INFO Epoch: 1, global_step: 650, lr: 0.00100000, total_loss: 10.0318, loss_xy: 0.3752, loss_wh: 0.5472, loss_conf: 9.0842, loss_class: 0.0251
+Tue, 11 Jan 2022 07:23:15 INFO Epoch: 1, global_step: 700, lr: 0.00100000, total_loss: 20.5429, loss_xy: 0.4620, loss_wh: 10.1369, loss_conf: 9.9278, loss_class: 0.0162
+Tue, 11 Jan 2022 07:23:21 INFO Epoch: 1, global_step: 750, lr: 0.00100000, total_loss: 9.4040, loss_xy: 0.4723, loss_wh: 0.3960, loss_conf: 8.5201, loss_class: 0.0156
+Tue, 11 Jan 2022 07:23:27 INFO Epoch: 1, global_step: 800, lr: 0.00100000, total_loss: 11.7680, loss_xy: 0.5912, loss_wh: 0.6766, loss_conf: 10.4789, loss_class: 0.0213
+Tue, 11 Jan 2022 07:23:33 INFO Epoch: 2, global_step: 850, lr: 0.00100000, total_loss: 8.1646, loss_xy: 0.4133, loss_wh: 0.4571, loss_conf: 7.2821, loss_class: 0.0122
+Tue, 11 Jan 2022 07:23:40 INFO Epoch: 2, global_step: 900, lr: 0.00100000, total_loss: 7.9863, loss_xy: 0.3193, loss_wh: 0.8379, loss_conf: 6.8120, loss_class: 0.0171
+Tue, 11 Jan 2022 07:23:46 INFO Epoch: 2, global_step: 950, lr: 0.00100000, total_loss: 8.9860, loss_xy: 0.3728, loss_wh: 0.6226, loss_conf: 7.9824, loss_class: 0.0083
+Tue, 11 Jan 2022 07:23:52 INFO Epoch: 2, global_step: 1000, lr: 0.00100000, total_loss: 6.3092, loss_xy: 0.2578, loss_wh: 0.3227, loss_conf: 5.7220, loss_class: 0.0067
+Tue, 11 Jan 2022 07:23:52 INFO ===> batch recall: 0.0000, batch precision: 0.0000 <===
+Tue, 11 Jan 2022 07:23:58 INFO Epoch: 2, global_step: 1050, lr: 0.00100000, total_loss: 8.2920, loss_xy: 0.4188, loss_wh: 0.4341, loss_conf: 7.4197, loss_class: 0.0194
+Tue, 11 Jan 2022 07:24:05 INFO Epoch: 2, global_step: 1100, lr: 0.00100000, total_loss: 8.4777, loss_xy: 0.4441, loss_wh: 0.2944, loss_conf: 7.7304, loss_class: 0.0088
+Tue, 11 Jan 2022 07:24:11 INFO Epoch: 2, global_step: 1150, lr: 0.00100000, total_loss: 5.4766, loss_xy: 0.1911, loss_wh: 0.2282, loss_conf: 5.0499, loss_class: 0.0075
+Tue, 11 Jan 2022 07:24:17 INFO Epoch: 2, global_step: 1200, lr: 0.00100000, total_loss: 7.9115, loss_xy: 0.3645, loss_wh: 0.7894, loss_conf: 6.7389, loss_class: 0.0186
+Tue, 11 Jan 2022 07:24:23 INFO Epoch: 3, global_step: 1250, lr: 0.00100000, total_loss: 7.7361, loss_xy: 0.2874, loss_wh: 0.4853, loss_conf: 6.9581, loss_class: 0.0053
+Tue, 11 Jan 2022 07:24:29 INFO Epoch: 3, global_step: 1300, lr: 0.00100000, total_loss: 6.2705, loss_xy: 0.2279, loss_wh: 0.2171, loss_conf: 5.8225, loss_class: 0.0029
+Tue, 11 Jan 2022 07:24:35 INFO Epoch: 3, global_step: 1350, lr: 0.00100000, total_loss: 6.0533, loss_xy: 0.2044, loss_wh: 0.2675, loss_conf: 5.5702, loss_class: 0.0112
+Tue, 11 Jan 2022 07:24:41 INFO Epoch: 3, global_step: 1400, lr: 0.00100000, total_loss: 6.2054, loss_xy: 0.2724, loss_wh: 0.3023, loss_conf: 5.6236, loss_class: 0.0071
+Tue, 11 Jan 2022 07:24:48 INFO Epoch: 3, global_step: 1450, lr: 0.00096000, total_loss: 6.0144, loss_xy: 0.2305, loss_wh: 0.2293, loss_conf: 5.5504, loss_class: 0.0042
+Tue, 11 Jan 2022 07:24:54 INFO Epoch: 3, global_step: 1500, lr: 0.00096000, total_loss: 7.4399, loss_xy: 0.2661, loss_wh: 0.3224, loss_conf: 6.8476, loss_class: 0.0038
+Tue, 11 Jan 2022 07:24:54 INFO ===> batch recall: 0.2500, batch precision: 0.9333 <===
+Tue, 11 Jan 2022 07:25:00 INFO Epoch: 3, global_step: 1550, lr: 0.00096000, total_loss: 5.7026, loss_xy: 0.2536, loss_wh: 0.3722, loss_conf: 5.0740, loss_class: 0.0028
+Tue, 11 Jan 2022 07:25:07 INFO Epoch: 3, global_step: 1600, lr: 0.00096000, total_loss: 5.5198, loss_xy: 0.1914, loss_wh: 0.2342, loss_conf: 5.0923, loss_class: 0.0020
+Tue, 11 Jan 2022 07:25:13 INFO Epoch: 4, global_step: 1650, lr: 0.00096000, total_loss: 6.0013, loss_xy: 0.2527, loss_wh: 0.2490, loss_conf: 5.4969, loss_class: 0.0027
+Tue, 11 Jan 2022 07:25:20 INFO Epoch: 4, global_step: 1700, lr: 0.00096000, total_loss: 7.1266, loss_xy: 0.2792, loss_wh: 0.2788, loss_conf: 6.5655, loss_class: 0.0030
+Tue, 11 Jan 2022 07:25:26 INFO Epoch: 4, global_step: 1750, lr: 0.00096000, total_loss: 6.2506, loss_xy: 0.2028, loss_wh: 0.2233, loss_conf: 5.8222, loss_class: 0.0023
+Tue, 11 Jan 2022 07:25:32 INFO Epoch: 4, global_step: 1800, lr: 0.00096000, total_loss: 4.8151, loss_xy: 0.1612, loss_wh: 0.2606, loss_conf: 4.3920, loss_class: 0.0013
+Tue, 11 Jan 2022 07:25:39 INFO Epoch: 4, global_step: 1850, lr: 0.00096000, total_loss: 5.3211, loss_xy: 0.2416, loss_wh: 0.2426, loss_conf: 4.8336, loss_class: 0.0033
+Tue, 11 Jan 2022 07:25:45 INFO Epoch: 4, global_step: 1900, lr: 0.00096000, total_loss: 5.8921, loss_xy: 0.1828, loss_wh: 0.2440, loss_conf: 5.4620, loss_class: 0.0033
+Tue, 11 Jan 2022 07:25:51 INFO Epoch: 4, global_step: 1950, lr: 0.00096000, total_loss: 5.2325, loss_xy: 0.1823, loss_wh: 0.2200, loss_conf: 4.8289, loss_class: 0.0014
+Tue, 11 Jan 2022 07:25:58 INFO Epoch: 4, global_step: 2000, lr: 0.00096000, total_loss: 3.5734, loss_xy: 0.1406, loss_wh: 0.1356, loss_conf: 3.2938, loss_class: 0.0034
+Tue, 11 Jan 2022 07:25:58 INFO ===> batch recall: 0.2647, batch precision: 0.7500 <===
+Tue, 11 Jan 2022 07:26:12 INFO ===> Epoch: 4, global_step: 2000, recall: 0.3021, precision: 0.7598, total_loss: 5.4408, loss_xy: 0.2326, loss_wh: 0.2920, loss_conf: 4.9141, loss_class: 0.0020
+Tue, 11 Jan 2022 07:26:18 INFO Epoch: 5, global_step: 2050, lr: 0.00096000, total_loss: 3.5110, loss_xy: 0.1289, loss_wh: 0.1808, loss_conf: 3.2003, loss_class: 0.0010
+Tue, 11 Jan 2022 07:26:24 INFO Epoch: 5, global_step: 2100, lr: 0.00096000, total_loss: 4.4484, loss_xy: 0.2010, loss_wh: 0.1584, loss_conf: 4.0880, loss_class: 0.0010
+Tue, 11 Jan 2022 07:26:31 INFO Epoch: 5, global_step: 2150, lr: 0.00096000, total_loss: 2.5806, loss_xy: 0.1132, loss_wh: 0.1596, loss_conf: 2.3068, loss_class: 0.0011
+Tue, 11 Jan 2022 07:26:37 INFO Epoch: 5, global_step: 2200, lr: 0.00096000, total_loss: 4.2138, loss_xy: 0.2048, loss_wh: 0.2024, loss_conf: 3.8054, loss_class: 0.0011
+Tue, 11 Jan 2022 07:26:44 INFO Epoch: 5, global_step: 2250, lr: 0.00096000, total_loss: 5.2860, loss_xy: 0.2391, loss_wh: 0.2328, loss_conf: 4.8127, loss_class: 0.0015
+Tue, 11 Jan 2022 07:26:50 INFO Epoch: 5, global_step: 2300, lr: 0.00096000, total_loss: 5.6784, loss_xy: 0.2042, loss_wh: 0.1981, loss_conf: 5.2749, loss_class: 0.0012
+Tue, 11 Jan 2022 07:26:56 INFO Epoch: 5, global_step: 2350, lr: 0.00096000, total_loss: 3.3072, loss_xy: 0.1199, loss_wh: 0.1658, loss_conf: 3.0208, loss_class: 0.0007
+Tue, 11 Jan 2022 07:27:03 INFO Epoch: 5, global_step: 2400, lr: 0.00096000, total_loss: 4.7717, loss_xy: 0.2163, loss_wh: 0.1564, loss_conf: 4.3974, loss_class: 0.0015
+Tue, 11 Jan 2022 07:27:09 INFO Epoch: 6, global_step: 2450, lr: 0.00092160, total_loss: 3.1859, loss_xy: 0.1586, loss_wh: 0.1627, loss_conf: 2.8639, loss_class: 0.0007
+Tue, 11 Jan 2022 07:27:15 INFO Epoch: 6, global_step: 2500, lr: 0.00092160, total_loss: 4.1582, loss_xy: 0.1482, loss_wh: 0.2916, loss_conf: 3.7170, loss_class: 0.0015
+Tue, 11 Jan 2022 07:27:15 INFO ===> batch recall: 0.5000, batch precision: 0.8485 <===
+Tue, 11 Jan 2022 07:27:22 INFO Epoch: 6, global_step: 2550, lr: 0.00092160, total_loss: 3.9499, loss_xy: 0.2038, loss_wh: 0.2679, loss_conf: 3.4772, loss_class: 0.0011
+Tue, 11 Jan 2022 07:27:28 INFO Epoch: 6, global_step: 2600, lr: 0.00092160, total_loss: 5.1016, loss_xy: 0.1831, loss_wh: 0.2968, loss_conf: 4.6212, loss_class: 0.0005
+Tue, 11 Jan 2022 07:27:35 INFO Epoch: 6, global_step: 2650, lr: 0.00092160, total_loss: 2.7019, loss_xy: 0.1050, loss_wh: 0.1820, loss_conf: 2.4141, loss_class: 0.0007
+Tue, 11 Jan 2022 07:27:41 INFO Epoch: 6, global_step: 2700, lr: 0.00092160, total_loss: 3.3160, loss_xy: 0.1566, loss_wh: 0.1089, loss_conf: 3.0496, loss_class: 0.0010
+Tue, 11 Jan 2022 07:27:47 INFO Epoch: 6, global_step: 2750, lr: 0.00092160, total_loss: 3.6581, loss_xy: 0.1335, loss_wh: 0.1621, loss_conf: 3.3617, loss_class: 0.0008
+Tue, 11 Jan 2022 07:27:54 INFO Epoch: 6, global_step: 2800, lr: 0.00092160, total_loss: 4.6875, loss_xy: 0.1901, loss_wh: 0.2199, loss_conf: 4.2768, loss_class: 0.0006
+Tue, 11 Jan 2022 07:28:00 INFO Epoch: 7, global_step: 2850, lr: 0.00092160, total_loss: 5.0737, loss_xy: 0.1586, loss_wh: 0.1783, loss_conf: 4.7363, loss_class: 0.0005
+Tue, 11 Jan 2022 07:28:07 INFO Epoch: 7, global_step: 2900, lr: 0.00092160, total_loss: 2.5539, loss_xy: 0.0943, loss_wh: 0.1067, loss_conf: 2.3525, loss_class: 0.0005
+Tue, 11 Jan 2022 07:28:13 INFO Epoch: 7, global_step: 2950, lr: 0.00092160, total_loss: 2.9486, loss_xy: 0.1176, loss_wh: 0.1284, loss_conf: 2.7008, loss_class: 0.0018
+Tue, 11 Jan 2022 07:28:19 INFO Epoch: 7, global_step: 3000, lr: 0.00092160, total_loss: 3.6786, loss_xy: 0.2054, loss_wh: 0.1174, loss_conf: 3.3548, loss_class: 0.0010
+Tue, 11 Jan 2022 07:28:19 INFO ===> batch recall: 0.5472, batch precision: 0.8529 <===
+Tue, 11 Jan 2022 07:28:26 INFO Epoch: 7, global_step: 3050, lr: 0.00092160, total_loss: 2.7266, loss_xy: 0.1032, loss_wh: 0.1721, loss_conf: 2.4511, loss_class: 0.0002
+Tue, 11 Jan 2022 07:28:32 INFO Epoch: 7, global_step: 3100, lr: 0.00092160, total_loss: 3.6320, loss_xy: 0.1996, loss_wh: 0.0996, loss_conf: 3.3322, loss_class: 0.0006
+Tue, 11 Jan 2022 07:28:38 INFO Epoch: 7, global_step: 3150, lr: 0.00092160, total_loss: 2.6942, loss_xy: 0.1085, loss_wh: 0.0985, loss_conf: 2.4870, loss_class: 0.0002
+Tue, 11 Jan 2022 07:28:45 INFO Epoch: 7, global_step: 3200, lr: 0.00092160, total_loss: 4.3407, loss_xy: 0.1972, loss_wh: 0.2579, loss_conf: 3.8851, loss_class: 0.0007
+Tue, 11 Jan 2022 07:28:51 INFO Epoch: 8, global_step: 3250, lr: 0.00092160, total_loss: 3.1547, loss_xy: 0.1474, loss_wh: 0.1016, loss_conf: 2.9054, loss_class: 0.0004
+Tue, 11 Jan 2022 07:28:57 INFO Epoch: 8, global_step: 3300, lr: 0.00092160, total_loss: 2.8607, loss_xy: 0.1011, loss_wh: 0.1869, loss_conf: 2.5723, loss_class: 0.0004
+Tue, 11 Jan 2022 07:29:04 INFO Epoch: 8, global_step: 3350, lr: 0.00092160, total_loss: 2.3725, loss_xy: 0.1154, loss_wh: 0.1674, loss_conf: 2.0893, loss_class: 0.0004
+Tue, 11 Jan 2022 07:29:10 INFO Epoch: 8, global_step: 3400, lr: 0.00092160, total_loss: 3.0590, loss_xy: 0.1645, loss_wh: 0.1610, loss_conf: 2.7331, loss_class: 0.0005
+Tue, 11 Jan 2022 07:29:16 INFO Epoch: 8, global_step: 3450, lr: 0.00088474, total_loss: 3.0017, loss_xy: 0.1543, loss_wh: 0.1420, loss_conf: 2.7050, loss_class: 0.0004
+Tue, 11 Jan 2022 07:29:22 INFO Epoch: 8, global_step: 3500, lr: 0.00088474, total_loss: 2.9866, loss_xy: 0.1189, loss_wh: 0.1417, loss_conf: 2.7255, loss_class: 0.0004
+Tue, 11 Jan 2022 07:29:22 INFO ===> batch recall: 0.5849, batch precision: 0.9394 <===
+Tue, 11 Jan 2022 07:29:28 INFO Epoch: 8, global_step: 3550, lr: 0.00088474, total_loss: 5.2593, loss_xy: 0.2111, loss_wh: 0.1806, loss_conf: 4.8672, loss_class: 0.0004
+Tue, 11 Jan 2022 07:29:34 INFO Epoch: 8, global_step: 3600, lr: 0.00088474, total_loss: 4.5022, loss_xy: 0.1968, loss_wh: 0.1570, loss_conf: 4.1480, loss_class: 0.0005
+Tue, 11 Jan 2022 07:29:40 INFO Epoch: 9, global_step: 3650, lr: 0.00088474, total_loss: 2.3359, loss_xy: 0.0783, loss_wh: 0.1112, loss_conf: 2.1461, loss_class: 0.0002
+Tue, 11 Jan 2022 07:29:46 INFO Epoch: 9, global_step: 3700, lr: 0.00088474, total_loss: 3.2761, loss_xy: 0.1459, loss_wh: 0.1356, loss_conf: 2.9943, loss_class: 0.0002
+Tue, 11 Jan 2022 07:29:52 INFO Epoch: 9, global_step: 3750, lr: 0.00088474, total_loss: 3.1465, loss_xy: 0.1652, loss_wh: 0.1768, loss_conf: 2.8043, loss_class: 0.0002
+Tue, 11 Jan 2022 07:29:58 INFO Epoch: 9, global_step: 3800, lr: 0.00088474, total_loss: 4.3228, loss_xy: 0.1259, loss_wh: 0.2014, loss_conf: 3.9950, loss_class: 0.0005
+Tue, 11 Jan 2022 07:30:05 INFO Epoch: 9, global_step: 3850, lr: 0.00088474, total_loss: 2.4917, loss_xy: 0.1121, loss_wh: 0.1000, loss_conf: 2.2795, loss_class: 0.0002
+Tue, 11 Jan 2022 07:30:11 INFO Epoch: 9, global_step: 3900, lr: 0.00088474, total_loss: 4.7334, loss_xy: 0.2000, loss_wh: 0.1534, loss_conf: 4.3797, loss_class: 0.0003
+Tue, 11 Jan 2022 07:30:17 INFO Epoch: 9, global_step: 3950, lr: 0.00088474, total_loss: 2.4935, loss_xy: 0.1204, loss_wh: 0.0824, loss_conf: 2.2905, loss_class: 0.0001
+Tue, 11 Jan 2022 07:30:23 INFO Epoch: 9, global_step: 4000, lr: 0.00088474, total_loss: 2.2915, loss_xy: 0.1047, loss_wh: 0.1457, loss_conf: 2.0409, loss_class: 0.0002
+Tue, 11 Jan 2022 07:30:23 INFO ===> batch recall: 0.6757, batch precision: 0.9615 <===
+Tue, 11 Jan 2022 07:30:36 INFO ===> Epoch: 9, global_step: 4000, recall: 0.5719, precision: 0.7297, total_loss: 4.8714, loss_xy: 0.1892, loss_wh: 0.1899, loss_conf: 4.4919, loss_class: 0.0004
+Tue, 11 Jan 2022 07:30:42 INFO Epoch: 10, global_step: 4050, lr: 0.00088474, total_loss: 1.8594, loss_xy: 0.0696, loss_wh: 0.0894, loss_conf: 1.7004, loss_class: 0.0001
+Tue, 11 Jan 2022 07:30:48 INFO Epoch: 10, global_step: 4100, lr: 0.00088474, total_loss: 2.8682, loss_xy: 0.2059, loss_wh: 0.1295, loss_conf: 2.5325, loss_class: 0.0003
+Tue, 11 Jan 2022 07:30:54 INFO Epoch: 10, global_step: 4150, lr: 0.00088474, total_loss: 2.6517, loss_xy: 0.1658, loss_wh: 0.1311, loss_conf: 2.3545, loss_class: 0.0002
+Tue, 11 Jan 2022 07:31:00 INFO Epoch: 10, global_step: 4200, lr: 0.00088474, total_loss: 2.9752, loss_xy: 0.1909, loss_wh: 0.1491, loss_conf: 2.6349, loss_class: 0.0003
+Tue, 11 Jan 2022 07:31:06 INFO Epoch: 10, global_step: 4250, lr: 0.00088474, total_loss: 3.0068, loss_xy: 0.1196, loss_wh: 0.1344, loss_conf: 2.7523, loss_class: 0.0005
+Tue, 11 Jan 2022 07:31:13 INFO Epoch: 10, global_step: 4300, lr: 0.00088474, total_loss: 2.9795, loss_xy: 0.0916, loss_wh: 0.1647, loss_conf: 2.7229, loss_class: 0.0003
+Tue, 11 Jan 2022 07:31:19 INFO Epoch: 10, global_step: 4350, lr: 0.00088474, total_loss: 3.7586, loss_xy: 0.1904, loss_wh: 0.2212, loss_conf: 3.3468, loss_class: 0.0002
+Tue, 11 Jan 2022 07:31:25 INFO Epoch: 10, global_step: 4400, lr: 0.00088474, total_loss: 2.2972, loss_xy: 0.0946, loss_wh: 0.1109, loss_conf: 2.0915, loss_class: 0.0001
+Tue, 11 Jan 2022 07:31:31 INFO Epoch: 11, global_step: 4450, lr: 0.00084935, total_loss: 3.2335, loss_xy: 0.2044, loss_wh: 0.1248, loss_conf: 2.9041, loss_class: 0.0002
+Tue, 11 Jan 2022 07:31:37 INFO Epoch: 11, global_step: 4500, lr: 0.00084935, total_loss: 2.0300, loss_xy: 0.0883, loss_wh: 0.0727, loss_conf: 1.8688, loss_class: 0.0002
+Tue, 11 Jan 2022 07:31:37 INFO ===> batch recall: 0.5455, batch precision: 0.7200 <===
+Tue, 11 Jan 2022 07:31:43 INFO Epoch: 11, global_step: 4550, lr: 0.00084935, total_loss: 2.5043, loss_xy: 0.1419, loss_wh: 0.1341, loss_conf: 2.2279, loss_class: 0.0003
+Tue, 11 Jan 2022 07:31:49 INFO Epoch: 11, global_step: 4600, lr: 0.00084935, total_loss: 2.0145, loss_xy: 0.1427, loss_wh: 0.1538, loss_conf: 1.7179, loss_class: 0.0001
+Tue, 11 Jan 2022 07:31:55 INFO Epoch: 11, global_step: 4650, lr: 0.00084935, total_loss: 1.4278, loss_xy: 0.0805, loss_wh: 0.0850, loss_conf: 1.2623, loss_class: 0.0001
+Tue, 11 Jan 2022 07:32:02 INFO Epoch: 11, global_step: 4700, lr: 0.00084935, total_loss: 1.4443, loss_xy: 0.0577, loss_wh: 0.2073, loss_conf: 1.1792, loss_class: 0.0001
+Tue, 11 Jan 2022 07:32:08 INFO Epoch: 11, global_step: 4750, lr: 0.00084935, total_loss: 2.2646, loss_xy: 0.1426, loss_wh: 0.0956, loss_conf: 2.0262, loss_class: 0.0001
+Tue, 11 Jan 2022 07:32:14 INFO Epoch: 11, global_step: 4800, lr: 0.00084935, total_loss: 2.9474, loss_xy: 0.1748, loss_wh: 0.1915, loss_conf: 2.5808, loss_class: 0.0003
+Tue, 11 Jan 2022 07:32:20 INFO Epoch: 12, global_step: 4850, lr: 0.00084935, total_loss: 1.8630, loss_xy: 0.0963, loss_wh: 0.1004, loss_conf: 1.6660, loss_class: 0.0003
+Tue, 11 Jan 2022 07:32:26 INFO Epoch: 12, global_step: 4900, lr: 0.00084935, total_loss: 1.2884, loss_xy: 0.0372, loss_wh: 0.0759, loss_conf: 1.1753, loss_class: 0.0000
+Tue, 11 Jan 2022 07:32:32 INFO Epoch: 12, global_step: 4950, lr: 0.00084935, total_loss: 1.7535, loss_xy: 0.1592, loss_wh: 0.1135, loss_conf: 1.4808, loss_class: 0.0001
+Tue, 11 Jan 2022 07:32:38 INFO Epoch: 12, global_step: 5000, lr: 0.00084935, total_loss: 2.0158, loss_xy: 0.1091, loss_wh: 0.1609, loss_conf: 1.7457, loss_class: 0.0001
+Tue, 11 Jan 2022 07:32:38 INFO ===> batch recall: 0.6889, batch precision: 0.8857 <===
+Tue, 11 Jan 2022 07:32:44 INFO Epoch: 12, global_step: 5050, lr: 0.00084935, total_loss: 3.1078, loss_xy: 0.1870, loss_wh: 0.1510, loss_conf: 2.7696, loss_class: 0.0001
+Tue, 11 Jan 2022 07:32:50 INFO Epoch: 12, global_step: 5100, lr: 0.00084935, total_loss: 3.2173, loss_xy: 0.1680, loss_wh: 0.1318, loss_conf: 2.9173, loss_class: 0.0002
+Tue, 11 Jan 2022 07:32:57 INFO Epoch: 12, global_step: 5150, lr: 0.00084935, total_loss: 1.7484, loss_xy: 0.1027, loss_wh: 0.1157, loss_conf: 1.5299, loss_class: 0.0001
+Tue, 11 Jan 2022 07:33:03 INFO Epoch: 12, global_step: 5200, lr: 0.00084935, total_loss: 2.5282, loss_xy: 0.1133, loss_wh: 0.1262, loss_conf: 2.2887, loss_class: 0.0001
+Tue, 11 Jan 2022 07:33:09 INFO Epoch: 13, global_step: 5250, lr: 0.00084935, total_loss: 1.1486, loss_xy: 0.0760, loss_wh: 0.0892, loss_conf: 0.9833, loss_class: 0.0001
+Tue, 11 Jan 2022 07:33:15 INFO Epoch: 13, global_step: 5300, lr: 0.00084935, total_loss: 1.8890, loss_xy: 0.1649, loss_wh: 0.1722, loss_conf: 1.5518, loss_class: 0.0001
+Tue, 11 Jan 2022 07:33:21 INFO Epoch: 13, global_step: 5350, lr: 0.00084935, total_loss: 2.2761, loss_xy: 0.2031, loss_wh: 0.1433, loss_conf: 1.9296, loss_class: 0.0001
+Tue, 11 Jan 2022 07:33:27 INFO Epoch: 13, global_step: 5400, lr: 0.00084935, total_loss: 1.1399, loss_xy: 0.0668, loss_wh: 0.0678, loss_conf: 1.0053, loss_class: 0.0000
+Tue, 11 Jan 2022 07:33:33 INFO Epoch: 13, global_step: 5450, lr: 0.00081537, total_loss: 2.1866, loss_xy: 0.1489, loss_wh: 0.1083, loss_conf: 1.9294, loss_class: 0.0001
+Tue, 11 Jan 2022 07:33:39 INFO Epoch: 13, global_step: 5500, lr: 0.00081537, total_loss: 2.5961, loss_xy: 0.1625, loss_wh: 0.1833, loss_conf: 2.2502, loss_class: 0.0001
+Tue, 11 Jan 2022 07:33:39 INFO ===> batch recall: 0.6491, batch precision: 0.8043 <===
+Tue, 11 Jan 2022 07:33:46 INFO Epoch: 13, global_step: 5550, lr: 0.00081537, total_loss: 1.9268, loss_xy: 0.1066, loss_wh: 0.0920, loss_conf: 1.7281, loss_class: 0.0001
+Tue, 11 Jan 2022 07:33:52 INFO Epoch: 13, global_step: 5600, lr: 0.00081537, total_loss: 2.1362, loss_xy: 0.1067, loss_wh: 0.1362, loss_conf: 1.8934, loss_class: 0.0000
+Tue, 11 Jan 2022 07:33:58 INFO Epoch: 14, global_step: 5650, lr: 0.00081537, total_loss: 1.9204, loss_xy: 0.1376, loss_wh: 0.1329, loss_conf: 1.6498, loss_class: 0.0001
+Tue, 11 Jan 2022 07:34:04 INFO Epoch: 14, global_step: 5700, lr: 0.00081537, total_loss: 1.9449, loss_xy: 0.1173, loss_wh: 0.1329, loss_conf: 1.6946, loss_class: 0.0000
+Tue, 11 Jan 2022 07:34:10 INFO Epoch: 14, global_step: 5750, lr: 0.00081537, total_loss: 1.2750, loss_xy: 0.0825, loss_wh: 0.0904, loss_conf: 1.1021, loss_class: 0.0000
+Tue, 11 Jan 2022 07:34:16 INFO Epoch: 14, global_step: 5800, lr: 0.00081537, total_loss: 2.4737, loss_xy: 0.1441, loss_wh: 0.1326, loss_conf: 2.1967, loss_class: 0.0002
+Tue, 11 Jan 2022 07:34:23 INFO Epoch: 14, global_step: 5850, lr: 0.00081537, total_loss: 1.6346, loss_xy: 0.1715, loss_wh: 0.1368, loss_conf: 1.3262, loss_class: 0.0001
+Tue, 11 Jan 2022 07:34:29 INFO Epoch: 14, global_step: 5900, lr: 0.00081537, total_loss: 1.8849, loss_xy: 0.1264, loss_wh: 0.1274, loss_conf: 1.6310, loss_class: 0.0000
+Tue, 11 Jan 2022 07:34:35 INFO Epoch: 14, global_step: 5950, lr: 0.00081537, total_loss: 1.7333, loss_xy: 0.1281, loss_wh: 0.1865, loss_conf: 1.4188, loss_class: 0.0000
+Tue, 11 Jan 2022 07:34:41 INFO Epoch: 14, global_step: 6000, lr: 0.00081537, total_loss: 2.0509, loss_xy: 0.1474, loss_wh: 0.0843, loss_conf: 1.8191, loss_class: 0.0001
+Tue, 11 Jan 2022 07:34:41 INFO ===> batch recall: 0.7917, batch precision: 0.8261 <===
+Tue, 11 Jan 2022 07:34:54 INFO ===> Epoch: 14, global_step: 6000, recall: 0.5347, precision: 0.8029, total_loss: 5.2256, loss_xy: 0.1971, loss_wh: 0.1979, loss_conf: 4.8304, loss_class: 0.0001
+Tue, 11 Jan 2022 07:35:00 INFO Epoch: 15, global_step: 6050, lr: 0.00081537, total_loss: 1.0236, loss_xy: 0.1233, loss_wh: 0.0906, loss_conf: 0.8096, loss_class: 0.0000
+Tue, 11 Jan 2022 07:35:06 INFO Epoch: 15, global_step: 6100, lr: 0.00081537, total_loss: 0.9983, loss_xy: 0.0905, loss_wh: 0.1212, loss_conf: 0.7866, loss_class: 0.0000
+Tue, 11 Jan 2022 07:35:12 INFO Epoch: 15, global_step: 6150, lr: 0.00081537, total_loss: 1.2759, loss_xy: 0.1671, loss_wh: 0.1494, loss_conf: 0.9595, loss_class: 0.0000
+Tue, 11 Jan 2022 07:35:18 INFO Epoch: 15, global_step: 6200, lr: 0.00081537, total_loss: 1.6157, loss_xy: 0.1371, loss_wh: 0.1379, loss_conf: 1.3407, loss_class: 0.0000
+Tue, 11 Jan 2022 07:35:24 INFO Epoch: 15, global_step: 6250, lr: 0.00081537, total_loss: 1.1089, loss_xy: 0.1163, loss_wh: 0.0824, loss_conf: 0.9102, loss_class: 0.0000
+Tue, 11 Jan 2022 07:35:30 INFO Epoch: 15, global_step: 6300, lr: 0.00081537, total_loss: 0.9667, loss_xy: 0.0708, loss_wh: 0.0790, loss_conf: 0.8168, loss_class: 0.0000
+Tue, 11 Jan 2022 07:35:36 INFO Epoch: 15, global_step: 6350, lr: 0.00081537, total_loss: 1.7817, loss_xy: 0.1173, loss_wh: 0.1093, loss_conf: 1.5550, loss_class: 0.0000
+Tue, 11 Jan 2022 07:35:42 INFO Epoch: 15, global_step: 6400, lr: 0.00081537, total_loss: 1.3477, loss_xy: 0.1373, loss_wh: 0.1087, loss_conf: 1.1017, loss_class: 0.0001
+Tue, 11 Jan 2022 07:35:49 INFO Epoch: 16, global_step: 6450, lr: 0.00078276, total_loss: 1.4595, loss_xy: 0.1375, loss_wh: 0.0984, loss_conf: 1.2235, loss_class: 0.0001
+Tue, 11 Jan 2022 07:35:55 INFO Epoch: 16, global_step: 6500, lr: 0.00078276, total_loss: 2.4828, loss_xy: 0.1716, loss_wh: 0.1565, loss_conf: 2.1546, loss_class: 0.0000
+Tue, 11 Jan 2022 07:35:55 INFO ===> batch recall: 0.6508, batch precision: 0.8367 <===
+Tue, 11 Jan 2022 07:36:01 INFO Epoch: 16, global_step: 6550, lr: 0.00078276, total_loss: 0.9948, loss_xy: 0.0946, loss_wh: 0.1021, loss_conf: 0.7980, loss_class: 0.0000
+Tue, 11 Jan 2022 07:36:07 INFO Epoch: 16, global_step: 6600, lr: 0.00078276, total_loss: 1.3188, loss_xy: 0.1175, loss_wh: 0.0974, loss_conf: 1.1038, loss_class: 0.0001
+Tue, 11 Jan 2022 07:36:13 INFO Epoch: 16, global_step: 6650, lr: 0.00078276, total_loss: 0.7305, loss_xy: 0.0967, loss_wh: 0.0937, loss_conf: 0.5402, loss_class: 0.0000
+Tue, 11 Jan 2022 07:36:19 INFO Epoch: 16, global_step: 6700, lr: 0.00078276, total_loss: 0.7474, loss_xy: 0.0659, loss_wh: 0.0407, loss_conf: 0.6408, loss_class: 0.0000
+Tue, 11 Jan 2022 07:36:25 INFO Epoch: 16, global_step: 6750, lr: 0.00078276, total_loss: 1.1511, loss_xy: 0.0916, loss_wh: 0.1093, loss_conf: 0.9502, loss_class: 0.0000
+Tue, 11 Jan 2022 07:36:31 INFO Epoch: 16, global_step: 6800, lr: 0.00078276, total_loss: 1.6573, loss_xy: 0.1166, loss_wh: 0.1554, loss_conf: 1.3853, loss_class: 0.0000
+Tue, 11 Jan 2022 07:36:38 INFO Epoch: 17, global_step: 6850, lr: 0.00078276, total_loss: 0.8821, loss_xy: 0.0975, loss_wh: 0.1221, loss_conf: 0.6624, loss_class: 0.0001
+Tue, 11 Jan 2022 07:36:44 INFO Epoch: 17, global_step: 6900, lr: 0.00078276, total_loss: 1.0579, loss_xy: 0.1300, loss_wh: 0.1078, loss_conf: 0.8201, loss_class: 0.0000
+Tue, 11 Jan 2022 07:36:50 INFO Epoch: 17, global_step: 6950, lr: 0.00078276, total_loss: 0.8676, loss_xy: 0.0874, loss_wh: 0.0675, loss_conf: 0.7127, loss_class: 0.0000
+Tue, 11 Jan 2022 07:36:56 INFO Epoch: 17, global_step: 7000, lr: 0.00078276, total_loss: 0.6840, loss_xy: 0.0884, loss_wh: 0.0632, loss_conf: 0.5324, loss_class: 0.0000
+Tue, 11 Jan 2022 07:36:56 INFO ===> batch recall: 0.8462, batch precision: 0.8919 <===
+Tue, 11 Jan 2022 07:37:02 INFO Epoch: 17, global_step: 7050, lr: 0.00078276, total_loss: 0.8291, loss_xy: 0.0918, loss_wh: 0.1187, loss_conf: 0.6186, loss_class: 0.0000
+Tue, 11 Jan 2022 07:37:08 INFO Epoch: 17, global_step: 7100, lr: 0.00078276, total_loss: 0.9809, loss_xy: 0.1125, loss_wh: 0.1026, loss_conf: 0.7657, loss_class: 0.0001
+Tue, 11 Jan 2022 07:37:15 INFO Epoch: 17, global_step: 7150, lr: 0.00078276, total_loss: 0.6892, loss_xy: 0.0953, loss_wh: 0.1276, loss_conf: 0.4662, loss_class: 0.0000
+Tue, 11 Jan 2022 07:37:21 INFO Epoch: 17, global_step: 7200, lr: 0.00078276, total_loss: 0.9395, loss_xy: 0.1004, loss_wh: 0.0955, loss_conf: 0.7437, loss_class: 0.0000
+Tue, 11 Jan 2022 07:37:28 INFO Epoch: 18, global_step: 7250, lr: 0.00078276, total_loss: 0.4389, loss_xy: 0.0373, loss_wh: 0.0556, loss_conf: 0.3459, loss_class: 0.0000
+Tue, 11 Jan 2022 07:37:34 INFO Epoch: 18, global_step: 7300, lr: 0.00078276, total_loss: 0.9173, loss_xy: 0.1441, loss_wh: 0.1132, loss_conf: 0.6599, loss_class: 0.0001
+Tue, 11 Jan 2022 07:37:41 INFO Epoch: 18, global_step: 7350, lr: 0.00078276, total_loss: 1.5698, loss_xy: 0.0996, loss_wh: 0.0998, loss_conf: 1.3704, loss_class: 0.0000
+Tue, 11 Jan 2022 07:37:47 INFO Epoch: 18, global_step: 7400, lr: 0.00078276, total_loss: 0.5282, loss_xy: 0.0464, loss_wh: 0.0459, loss_conf: 0.4359, loss_class: 0.0000
+Tue, 11 Jan 2022 07:37:53 INFO Epoch: 18, global_step: 7450, lr: 0.00075145, total_loss: 0.8601, loss_xy: 0.0711, loss_wh: 0.0848, loss_conf: 0.7041, loss_class: 0.0000
+Tue, 11 Jan 2022 07:37:59 INFO Epoch: 18, global_step: 7500, lr: 0.00075145, total_loss: 0.5275, loss_xy: 0.1027, loss_wh: 0.1075, loss_conf: 0.3172, loss_class: 0.0000
+Tue, 11 Jan 2022 07:37:59 INFO ===> batch recall: 0.8889, batch precision: 0.8696 <===
+Tue, 11 Jan 2022 07:38:06 INFO Epoch: 18, global_step: 7550, lr: 0.00075145, total_loss: 0.5463, loss_xy: 0.0718, loss_wh: 0.0955, loss_conf: 0.3790, loss_class: 0.0000
+Tue, 11 Jan 2022 07:38:12 INFO Epoch: 18, global_step: 7600, lr: 0.00075145, total_loss: 0.7534, loss_xy: 0.0985, loss_wh: 0.0963, loss_conf: 0.5585, loss_class: 0.0000
+Tue, 11 Jan 2022 07:38:18 INFO Epoch: 19, global_step: 7650, lr: 0.00075145, total_loss: 0.8456, loss_xy: 0.0841, loss_wh: 0.0887, loss_conf: 0.6728, loss_class: 0.0000
+Tue, 11 Jan 2022 07:38:25 INFO Epoch: 19, global_step: 7700, lr: 0.00075145, total_loss: 0.8708, loss_xy: 0.0856, loss_wh: 0.0842, loss_conf: 0.7010, loss_class: 0.0000
+Tue, 11 Jan 2022 07:38:31 INFO Epoch: 19, global_step: 7750, lr: 0.00075145, total_loss: 0.4549, loss_xy: 0.0495, loss_wh: 0.0538, loss_conf: 0.3515, loss_class: 0.0000
+Tue, 11 Jan 2022 07:38:37 INFO Epoch: 19, global_step: 7800, lr: 0.00075145, total_loss: 0.7628, loss_xy: 0.1263, loss_wh: 0.0902, loss_conf: 0.5463, loss_class: 0.0000
+Tue, 11 Jan 2022 07:38:44 INFO Epoch: 19, global_step: 7850, lr: 0.00075145, total_loss: 0.9731, loss_xy: 0.0816, loss_wh: 0.1031, loss_conf: 0.7884, loss_class: 0.0000
+Tue, 11 Jan 2022 07:38:50 INFO Epoch: 19, global_step: 7900, lr: 0.00075145, total_loss: 1.1661, loss_xy: 0.1238, loss_wh: 0.1181, loss_conf: 0.9242, loss_class: 0.0000
+Tue, 11 Jan 2022 07:38:56 INFO Epoch: 19, global_step: 7950, lr: 0.00075145, total_loss: 0.9103, loss_xy: 0.1245, loss_wh: 0.1248, loss_conf: 0.6610, loss_class: 0.0000
+Tue, 11 Jan 2022 07:39:02 INFO Epoch: 19, global_step: 8000, lr: 0.00075145, total_loss: 0.4504, loss_xy: 0.0552, loss_wh: 0.0657, loss_conf: 0.3296, loss_class: 0.0000
+Tue, 11 Jan 2022 07:39:02 INFO ===> batch recall: 0.9286, batch precision: 0.8667 <===
+Tue, 11 Jan 2022 07:39:16 INFO ===> Epoch: 19, global_step: 8000, recall: 0.6237, precision: 0.7068, total_loss: 6.2269, loss_xy: 0.2002, loss_wh: 0.1716, loss_conf: 5.8550, loss_class: 0.0000
+Tue, 11 Jan 2022 07:39:22 INFO Epoch: 20, global_step: 8050, lr: 0.00075145, total_loss: 0.4889, loss_xy: 0.0647, loss_wh: 0.0788, loss_conf: 0.3454, loss_class: 0.0000
+Tue, 11 Jan 2022 07:39:28 INFO Epoch: 20, global_step: 8100, lr: 0.00075145, total_loss: 0.7754, loss_xy: 0.0992, loss_wh: 0.1084, loss_conf: 0.5679, loss_class: 0.0000
+Tue, 11 Jan 2022 07:39:34 INFO Epoch: 20, global_step: 8150, lr: 0.00075145, total_loss: 0.6227, loss_xy: 0.0655, loss_wh: 0.1044, loss_conf: 0.4527, loss_class: 0.0000
+Tue, 11 Jan 2022 07:39:41 INFO Epoch: 20, global_step: 8200, lr: 0.00075145, total_loss: 0.7172, loss_xy: 0.1614, loss_wh: 0.1560, loss_conf: 0.3998, loss_class: 0.0000
+Tue, 11 Jan 2022 07:39:47 INFO Epoch: 20, global_step: 8250, lr: 0.00075145, total_loss: 0.6869, loss_xy: 0.0708, loss_wh: 0.0606, loss_conf: 0.5555, loss_class: 0.0000
+Tue, 11 Jan 2022 07:39:53 INFO Epoch: 20, global_step: 8300, lr: 0.00075145, total_loss: 0.3397, loss_xy: 0.0844, loss_wh: 0.0877, loss_conf: 0.1675, loss_class: 0.0000
+Tue, 11 Jan 2022 07:40:00 INFO Epoch: 20, global_step: 8350, lr: 0.00075145, total_loss: 0.3515, loss_xy: 0.0621, loss_wh: 0.0595, loss_conf: 0.2299, loss_class: 0.0000
+Tue, 11 Jan 2022 07:40:06 INFO Epoch: 20, global_step: 8400, lr: 0.00075145, total_loss: 0.9384, loss_xy: 0.0884, loss_wh: 0.0785, loss_conf: 0.7716, loss_class: 0.0000
+Tue, 11 Jan 2022 07:40:12 INFO Epoch: 21, global_step: 8450, lr: 0.00072139, total_loss: 0.5399, loss_xy: 0.0761, loss_wh: 0.1008, loss_conf: 0.3630, loss_class: 0.0000
+Tue, 11 Jan 2022 07:40:18 INFO Epoch: 21, global_step: 8500, lr: 0.00072139, total_loss: 0.6454, loss_xy: 0.1044, loss_wh: 0.1066, loss_conf: 0.4345, loss_class: 0.0000
+Tue, 11 Jan 2022 07:40:18 INFO ===> batch recall: 0.9683, batch precision: 0.9683 <===
+Tue, 11 Jan 2022 07:40:24 INFO Epoch: 21, global_step: 8550, lr: 0.00072139, total_loss: 0.8478, loss_xy: 0.1021, loss_wh: 0.0980, loss_conf: 0.6477, loss_class: 0.0000
+Tue, 11 Jan 2022 07:40:30 INFO Epoch: 21, global_step: 8600, lr: 0.00072139, total_loss: 0.3763, loss_xy: 0.0840, loss_wh: 0.0925, loss_conf: 0.1998, loss_class: 0.0000
+Tue, 11 Jan 2022 07:40:37 INFO Epoch: 21, global_step: 8650, lr: 0.00072139, total_loss: 0.3270, loss_xy: 0.0673, loss_wh: 0.0859, loss_conf: 0.1738, loss_class: 0.0000
+Tue, 11 Jan 2022 07:40:42 INFO Epoch: 21, global_step: 8700, lr: 0.00072139, total_loss: 0.5211, loss_xy: 0.0624, loss_wh: 0.0837, loss_conf: 0.3749, loss_class: 0.0000
+Tue, 11 Jan 2022 07:40:49 INFO Epoch: 21, global_step: 8750, lr: 0.00072139, total_loss: 0.3868, loss_xy: 0.0588, loss_wh: 0.0570, loss_conf: 0.2709, loss_class: 0.0000
+Tue, 11 Jan 2022 07:40:55 INFO Epoch: 21, global_step: 8800, lr: 0.00072139, total_loss: 0.8573, loss_xy: 0.0640, loss_wh: 0.0800, loss_conf: 0.7133, loss_class: 0.0000
+Tue, 11 Jan 2022 07:41:01 INFO Epoch: 22, global_step: 8850, lr: 0.00072139, total_loss: 0.2353, loss_xy: 0.0599, loss_wh: 0.0605, loss_conf: 0.1149, loss_class: 0.0000
+Tue, 11 Jan 2022 07:41:07 INFO Epoch: 22, global_step: 8900, lr: 0.00072139, total_loss: 0.3177, loss_xy: 0.0811, loss_wh: 0.0708, loss_conf: 0.1659, loss_class: 0.0000
+Tue, 11 Jan 2022 07:41:13 INFO Epoch: 22, global_step: 8950, lr: 0.00072139, total_loss: 0.7398, loss_xy: 0.1216, loss_wh: 0.1058, loss_conf: 0.5123, loss_class: 0.0000
+Tue, 11 Jan 2022 07:41:19 INFO Epoch: 22, global_step: 9000, lr: 0.00072139, total_loss: 0.4549, loss_xy: 0.0761, loss_wh: 0.0619, loss_conf: 0.3168, loss_class: 0.0000
+Tue, 11 Jan 2022 07:41:19 INFO ===> batch recall: 0.9583, batch precision: 0.9388 <===
+Tue, 11 Jan 2022 07:41:25 INFO Epoch: 22, global_step: 9050, lr: 0.00072139, total_loss: 0.2663, loss_xy: 0.0443, loss_wh: 0.0469, loss_conf: 0.1750, loss_class: 0.0000
+Tue, 11 Jan 2022 07:41:31 INFO Epoch: 22, global_step: 9100, lr: 0.00072139, total_loss: 0.4639, loss_xy: 0.0660, loss_wh: 0.0763, loss_conf: 0.3215, loss_class: 0.0001
+Tue, 11 Jan 2022 07:41:37 INFO Epoch: 22, global_step: 9150, lr: 0.00072139, total_loss: 2.0810, loss_xy: 0.2494, loss_wh: 0.1576, loss_conf: 1.6740, loss_class: 0.0000
+Tue, 11 Jan 2022 07:41:43 INFO Epoch: 22, global_step: 9200, lr: 0.00072139, total_loss: 0.2102, loss_xy: 0.0449, loss_wh: 0.0682, loss_conf: 0.0970, loss_class: 0.0000
+Tue, 11 Jan 2022 07:41:49 INFO Epoch: 23, global_step: 9250, lr: 0.00072139, total_loss: 0.2905, loss_xy: 0.0146, loss_wh: 0.0311, loss_conf: 0.2448, loss_class: 0.0000
+Tue, 11 Jan 2022 07:41:55 INFO Epoch: 23, global_step: 9300, lr: 0.00072139, total_loss: 0.5204, loss_xy: 0.1300, loss_wh: 0.0850, loss_conf: 0.3053, loss_class: 0.0000
+Tue, 11 Jan 2022 07:42:01 INFO Epoch: 23, global_step: 9350, lr: 0.00072139, total_loss: 0.4559, loss_xy: 0.0605, loss_wh: 0.1097, loss_conf: 0.2858, loss_class: 0.0000
+Tue, 11 Jan 2022 07:42:07 INFO Epoch: 23, global_step: 9400, lr: 0.00072139, total_loss: 0.3079, loss_xy: 0.0864, loss_wh: 0.0943, loss_conf: 0.1272, loss_class: 0.0000
+Tue, 11 Jan 2022 07:42:13 INFO Epoch: 23, global_step: 9450, lr: 0.00069253, total_loss: 0.6982, loss_xy: 0.1332, loss_wh: 0.0980, loss_conf: 0.4670, loss_class: 0.0000
+Tue, 11 Jan 2022 07:42:20 INFO Epoch: 23, global_step: 9500, lr: 0.00069253, total_loss: 0.3328, loss_xy: 0.0722, loss_wh: 0.0809, loss_conf: 0.1797, loss_class: 0.0000
+Tue, 11 Jan 2022 07:42:20 INFO ===> batch recall: 0.8837, batch precision: 0.9268 <===
+Tue, 11 Jan 2022 07:42:26 INFO Epoch: 23, global_step: 9550, lr: 0.00069253, total_loss: 0.5337, loss_xy: 0.0902, loss_wh: 0.0768, loss_conf: 0.3667, loss_class: 0.0000
+Tue, 11 Jan 2022 07:42:32 INFO Epoch: 23, global_step: 9600, lr: 0.00069253, total_loss: 0.3641, loss_xy: 0.0452, loss_wh: 0.0508, loss_conf: 0.2682, loss_class: 0.0000
+Tue, 11 Jan 2022 07:42:38 INFO Epoch: 24, global_step: 9650, lr: 0.00069253, total_loss: 0.1641, loss_xy: 0.0221, loss_wh: 0.0289, loss_conf: 0.1131, loss_class: 0.0000
+Tue, 11 Jan 2022 07:42:45 INFO Epoch: 24, global_step: 9700, lr: 0.00069253, total_loss: 0.8247, loss_xy: 0.0944, loss_wh: 0.1347, loss_conf: 0.5956, loss_class: 0.0000
+Tue, 11 Jan 2022 07:42:51 INFO Epoch: 24, global_step: 9750, lr: 0.00069253, total_loss: 0.4757, loss_xy: 0.0782, loss_wh: 0.0895, loss_conf: 0.3080, loss_class: 0.0000
+Tue, 11 Jan 2022 07:42:57 INFO Epoch: 24, global_step: 9800, lr: 0.00069253, total_loss: 0.3919, loss_xy: 0.0589, loss_wh: 0.0887, loss_conf: 0.2443, loss_class: 0.0000
+Tue, 11 Jan 2022 07:43:04 INFO Epoch: 24, global_step: 9850, lr: 0.00069253, total_loss: 0.2463, loss_xy: 0.0667, loss_wh: 0.0496, loss_conf: 0.1300, loss_class: 0.0000
+Tue, 11 Jan 2022 07:43:10 INFO Epoch: 24, global_step: 9900, lr: 0.00069253, total_loss: 0.5096, loss_xy: 0.0744, loss_wh: 0.0966, loss_conf: 0.3386, loss_class: 0.0000
+Tue, 11 Jan 2022 07:43:16 INFO Epoch: 24, global_step: 9950, lr: 0.00069253, total_loss: 0.5591, loss_xy: 0.0875, loss_wh: 0.0996, loss_conf: 0.3721, loss_class: 0.0000
+Tue, 11 Jan 2022 07:43:23 INFO Epoch: 24, global_step: 10000, lr: 0.00069253, total_loss: 0.8724, loss_xy: 0.0884, loss_wh: 0.0892, loss_conf: 0.6948, loss_class: 0.0000
+Tue, 11 Jan 2022 07:43:23 INFO ===> batch recall: 0.9508, batch precision: 0.9355 <===
+Tue, 11 Jan 2022 07:43:36 INFO ===> Epoch: 24, global_step: 10000, recall: 0.5782, precision: 0.7763, total_loss: 7.5526, loss_xy: 0.2062, loss_wh: 0.1787, loss_conf: 7.1677, loss_class: 0.0000
+Tue, 11 Jan 2022 07:43:42 INFO Epoch: 25, global_step: 10050, lr: 0.00069253, total_loss: 0.5040, loss_xy: 0.0717, loss_wh: 0.0885, loss_conf: 0.3438, loss_class: 0.0000
+Tue, 11 Jan 2022 07:43:49 INFO Epoch: 25, global_step: 10100, lr: 0.00069253, total_loss: 0.2496, loss_xy: 0.0603, loss_wh: 0.0734, loss_conf: 0.1159, loss_class: 0.0000
+Tue, 11 Jan 2022 07:43:55 INFO Epoch: 25, global_step: 10150, lr: 0.00069253, total_loss: 0.3676, loss_xy: 0.0619, loss_wh: 0.0604, loss_conf: 0.2452, loss_class: 0.0000
+Tue, 11 Jan 2022 07:44:01 INFO Epoch: 25, global_step: 10200, lr: 0.00069253, total_loss: 0.6188, loss_xy: 0.0993, loss_wh: 0.1039, loss_conf: 0.4155, loss_class: 0.0000
+Tue, 11 Jan 2022 07:44:08 INFO Epoch: 25, global_step: 10250, lr: 0.00069253, total_loss: 0.4349, loss_xy: 0.0932, loss_wh: 0.0951, loss_conf: 0.2467, loss_class: 0.0000
+Tue, 11 Jan 2022 07:44:14 INFO Epoch: 25, global_step: 10300, lr: 0.00069253, total_loss: 0.2313, loss_xy: 0.0882, loss_wh: 0.0457, loss_conf: 0.0973, loss_class: 0.0000
+Tue, 11 Jan 2022 07:44:20 INFO Epoch: 25, global_step: 10350, lr: 0.00069253, total_loss: 0.8727, loss_xy: 0.1305, loss_wh: 0.0928, loss_conf: 0.6494, loss_class: 0.0000
+Tue, 11 Jan 2022 07:44:27 INFO Epoch: 25, global_step: 10400, lr: 0.00069253, total_loss: 0.5901, loss_xy: 0.0880, loss_wh: 0.0724, loss_conf: 0.4297, loss_class: 0.0001
+Tue, 11 Jan 2022 07:44:34 INFO Epoch: 26, global_step: 10450, lr: 0.00066483, total_loss: 0.4067, loss_xy: 0.0654, loss_wh: 0.0489, loss_conf: 0.2924, loss_class: 0.0000
+Tue, 11 Jan 2022 07:44:40 INFO Epoch: 26, global_step: 10500, lr: 0.00066483, total_loss: 0.4065, loss_xy: 0.0542, loss_wh: 0.0564, loss_conf: 0.2959, loss_class: 0.0000
+Tue, 11 Jan 2022 07:44:40 INFO ===> batch recall: 0.9574, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 07:44:46 INFO Epoch: 26, global_step: 10550, lr: 0.00066483, total_loss: 0.2760, loss_xy: 0.0783, loss_wh: 0.0750, loss_conf: 0.1227, loss_class: 0.0000
+Tue, 11 Jan 2022 07:44:52 INFO Epoch: 26, global_step: 10600, lr: 0.00066483, total_loss: 0.1495, loss_xy: 0.0389, loss_wh: 0.0462, loss_conf: 0.0644, loss_class: 0.0000
+Tue, 11 Jan 2022 07:44:58 INFO Epoch: 26, global_step: 10650, lr: 0.00066483, total_loss: 0.3124, loss_xy: 0.0781, loss_wh: 0.0680, loss_conf: 0.1663, loss_class: 0.0000
+Tue, 11 Jan 2022 07:45:04 INFO Epoch: 26, global_step: 10700, lr: 0.00066483, total_loss: 0.3350, loss_xy: 0.0567, loss_wh: 0.0564, loss_conf: 0.2219, loss_class: 0.0000
+Tue, 11 Jan 2022 07:45:10 INFO Epoch: 26, global_step: 10750, lr: 0.00066483, total_loss: 0.3868, loss_xy: 0.0891, loss_wh: 0.0776, loss_conf: 0.2201, loss_class: 0.0000
+Tue, 11 Jan 2022 07:45:16 INFO Epoch: 26, global_step: 10800, lr: 0.00066483, total_loss: 0.3595, loss_xy: 0.0808, loss_wh: 0.0781, loss_conf: 0.2006, loss_class: 0.0000
+Tue, 11 Jan 2022 07:45:22 INFO Epoch: 27, global_step: 10850, lr: 0.00066483, total_loss: 0.2234, loss_xy: 0.0342, loss_wh: 0.0411, loss_conf: 0.1481, loss_class: 0.0000
+Tue, 11 Jan 2022 07:45:28 INFO Epoch: 27, global_step: 10900, lr: 0.00066483, total_loss: 0.3665, loss_xy: 0.0530, loss_wh: 0.0604, loss_conf: 0.2532, loss_class: 0.0000
+Tue, 11 Jan 2022 07:45:34 INFO Epoch: 27, global_step: 10950, lr: 0.00066483, total_loss: 0.3731, loss_xy: 0.0731, loss_wh: 0.0929, loss_conf: 0.2071, loss_class: 0.0000
+Tue, 11 Jan 2022 07:45:40 INFO Epoch: 27, global_step: 11000, lr: 0.00066483, total_loss: 0.2524, loss_xy: 0.0540, loss_wh: 0.0547, loss_conf: 0.1437, loss_class: 0.0000
+Tue, 11 Jan 2022 07:45:40 INFO ===> batch recall: 0.9756, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 07:45:46 INFO Epoch: 27, global_step: 11050, lr: 0.00066483, total_loss: 0.4163, loss_xy: 0.0424, loss_wh: 0.0692, loss_conf: 0.3046, loss_class: 0.0000
+Tue, 11 Jan 2022 07:45:52 INFO Epoch: 27, global_step: 11100, lr: 0.00066483, total_loss: 0.2766, loss_xy: 0.0674, loss_wh: 0.1074, loss_conf: 0.1018, loss_class: 0.0000
+Tue, 11 Jan 2022 07:45:58 INFO Epoch: 27, global_step: 11150, lr: 0.00066483, total_loss: 0.3214, loss_xy: 0.0624, loss_wh: 0.0992, loss_conf: 0.1599, loss_class: 0.0000
+Tue, 11 Jan 2022 07:46:04 INFO Epoch: 27, global_step: 11200, lr: 0.00066483, total_loss: 0.4232, loss_xy: 0.0831, loss_wh: 0.1100, loss_conf: 0.2301, loss_class: 0.0000
+Tue, 11 Jan 2022 07:46:11 INFO Epoch: 28, global_step: 11250, lr: 0.00066483, total_loss: 0.2011, loss_xy: 0.0445, loss_wh: 0.0499, loss_conf: 0.1066, loss_class: 0.0000
+Tue, 11 Jan 2022 07:46:17 INFO Epoch: 28, global_step: 11300, lr: 0.00066483, total_loss: 0.2480, loss_xy: 0.0475, loss_wh: 0.0738, loss_conf: 0.1267, loss_class: 0.0000
+Tue, 11 Jan 2022 07:46:23 INFO Epoch: 28, global_step: 11350, lr: 0.00066483, total_loss: 0.1953, loss_xy: 0.0335, loss_wh: 0.0446, loss_conf: 0.1172, loss_class: 0.0000
+Tue, 11 Jan 2022 07:46:29 INFO Epoch: 28, global_step: 11400, lr: 0.00066483, total_loss: 0.2307, loss_xy: 0.0354, loss_wh: 0.0786, loss_conf: 0.1167, loss_class: 0.0000
+Tue, 11 Jan 2022 07:46:35 INFO Epoch: 28, global_step: 11450, lr: 0.00063824, total_loss: 0.1928, loss_xy: 0.0371, loss_wh: 0.0435, loss_conf: 0.1122, loss_class: 0.0000
+Tue, 11 Jan 2022 07:46:41 INFO Epoch: 28, global_step: 11500, lr: 0.00063824, total_loss: 0.1211, loss_xy: 0.0370, loss_wh: 0.0612, loss_conf: 0.0228, loss_class: 0.0000
+Tue, 11 Jan 2022 07:46:41 INFO ===> batch recall: 1.0000, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 07:46:47 INFO Epoch: 28, global_step: 11550, lr: 0.00063824, total_loss: 0.1709, loss_xy: 0.0442, loss_wh: 0.0384, loss_conf: 0.0884, loss_class: 0.0000
+Tue, 11 Jan 2022 07:46:53 INFO Epoch: 28, global_step: 11600, lr: 0.00063824, total_loss: 0.1839, loss_xy: 0.0403, loss_wh: 0.0715, loss_conf: 0.0722, loss_class: 0.0000
+Tue, 11 Jan 2022 07:46:59 INFO Epoch: 29, global_step: 11650, lr: 0.00063824, total_loss: 0.2049, loss_xy: 0.0554, loss_wh: 0.0616, loss_conf: 0.0879, loss_class: 0.0000
+Tue, 11 Jan 2022 07:47:05 INFO Epoch: 29, global_step: 11700, lr: 0.00063824, total_loss: 0.1751, loss_xy: 0.0300, loss_wh: 0.0346, loss_conf: 0.1105, loss_class: 0.0000
+Tue, 11 Jan 2022 07:47:12 INFO Epoch: 29, global_step: 11750, lr: 0.00063824, total_loss: 0.1869, loss_xy: 0.0644, loss_wh: 0.0586, loss_conf: 0.0639, loss_class: 0.0000
+Tue, 11 Jan 2022 07:47:18 INFO Epoch: 29, global_step: 11800, lr: 0.00063824, total_loss: 0.1804, loss_xy: 0.0352, loss_wh: 0.0346, loss_conf: 0.1105, loss_class: 0.0000
+Tue, 11 Jan 2022 07:47:24 INFO Epoch: 29, global_step: 11850, lr: 0.00063824, total_loss: 0.3633, loss_xy: 0.0692, loss_wh: 0.0486, loss_conf: 0.2454, loss_class: 0.0000
+Tue, 11 Jan 2022 07:47:30 INFO Epoch: 29, global_step: 11900, lr: 0.00063824, total_loss: 0.1332, loss_xy: 0.0448, loss_wh: 0.0576, loss_conf: 0.0309, loss_class: 0.0000
+Tue, 11 Jan 2022 07:47:36 INFO Epoch: 29, global_step: 11950, lr: 0.00063824, total_loss: 0.0823, loss_xy: 0.0259, loss_wh: 0.0317, loss_conf: 0.0246, loss_class: 0.0000
+Tue, 11 Jan 2022 07:47:42 INFO Epoch: 29, global_step: 12000, lr: 0.00063824, total_loss: 0.2374, loss_xy: 0.0656, loss_wh: 0.0681, loss_conf: 0.1037, loss_class: 0.0000
+Tue, 11 Jan 2022 07:47:42 INFO ===> batch recall: 0.9808, batch precision: 0.9808 <===
+Tue, 11 Jan 2022 07:47:42 WARNING From /home/ubuntu/anaconda3/envs/tf15_keras/lib/python3.6/site-packages/tensorflow/python/training/saver.py:960: remove_checkpoint (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to delete files with this prefix.
+Tue, 11 Jan 2022 07:47:55 INFO ===> Epoch: 29, global_step: 12000, recall: 0.5886, precision: 0.7483, total_loss: 8.8614, loss_xy: 0.2212, loss_wh: 0.2112, loss_conf: 8.4290, loss_class: 0.0000
+Tue, 11 Jan 2022 07:48:01 INFO Epoch: 30, global_step: 12050, lr: 0.00063824, total_loss: 0.2549, loss_xy: 0.0814, loss_wh: 0.0538, loss_conf: 0.1197, loss_class: 0.0000
+Tue, 11 Jan 2022 07:48:07 INFO Epoch: 30, global_step: 12100, lr: 0.00063824, total_loss: 0.2477, loss_xy: 0.0570, loss_wh: 0.0538, loss_conf: 0.1369, loss_class: 0.0000
+Tue, 11 Jan 2022 07:48:13 INFO Epoch: 30, global_step: 12150, lr: 0.00063824, total_loss: 0.3222, loss_xy: 0.0651, loss_wh: 0.0752, loss_conf: 0.1819, loss_class: 0.0000
+Tue, 11 Jan 2022 07:48:19 INFO Epoch: 30, global_step: 12200, lr: 0.00063824, total_loss: 0.2026, loss_xy: 0.0489, loss_wh: 0.0623, loss_conf: 0.0914, loss_class: 0.0000
+Tue, 11 Jan 2022 07:48:26 INFO Epoch: 30, global_step: 12250, lr: 0.00063824, total_loss: 0.1748, loss_xy: 0.0246, loss_wh: 0.0334, loss_conf: 0.1168, loss_class: 0.0000
+Tue, 11 Jan 2022 07:48:32 INFO Epoch: 30, global_step: 12300, lr: 0.00063824, total_loss: 0.1823, loss_xy: 0.0535, loss_wh: 0.0561, loss_conf: 0.0727, loss_class: 0.0000
+Tue, 11 Jan 2022 07:48:38 INFO Epoch: 30, global_step: 12350, lr: 0.00063824, total_loss: 0.2343, loss_xy: 0.0379, loss_wh: 0.0645, loss_conf: 0.1319, loss_class: 0.0000
+Tue, 11 Jan 2022 07:48:44 INFO Epoch: 30, global_step: 12400, lr: 0.00063824, total_loss: 0.4878, loss_xy: 0.0537, loss_wh: 0.0767, loss_conf: 0.3573, loss_class: 0.0000
+Tue, 11 Jan 2022 07:48:50 INFO Epoch: 31, global_step: 12450, lr: 0.00061271, total_loss: 0.3259, loss_xy: 0.0695, loss_wh: 0.0716, loss_conf: 0.1848, loss_class: 0.0000
+Tue, 11 Jan 2022 07:48:56 INFO Epoch: 31, global_step: 12500, lr: 0.00061271, total_loss: 0.1831, loss_xy: 0.0409, loss_wh: 0.0676, loss_conf: 0.0746, loss_class: 0.0000
+Tue, 11 Jan 2022 07:48:57 INFO ===> batch recall: 0.9767, batch precision: 0.9545 <===
+Tue, 11 Jan 2022 07:49:03 INFO Epoch: 31, global_step: 12550, lr: 0.00061271, total_loss: 0.3096, loss_xy: 0.0499, loss_wh: 0.0587, loss_conf: 0.2010, loss_class: 0.0000
+Tue, 11 Jan 2022 07:49:09 INFO Epoch: 31, global_step: 12600, lr: 0.00061271, total_loss: 0.3535, loss_xy: 0.0530, loss_wh: 0.0519, loss_conf: 0.2486, loss_class: 0.0000
+Tue, 11 Jan 2022 07:49:15 INFO Epoch: 31, global_step: 12650, lr: 0.00061271, total_loss: 0.2260, loss_xy: 0.0642, loss_wh: 0.0616, loss_conf: 0.1002, loss_class: 0.0000
+Tue, 11 Jan 2022 07:49:21 INFO Epoch: 31, global_step: 12700, lr: 0.00061271, total_loss: 0.2152, loss_xy: 0.0314, loss_wh: 0.0830, loss_conf: 0.1008, loss_class: 0.0000
+Tue, 11 Jan 2022 07:49:27 INFO Epoch: 31, global_step: 12750, lr: 0.00061271, total_loss: 0.3146, loss_xy: 0.0618, loss_wh: 0.0705, loss_conf: 0.1823, loss_class: 0.0000
+Tue, 11 Jan 2022 07:49:33 INFO Epoch: 31, global_step: 12800, lr: 0.00061271, total_loss: 0.5033, loss_xy: 0.0499, loss_wh: 0.0603, loss_conf: 0.3931, loss_class: 0.0000
+Tue, 11 Jan 2022 07:49:39 INFO Epoch: 32, global_step: 12850, lr: 0.00061271, total_loss: 0.1735, loss_xy: 0.0575, loss_wh: 0.0543, loss_conf: 0.0618, loss_class: 0.0000
+Tue, 11 Jan 2022 07:49:45 INFO Epoch: 32, global_step: 12900, lr: 0.00061271, total_loss: 0.2064, loss_xy: 0.0498, loss_wh: 0.0446, loss_conf: 0.1119, loss_class: 0.0000
+Tue, 11 Jan 2022 07:49:52 INFO Epoch: 32, global_step: 12950, lr: 0.00061271, total_loss: 0.1346, loss_xy: 0.0323, loss_wh: 0.0481, loss_conf: 0.0541, loss_class: 0.0000
+Tue, 11 Jan 2022 07:49:58 INFO Epoch: 32, global_step: 13000, lr: 0.00061271, total_loss: 0.2991, loss_xy: 0.0951, loss_wh: 0.0657, loss_conf: 0.1383, loss_class: 0.0000
+Tue, 11 Jan 2022 07:49:58 INFO ===> batch recall: 0.9508, batch precision: 0.9667 <===
+Tue, 11 Jan 2022 07:50:04 INFO Epoch: 32, global_step: 13050, lr: 0.00061271, total_loss: 0.1334, loss_xy: 0.0407, loss_wh: 0.0358, loss_conf: 0.0569, loss_class: 0.0000
+Tue, 11 Jan 2022 07:50:10 INFO Epoch: 32, global_step: 13100, lr: 0.00061271, total_loss: 0.2065, loss_xy: 0.0365, loss_wh: 0.0441, loss_conf: 0.1259, loss_class: 0.0000
+Tue, 11 Jan 2022 07:50:16 INFO Epoch: 32, global_step: 13150, lr: 0.00061271, total_loss: 0.3845, loss_xy: 0.0522, loss_wh: 0.0545, loss_conf: 0.2778, loss_class: 0.0000
+Tue, 11 Jan 2022 07:50:22 INFO Epoch: 32, global_step: 13200, lr: 0.00061271, total_loss: 0.2833, loss_xy: 0.0441, loss_wh: 0.0519, loss_conf: 0.1873, loss_class: 0.0000
+Tue, 11 Jan 2022 07:50:29 INFO Epoch: 33, global_step: 13250, lr: 0.00061271, total_loss: 0.1254, loss_xy: 0.0251, loss_wh: 0.0340, loss_conf: 0.0663, loss_class: 0.0000
+Tue, 11 Jan 2022 07:50:35 INFO Epoch: 33, global_step: 13300, lr: 0.00061271, total_loss: 0.2456, loss_xy: 0.0509, loss_wh: 0.0475, loss_conf: 0.1472, loss_class: 0.0000
+Tue, 11 Jan 2022 07:50:41 INFO Epoch: 33, global_step: 13350, lr: 0.00061271, total_loss: 0.1108, loss_xy: 0.0395, loss_wh: 0.0284, loss_conf: 0.0430, loss_class: 0.0000
+Tue, 11 Jan 2022 07:50:47 INFO Epoch: 33, global_step: 13400, lr: 0.00061271, total_loss: 0.1872, loss_xy: 0.0443, loss_wh: 0.0483, loss_conf: 0.0946, loss_class: 0.0000
+Tue, 11 Jan 2022 07:50:53 INFO Epoch: 33, global_step: 13450, lr: 0.00058820, total_loss: 0.3022, loss_xy: 0.0468, loss_wh: 0.0611, loss_conf: 0.1942, loss_class: 0.0000
+Tue, 11 Jan 2022 07:50:59 INFO Epoch: 33, global_step: 13500, lr: 0.00058820, total_loss: 0.2052, loss_xy: 0.0529, loss_wh: 0.0504, loss_conf: 0.1019, loss_class: 0.0000
+Tue, 11 Jan 2022 07:50:59 INFO ===> batch recall: 1.0000, batch precision: 0.9762 <===
+Tue, 11 Jan 2022 07:51:05 INFO Epoch: 33, global_step: 13550, lr: 0.00058820, total_loss: 0.2150, loss_xy: 0.0538, loss_wh: 0.0536, loss_conf: 0.1077, loss_class: 0.0000
+Tue, 11 Jan 2022 07:51:11 INFO Epoch: 33, global_step: 13600, lr: 0.00058820, total_loss: 0.2336, loss_xy: 0.0639, loss_wh: 0.0909, loss_conf: 0.0788, loss_class: 0.0000
+Tue, 11 Jan 2022 07:51:18 INFO Epoch: 34, global_step: 13650, lr: 0.00058820, total_loss: 0.2284, loss_xy: 0.0586, loss_wh: 0.0713, loss_conf: 0.0985, loss_class: 0.0000
+Tue, 11 Jan 2022 07:51:24 INFO Epoch: 34, global_step: 13700, lr: 0.00058820, total_loss: 0.1973, loss_xy: 0.0365, loss_wh: 0.0591, loss_conf: 0.1017, loss_class: 0.0000
+Tue, 11 Jan 2022 07:51:31 INFO Epoch: 34, global_step: 13750, lr: 0.00058820, total_loss: 0.0841, loss_xy: 0.0287, loss_wh: 0.0322, loss_conf: 0.0232, loss_class: 0.0000
+Tue, 11 Jan 2022 07:51:37 INFO Epoch: 34, global_step: 13800, lr: 0.00058820, total_loss: 0.1979, loss_xy: 0.0264, loss_wh: 0.0603, loss_conf: 0.1111, loss_class: 0.0000
+Tue, 11 Jan 2022 07:51:44 INFO Epoch: 34, global_step: 13850, lr: 0.00058820, total_loss: 0.1994, loss_xy: 0.0465, loss_wh: 0.0342, loss_conf: 0.1188, loss_class: 0.0000
+Tue, 11 Jan 2022 07:51:50 INFO Epoch: 34, global_step: 13900, lr: 0.00058820, total_loss: 0.1732, loss_xy: 0.0422, loss_wh: 0.0509, loss_conf: 0.0801, loss_class: 0.0000
+Tue, 11 Jan 2022 07:51:56 INFO Epoch: 34, global_step: 13950, lr: 0.00058820, total_loss: 0.2883, loss_xy: 0.0468, loss_wh: 0.0667, loss_conf: 0.1748, loss_class: 0.0000
+Tue, 11 Jan 2022 07:52:03 INFO Epoch: 34, global_step: 14000, lr: 0.00058820, total_loss: 0.2021, loss_xy: 0.0745, loss_wh: 0.0484, loss_conf: 0.0792, loss_class: 0.0000
+Tue, 11 Jan 2022 07:52:03 INFO ===> batch recall: 0.9818, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 07:52:16 INFO ===> Epoch: 34, global_step: 14000, recall: 0.5454, precision: 0.8457, total_loss: 10.2685, loss_xy: 0.2118, loss_wh: 0.1973, loss_conf: 9.8594, loss_class: 0.0000
+Tue, 11 Jan 2022 07:52:22 INFO Epoch: 35, global_step: 14050, lr: 0.00058820, total_loss: 0.2617, loss_xy: 0.0410, loss_wh: 0.0291, loss_conf: 0.1917, loss_class: 0.0000
+Tue, 11 Jan 2022 07:52:28 INFO Epoch: 35, global_step: 14100, lr: 0.00058820, total_loss: 0.2462, loss_xy: 0.0395, loss_wh: 0.0507, loss_conf: 0.1560, loss_class: 0.0000
+Tue, 11 Jan 2022 07:52:35 INFO Epoch: 35, global_step: 14150, lr: 0.00058820, total_loss: 0.0679, loss_xy: 0.0293, loss_wh: 0.0291, loss_conf: 0.0095, loss_class: 0.0000
+Tue, 11 Jan 2022 07:52:41 INFO Epoch: 35, global_step: 14200, lr: 0.00058820, total_loss: 0.1443, loss_xy: 0.0353, loss_wh: 0.0455, loss_conf: 0.0635, loss_class: 0.0000
+Tue, 11 Jan 2022 07:52:48 INFO Epoch: 35, global_step: 14250, lr: 0.00058820, total_loss: 0.1906, loss_xy: 0.0455, loss_wh: 0.0380, loss_conf: 0.1072, loss_class: 0.0000
+Tue, 11 Jan 2022 07:52:54 INFO Epoch: 35, global_step: 14300, lr: 0.00058820, total_loss: 0.7452, loss_xy: 0.0704, loss_wh: 0.0793, loss_conf: 0.5955, loss_class: 0.0000
+Tue, 11 Jan 2022 07:53:01 INFO Epoch: 35, global_step: 14350, lr: 0.00058820, total_loss: 0.2849, loss_xy: 0.0379, loss_wh: 0.0822, loss_conf: 0.1647, loss_class: 0.0000
+Tue, 11 Jan 2022 07:53:07 INFO Epoch: 35, global_step: 14400, lr: 0.00058820, total_loss: 0.2253, loss_xy: 0.0623, loss_wh: 0.0601, loss_conf: 0.1028, loss_class: 0.0000
+Tue, 11 Jan 2022 07:53:14 INFO Epoch: 36, global_step: 14450, lr: 0.00056467, total_loss: 0.0944, loss_xy: 0.0361, loss_wh: 0.0335, loss_conf: 0.0248, loss_class: 0.0000
+Tue, 11 Jan 2022 07:53:20 INFO Epoch: 36, global_step: 14500, lr: 0.00056467, total_loss: 0.1203, loss_xy: 0.0388, loss_wh: 0.0410, loss_conf: 0.0406, loss_class: 0.0000
+Tue, 11 Jan 2022 07:53:20 INFO ===> batch recall: 1.0000, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 07:53:26 INFO Epoch: 36, global_step: 14550, lr: 0.00056467, total_loss: 0.0942, loss_xy: 0.0378, loss_wh: 0.0321, loss_conf: 0.0243, loss_class: 0.0000
+Tue, 11 Jan 2022 07:53:33 INFO Epoch: 36, global_step: 14600, lr: 0.00056467, total_loss: 0.1254, loss_xy: 0.0307, loss_wh: 0.0448, loss_conf: 0.0499, loss_class: 0.0000
+Tue, 11 Jan 2022 07:53:39 INFO Epoch: 36, global_step: 14650, lr: 0.00056467, total_loss: 0.1936, loss_xy: 0.0466, loss_wh: 0.0418, loss_conf: 0.1053, loss_class: 0.0000
+Tue, 11 Jan 2022 07:53:46 INFO Epoch: 36, global_step: 14700, lr: 0.00056467, total_loss: 0.1545, loss_xy: 0.0402, loss_wh: 0.0325, loss_conf: 0.0818, loss_class: 0.0000
+Tue, 11 Jan 2022 07:53:52 INFO Epoch: 36, global_step: 14750, lr: 0.00056467, total_loss: 0.1365, loss_xy: 0.0360, loss_wh: 0.0313, loss_conf: 0.0692, loss_class: 0.0000
+Tue, 11 Jan 2022 07:53:58 INFO Epoch: 36, global_step: 14800, lr: 0.00056467, total_loss: 0.2612, loss_xy: 0.0565, loss_wh: 0.0734, loss_conf: 0.1313, loss_class: 0.0000
+Tue, 11 Jan 2022 07:54:05 INFO Epoch: 37, global_step: 14850, lr: 0.00056467, total_loss: 0.1997, loss_xy: 0.0254, loss_wh: 0.0198, loss_conf: 0.1545, loss_class: 0.0000
+Tue, 11 Jan 2022 07:54:11 INFO Epoch: 37, global_step: 14900, lr: 0.00056467, total_loss: 0.1927, loss_xy: 0.0261, loss_wh: 0.0298, loss_conf: 0.1368, loss_class: 0.0000
+Tue, 11 Jan 2022 07:54:18 INFO Epoch: 37, global_step: 14950, lr: 0.00056467, total_loss: 0.2718, loss_xy: 0.0369, loss_wh: 0.0375, loss_conf: 0.1974, loss_class: 0.0000
+Tue, 11 Jan 2022 07:54:24 INFO Epoch: 37, global_step: 15000, lr: 0.00056467, total_loss: 0.0755, loss_xy: 0.0306, loss_wh: 0.0275, loss_conf: 0.0173, loss_class: 0.0000
+Tue, 11 Jan 2022 07:54:24 INFO ===> batch recall: 1.0000, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 07:54:31 INFO Epoch: 37, global_step: 15050, lr: 0.00056467, total_loss: 0.1715, loss_xy: 0.0389, loss_wh: 0.0476, loss_conf: 0.0850, loss_class: 0.0000
+Tue, 11 Jan 2022 07:54:37 INFO Epoch: 37, global_step: 15100, lr: 0.00056467, total_loss: 0.3212, loss_xy: 0.0301, loss_wh: 0.0339, loss_conf: 0.2572, loss_class: 0.0000
+Tue, 11 Jan 2022 07:54:44 INFO Epoch: 37, global_step: 15150, lr: 0.00056467, total_loss: 0.1196, loss_xy: 0.0534, loss_wh: 0.0423, loss_conf: 0.0238, loss_class: 0.0000
+Tue, 11 Jan 2022 07:54:50 INFO Epoch: 37, global_step: 15200, lr: 0.00056467, total_loss: 0.1914, loss_xy: 0.0750, loss_wh: 0.0716, loss_conf: 0.0448, loss_class: 0.0000
+Tue, 11 Jan 2022 07:54:56 INFO Epoch: 38, global_step: 15250, lr: 0.00056467, total_loss: 0.1522, loss_xy: 0.0349, loss_wh: 0.0363, loss_conf: 0.0810, loss_class: 0.0000
+Tue, 11 Jan 2022 07:55:03 INFO Epoch: 38, global_step: 15300, lr: 0.00056467, total_loss: 0.0577, loss_xy: 0.0219, loss_wh: 0.0242, loss_conf: 0.0115, loss_class: 0.0000
+Tue, 11 Jan 2022 07:55:09 INFO Epoch: 38, global_step: 15350, lr: 0.00056467, total_loss: 0.1275, loss_xy: 0.0315, loss_wh: 0.0367, loss_conf: 0.0592, loss_class: 0.0000
+Tue, 11 Jan 2022 07:55:16 INFO Epoch: 38, global_step: 15400, lr: 0.00056467, total_loss: 0.1707, loss_xy: 0.0250, loss_wh: 0.0361, loss_conf: 0.1096, loss_class: 0.0000
+Tue, 11 Jan 2022 07:55:22 INFO Epoch: 38, global_step: 15450, lr: 0.00054209, total_loss: 0.2331, loss_xy: 0.0402, loss_wh: 0.0358, loss_conf: 0.1570, loss_class: 0.0000
+Tue, 11 Jan 2022 07:55:28 INFO Epoch: 38, global_step: 15500, lr: 0.00054209, total_loss: 0.2265, loss_xy: 0.0440, loss_wh: 0.0628, loss_conf: 0.1197, loss_class: 0.0000
+Tue, 11 Jan 2022 07:55:28 INFO ===> batch recall: 0.9630, batch precision: 0.9811 <===
+Tue, 11 Jan 2022 07:55:34 INFO Epoch: 38, global_step: 15550, lr: 0.00054209, total_loss: 0.1534, loss_xy: 0.0408, loss_wh: 0.0572, loss_conf: 0.0554, loss_class: 0.0000
+Tue, 11 Jan 2022 07:55:40 INFO Epoch: 38, global_step: 15600, lr: 0.00054209, total_loss: 0.1346, loss_xy: 0.0433, loss_wh: 0.0363, loss_conf: 0.0551, loss_class: 0.0000
+Tue, 11 Jan 2022 07:55:47 INFO Epoch: 39, global_step: 15650, lr: 0.00054209, total_loss: 0.4517, loss_xy: 0.0795, loss_wh: 0.0815, loss_conf: 0.2907, loss_class: 0.0000
+Tue, 11 Jan 2022 07:55:53 INFO Epoch: 39, global_step: 15700, lr: 0.00054209, total_loss: 0.1214, loss_xy: 0.0333, loss_wh: 0.0536, loss_conf: 0.0345, loss_class: 0.0000
+Tue, 11 Jan 2022 07:55:59 INFO Epoch: 39, global_step: 15750, lr: 0.00054209, total_loss: 0.2330, loss_xy: 0.0485, loss_wh: 0.0475, loss_conf: 0.1370, loss_class: 0.0000
+Tue, 11 Jan 2022 07:56:05 INFO Epoch: 39, global_step: 15800, lr: 0.00054209, total_loss: 0.1035, loss_xy: 0.0283, loss_wh: 0.0263, loss_conf: 0.0489, loss_class: 0.0000
+Tue, 11 Jan 2022 07:56:11 INFO Epoch: 39, global_step: 15850, lr: 0.00054209, total_loss: 0.0807, loss_xy: 0.0274, loss_wh: 0.0335, loss_conf: 0.0199, loss_class: 0.0000
+Tue, 11 Jan 2022 07:56:17 INFO Epoch: 39, global_step: 15900, lr: 0.00054209, total_loss: 0.1536, loss_xy: 0.0400, loss_wh: 0.0404, loss_conf: 0.0732, loss_class: 0.0000
+Tue, 11 Jan 2022 07:56:23 INFO Epoch: 39, global_step: 15950, lr: 0.00054209, total_loss: 0.2720, loss_xy: 0.0426, loss_wh: 0.0694, loss_conf: 0.1600, loss_class: 0.0000
+Tue, 11 Jan 2022 07:56:30 INFO Epoch: 39, global_step: 16000, lr: 0.00054209, total_loss: 0.1487, loss_xy: 0.0532, loss_wh: 0.0484, loss_conf: 0.0471, loss_class: 0.0000
+Tue, 11 Jan 2022 07:56:30 INFO ===> batch recall: 0.9302, batch precision: 0.9302 <===
+Tue, 11 Jan 2022 07:56:42 INFO ===> Epoch: 39, global_step: 16000, recall: 0.5574, precision: 0.7847, total_loss: 11.1106, loss_xy: 0.2151, loss_wh: 0.1895, loss_conf: 10.7060, loss_class: 0.0000
+Tue, 11 Jan 2022 07:56:48 INFO Epoch: 40, global_step: 16050, lr: 0.00054209, total_loss: 0.0816, loss_xy: 0.0277, loss_wh: 0.0240, loss_conf: 0.0299, loss_class: 0.0000
+Tue, 11 Jan 2022 07:56:54 INFO Epoch: 40, global_step: 16100, lr: 0.00054209, total_loss: 0.1223, loss_xy: 0.0376, loss_wh: 0.0587, loss_conf: 0.0260, loss_class: 0.0000
+Tue, 11 Jan 2022 07:57:00 INFO Epoch: 40, global_step: 16150, lr: 0.00054209, total_loss: 0.6526, loss_xy: 0.0620, loss_wh: 0.0745, loss_conf: 0.5161, loss_class: 0.0000
+Tue, 11 Jan 2022 07:57:07 INFO Epoch: 40, global_step: 16200, lr: 0.00054209, total_loss: 0.1559, loss_xy: 0.0302, loss_wh: 0.0464, loss_conf: 0.0792, loss_class: 0.0000
+Tue, 11 Jan 2022 07:57:13 INFO Epoch: 40, global_step: 16250, lr: 0.00054209, total_loss: 0.2091, loss_xy: 0.0376, loss_wh: 0.0449, loss_conf: 0.1266, loss_class: 0.0000
+Tue, 11 Jan 2022 07:57:19 INFO Epoch: 40, global_step: 16300, lr: 0.00054209, total_loss: 0.1804, loss_xy: 0.0323, loss_wh: 0.0420, loss_conf: 0.1061, loss_class: 0.0000
+Tue, 11 Jan 2022 07:57:25 INFO Epoch: 40, global_step: 16350, lr: 0.00054209, total_loss: 0.1342, loss_xy: 0.0393, loss_wh: 0.0501, loss_conf: 0.0448, loss_class: 0.0000
+Tue, 11 Jan 2022 07:57:31 INFO Epoch: 40, global_step: 16400, lr: 0.00054209, total_loss: 0.2992, loss_xy: 0.0597, loss_wh: 0.0444, loss_conf: 0.1951, loss_class: 0.0000
+Tue, 11 Jan 2022 07:57:37 INFO Epoch: 41, global_step: 16450, lr: 0.00052040, total_loss: 0.1446, loss_xy: 0.0366, loss_wh: 0.0369, loss_conf: 0.0711, loss_class: 0.0000
+Tue, 11 Jan 2022 07:57:43 INFO Epoch: 41, global_step: 16500, lr: 0.00052040, total_loss: 0.2905, loss_xy: 0.0254, loss_wh: 0.0463, loss_conf: 0.2189, loss_class: 0.0000
+Tue, 11 Jan 2022 07:57:43 INFO ===> batch recall: 0.9744, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 07:57:49 INFO Epoch: 41, global_step: 16550, lr: 0.00052040, total_loss: 0.2131, loss_xy: 0.0649, loss_wh: 0.0459, loss_conf: 0.1023, loss_class: 0.0000
+Tue, 11 Jan 2022 07:57:55 INFO Epoch: 41, global_step: 16600, lr: 0.00052040, total_loss: 0.1521, loss_xy: 0.0417, loss_wh: 0.0525, loss_conf: 0.0579, loss_class: 0.0000
+Tue, 11 Jan 2022 07:58:02 INFO Epoch: 41, global_step: 16650, lr: 0.00052040, total_loss: 0.1568, loss_xy: 0.0417, loss_wh: 0.0325, loss_conf: 0.0826, loss_class: 0.0000
+Tue, 11 Jan 2022 07:58:08 INFO Epoch: 41, global_step: 16700, lr: 0.00052040, total_loss: 0.2659, loss_xy: 0.0337, loss_wh: 0.0473, loss_conf: 0.1850, loss_class: 0.0000
+Tue, 11 Jan 2022 07:58:14 INFO Epoch: 41, global_step: 16750, lr: 0.00052040, total_loss: 0.1057, loss_xy: 0.0267, loss_wh: 0.0361, loss_conf: 0.0429, loss_class: 0.0000
+Tue, 11 Jan 2022 07:58:20 INFO Epoch: 41, global_step: 16800, lr: 0.00052040, total_loss: 0.0937, loss_xy: 0.0284, loss_wh: 0.0382, loss_conf: 0.0272, loss_class: 0.0000
+Tue, 11 Jan 2022 07:58:26 INFO Epoch: 42, global_step: 16850, lr: 0.00052040, total_loss: 0.1244, loss_xy: 0.0344, loss_wh: 0.0431, loss_conf: 0.0469, loss_class: 0.0000
+Tue, 11 Jan 2022 07:58:33 INFO Epoch: 42, global_step: 16900, lr: 0.00052040, total_loss: 0.1276, loss_xy: 0.0382, loss_wh: 0.0348, loss_conf: 0.0545, loss_class: 0.0000
+Tue, 11 Jan 2022 07:58:39 INFO Epoch: 42, global_step: 16950, lr: 0.00052040, total_loss: 0.0859, loss_xy: 0.0283, loss_wh: 0.0379, loss_conf: 0.0197, loss_class: 0.0000
+Tue, 11 Jan 2022 07:58:45 INFO Epoch: 42, global_step: 17000, lr: 0.00052040, total_loss: 0.1061, loss_xy: 0.0331, loss_wh: 0.0306, loss_conf: 0.0425, loss_class: 0.0000
+Tue, 11 Jan 2022 07:58:45 INFO ===> batch recall: 1.0000, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 07:58:51 INFO Epoch: 42, global_step: 17050, lr: 0.00052040, total_loss: 0.3018, loss_xy: 0.0671, loss_wh: 0.0576, loss_conf: 0.1771, loss_class: 0.0000
+Tue, 11 Jan 2022 07:58:57 INFO Epoch: 42, global_step: 17100, lr: 0.00052040, total_loss: 0.1042, loss_xy: 0.0365, loss_wh: 0.0390, loss_conf: 0.0288, loss_class: 0.0000
+Tue, 11 Jan 2022 07:59:03 INFO Epoch: 42, global_step: 17150, lr: 0.00052040, total_loss: 0.1108, loss_xy: 0.0366, loss_wh: 0.0382, loss_conf: 0.0360, loss_class: 0.0000
+Tue, 11 Jan 2022 07:59:09 INFO Epoch: 42, global_step: 17200, lr: 0.00052040, total_loss: 0.0778, loss_xy: 0.0302, loss_wh: 0.0248, loss_conf: 0.0228, loss_class: 0.0000
+Tue, 11 Jan 2022 07:59:16 INFO Epoch: 43, global_step: 17250, lr: 0.00052040, total_loss: 0.2406, loss_xy: 0.0419, loss_wh: 0.0514, loss_conf: 0.1473, loss_class: 0.0000
+Tue, 11 Jan 2022 07:59:22 INFO Epoch: 43, global_step: 17300, lr: 0.00052040, total_loss: 0.1159, loss_xy: 0.0340, loss_wh: 0.0410, loss_conf: 0.0410, loss_class: 0.0000
+Tue, 11 Jan 2022 07:59:28 INFO Epoch: 43, global_step: 17350, lr: 0.00052040, total_loss: 0.0683, loss_xy: 0.0194, loss_wh: 0.0218, loss_conf: 0.0272, loss_class: 0.0000
+Tue, 11 Jan 2022 07:59:34 INFO Epoch: 43, global_step: 17400, lr: 0.00052040, total_loss: 0.1060, loss_xy: 0.0251, loss_wh: 0.0355, loss_conf: 0.0454, loss_class: 0.0000
+Tue, 11 Jan 2022 07:59:40 INFO Epoch: 43, global_step: 17450, lr: 0.00049959, total_loss: 0.0618, loss_xy: 0.0277, loss_wh: 0.0279, loss_conf: 0.0062, loss_class: 0.0000
+Tue, 11 Jan 2022 07:59:46 INFO Epoch: 43, global_step: 17500, lr: 0.00049959, total_loss: 0.1008, loss_xy: 0.0368, loss_wh: 0.0553, loss_conf: 0.0088, loss_class: 0.0000
+Tue, 11 Jan 2022 07:59:46 INFO ===> batch recall: 1.0000, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 07:59:52 INFO Epoch: 43, global_step: 17550, lr: 0.00049959, total_loss: 0.0826, loss_xy: 0.0384, loss_wh: 0.0311, loss_conf: 0.0132, loss_class: 0.0000
+Tue, 11 Jan 2022 07:59:58 INFO Epoch: 43, global_step: 17600, lr: 0.00049959, total_loss: 0.0606, loss_xy: 0.0225, loss_wh: 0.0323, loss_conf: 0.0058, loss_class: 0.0000
+Tue, 11 Jan 2022 08:00:05 INFO Epoch: 44, global_step: 17650, lr: 0.00049959, total_loss: 0.0736, loss_xy: 0.0250, loss_wh: 0.0311, loss_conf: 0.0175, loss_class: 0.0000
+Tue, 11 Jan 2022 08:00:11 INFO Epoch: 44, global_step: 17700, lr: 0.00049959, total_loss: 0.0952, loss_xy: 0.0270, loss_wh: 0.0242, loss_conf: 0.0439, loss_class: 0.0000
+Tue, 11 Jan 2022 08:00:17 INFO Epoch: 44, global_step: 17750, lr: 0.00049959, total_loss: 0.0414, loss_xy: 0.0176, loss_wh: 0.0201, loss_conf: 0.0037, loss_class: 0.0000
+Tue, 11 Jan 2022 08:00:23 INFO Epoch: 44, global_step: 17800, lr: 0.00049959, total_loss: 0.0639, loss_xy: 0.0242, loss_wh: 0.0356, loss_conf: 0.0041, loss_class: 0.0000
+Tue, 11 Jan 2022 08:00:29 INFO Epoch: 44, global_step: 17850, lr: 0.00049959, total_loss: 0.0733, loss_xy: 0.0285, loss_wh: 0.0354, loss_conf: 0.0094, loss_class: 0.0000
+Tue, 11 Jan 2022 08:00:35 INFO Epoch: 44, global_step: 17900, lr: 0.00049959, total_loss: 0.0622, loss_xy: 0.0269, loss_wh: 0.0267, loss_conf: 0.0086, loss_class: 0.0000
+Tue, 11 Jan 2022 08:00:41 INFO Epoch: 44, global_step: 17950, lr: 0.00049959, total_loss: 0.0804, loss_xy: 0.0196, loss_wh: 0.0350, loss_conf: 0.0258, loss_class: 0.0000
+Tue, 11 Jan 2022 08:00:47 INFO Epoch: 44, global_step: 18000, lr: 0.00049959, total_loss: 0.0590, loss_xy: 0.0196, loss_wh: 0.0223, loss_conf: 0.0172, loss_class: 0.0000
+Tue, 11 Jan 2022 08:00:47 INFO ===> batch recall: 1.0000, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 08:01:00 INFO ===> Epoch: 44, global_step: 18000, recall: 0.5816, precision: 0.8147, total_loss: 11.1198, loss_xy: 0.2077, loss_wh: 0.1747, loss_conf: 10.7375, loss_class: 0.0000
+Tue, 11 Jan 2022 08:01:06 INFO Epoch: 45, global_step: 18050, lr: 0.00049959, total_loss: 0.0383, loss_xy: 0.0092, loss_wh: 0.0261, loss_conf: 0.0030, loss_class: 0.0000
+Tue, 11 Jan 2022 08:01:12 INFO Epoch: 45, global_step: 18100, lr: 0.00049959, total_loss: 0.0398, loss_xy: 0.0194, loss_wh: 0.0182, loss_conf: 0.0022, loss_class: 0.0000
+Tue, 11 Jan 2022 08:01:18 INFO Epoch: 45, global_step: 18150, lr: 0.00049959, total_loss: 0.0717, loss_xy: 0.0250, loss_wh: 0.0411, loss_conf: 0.0055, loss_class: 0.0000
+Tue, 11 Jan 2022 08:01:24 INFO Epoch: 45, global_step: 18200, lr: 0.00049959, total_loss: 0.0526, loss_xy: 0.0165, loss_wh: 0.0294, loss_conf: 0.0067, loss_class: 0.0000
+Tue, 11 Jan 2022 08:01:30 INFO Epoch: 45, global_step: 18250, lr: 0.00049959, total_loss: 0.0567, loss_xy: 0.0233, loss_wh: 0.0203, loss_conf: 0.0132, loss_class: 0.0000
+Tue, 11 Jan 2022 08:01:36 INFO Epoch: 45, global_step: 18300, lr: 0.00049959, total_loss: 0.0836, loss_xy: 0.0280, loss_wh: 0.0412, loss_conf: 0.0143, loss_class: 0.0000
+Tue, 11 Jan 2022 08:01:42 INFO Epoch: 45, global_step: 18350, lr: 0.00049959, total_loss: 0.0401, loss_xy: 0.0168, loss_wh: 0.0196, loss_conf: 0.0038, loss_class: 0.0000
+Tue, 11 Jan 2022 08:01:49 INFO Epoch: 45, global_step: 18400, lr: 0.00049959, total_loss: 0.0709, loss_xy: 0.0281, loss_wh: 0.0386, loss_conf: 0.0041, loss_class: 0.0000
+Tue, 11 Jan 2022 08:01:55 INFO Epoch: 46, global_step: 18450, lr: 0.00047960, total_loss: 0.0588, loss_xy: 0.0223, loss_wh: 0.0276, loss_conf: 0.0089, loss_class: 0.0000
+Tue, 11 Jan 2022 08:02:01 INFO Epoch: 46, global_step: 18500, lr: 0.00047960, total_loss: 0.0527, loss_xy: 0.0239, loss_wh: 0.0217, loss_conf: 0.0072, loss_class: 0.0000
+Tue, 11 Jan 2022 08:02:01 INFO ===> batch recall: 1.0000, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 08:02:07 INFO Epoch: 46, global_step: 18550, lr: 0.00047960, total_loss: 0.0828, loss_xy: 0.0319, loss_wh: 0.0204, loss_conf: 0.0305, loss_class: 0.0000
+Tue, 11 Jan 2022 08:02:13 INFO Epoch: 46, global_step: 18600, lr: 0.00047960, total_loss: 0.0690, loss_xy: 0.0238, loss_wh: 0.0311, loss_conf: 0.0141, loss_class: 0.0000
+Tue, 11 Jan 2022 08:02:19 INFO Epoch: 46, global_step: 18650, lr: 0.00047960, total_loss: 0.0514, loss_xy: 0.0184, loss_wh: 0.0247, loss_conf: 0.0083, loss_class: 0.0000
+Tue, 11 Jan 2022 08:02:26 INFO Epoch: 46, global_step: 18700, lr: 0.00047960, total_loss: 0.1710, loss_xy: 0.0566, loss_wh: 0.0441, loss_conf: 0.0702, loss_class: 0.0000
+Tue, 11 Jan 2022 08:02:32 INFO Epoch: 46, global_step: 18750, lr: 0.00047960, total_loss: 0.0651, loss_xy: 0.0209, loss_wh: 0.0260, loss_conf: 0.0183, loss_class: 0.0000
+Tue, 11 Jan 2022 08:02:38 INFO Epoch: 46, global_step: 18800, lr: 0.00047960, total_loss: 0.1125, loss_xy: 0.0215, loss_wh: 0.0385, loss_conf: 0.0526, loss_class: 0.0000
+Tue, 11 Jan 2022 08:02:44 INFO Epoch: 47, global_step: 18850, lr: 0.00047960, total_loss: 0.3190, loss_xy: 0.0262, loss_wh: 0.0476, loss_conf: 0.2452, loss_class: 0.0000
+Tue, 11 Jan 2022 08:02:50 INFO Epoch: 47, global_step: 18900, lr: 0.00047960, total_loss: 0.1965, loss_xy: 0.0296, loss_wh: 0.0229, loss_conf: 0.1440, loss_class: 0.0000
+Tue, 11 Jan 2022 08:02:56 INFO Epoch: 47, global_step: 18950, lr: 0.00047960, total_loss: 0.4772, loss_xy: 0.0479, loss_wh: 0.0518, loss_conf: 0.3774, loss_class: 0.0000
+Tue, 11 Jan 2022 08:03:02 INFO Epoch: 47, global_step: 19000, lr: 0.00047960, total_loss: 0.5219, loss_xy: 0.0781, loss_wh: 0.0819, loss_conf: 0.3619, loss_class: 0.0000
+Tue, 11 Jan 2022 08:03:02 INFO ===> batch recall: 0.9747, batch precision: 0.9872 <===
+Tue, 11 Jan 2022 08:03:09 INFO Epoch: 47, global_step: 19050, lr: 0.00047960, total_loss: 0.1744, loss_xy: 0.0342, loss_wh: 0.0333, loss_conf: 0.1069, loss_class: 0.0000
+Tue, 11 Jan 2022 08:03:15 INFO Epoch: 47, global_step: 19100, lr: 0.00047960, total_loss: 0.1302, loss_xy: 0.0439, loss_wh: 0.0387, loss_conf: 0.0476, loss_class: 0.0000
+Tue, 11 Jan 2022 08:03:21 INFO Epoch: 47, global_step: 19150, lr: 0.00047960, total_loss: 0.0983, loss_xy: 0.0300, loss_wh: 0.0334, loss_conf: 0.0349, loss_class: 0.0000
+Tue, 11 Jan 2022 08:03:27 INFO Epoch: 47, global_step: 19200, lr: 0.00047960, total_loss: 0.1724, loss_xy: 0.0490, loss_wh: 0.0447, loss_conf: 0.0787, loss_class: 0.0000
+Tue, 11 Jan 2022 08:03:33 INFO Epoch: 48, global_step: 19250, lr: 0.00047960, total_loss: 0.1258, loss_xy: 0.0327, loss_wh: 0.0283, loss_conf: 0.0648, loss_class: 0.0000
+Tue, 11 Jan 2022 08:03:40 INFO Epoch: 48, global_step: 19300, lr: 0.00047960, total_loss: 0.1632, loss_xy: 0.0391, loss_wh: 0.0262, loss_conf: 0.0979, loss_class: 0.0000
+Tue, 11 Jan 2022 08:03:46 INFO Epoch: 48, global_step: 19350, lr: 0.00047960, total_loss: 0.3616, loss_xy: 0.0467, loss_wh: 0.0466, loss_conf: 0.2684, loss_class: 0.0000
+Tue, 11 Jan 2022 08:03:52 INFO Epoch: 48, global_step: 19400, lr: 0.00047960, total_loss: 0.0576, loss_xy: 0.0216, loss_wh: 0.0220, loss_conf: 0.0141, loss_class: 0.0000
+Tue, 11 Jan 2022 08:03:58 INFO Epoch: 48, global_step: 19450, lr: 0.00046042, total_loss: 0.1053, loss_xy: 0.0400, loss_wh: 0.0320, loss_conf: 0.0333, loss_class: 0.0000
+Tue, 11 Jan 2022 08:04:04 INFO Epoch: 48, global_step: 19500, lr: 0.00046042, total_loss: 0.0888, loss_xy: 0.0300, loss_wh: 0.0282, loss_conf: 0.0306, loss_class: 0.0000
+Tue, 11 Jan 2022 08:04:04 INFO ===> batch recall: 1.0000, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 08:04:10 INFO Epoch: 48, global_step: 19550, lr: 0.00046042, total_loss: 0.1670, loss_xy: 0.0480, loss_wh: 0.0712, loss_conf: 0.0478, loss_class: 0.0000
+Tue, 11 Jan 2022 08:04:16 INFO Epoch: 48, global_step: 19600, lr: 0.00046042, total_loss: 0.1328, loss_xy: 0.0308, loss_wh: 0.0336, loss_conf: 0.0684, loss_class: 0.0000
+Tue, 11 Jan 2022 08:04:23 INFO Epoch: 49, global_step: 19650, lr: 0.00046042, total_loss: 0.0346, loss_xy: 0.0185, loss_wh: 0.0142, loss_conf: 0.0018, loss_class: 0.0000
+Tue, 11 Jan 2022 08:04:29 INFO Epoch: 49, global_step: 19700, lr: 0.00046042, total_loss: 0.1128, loss_xy: 0.0228, loss_wh: 0.0316, loss_conf: 0.0584, loss_class: 0.0000
+Tue, 11 Jan 2022 08:04:35 INFO Epoch: 49, global_step: 19750, lr: 0.00046042, total_loss: 0.2089, loss_xy: 0.0334, loss_wh: 0.0341, loss_conf: 0.1414, loss_class: 0.0000
+Tue, 11 Jan 2022 08:04:41 INFO Epoch: 49, global_step: 19800, lr: 0.00046042, total_loss: 0.0779, loss_xy: 0.0289, loss_wh: 0.0294, loss_conf: 0.0196, loss_class: 0.0000
+Tue, 11 Jan 2022 08:04:47 INFO Epoch: 49, global_step: 19850, lr: 0.00046042, total_loss: 0.2480, loss_xy: 0.0374, loss_wh: 0.0406, loss_conf: 0.1701, loss_class: 0.0000
+Tue, 11 Jan 2022 08:04:53 INFO Epoch: 49, global_step: 19900, lr: 0.00046042, total_loss: 0.0608, loss_xy: 0.0276, loss_wh: 0.0276, loss_conf: 0.0056, loss_class: 0.0000
+Tue, 11 Jan 2022 08:04:59 INFO Epoch: 49, global_step: 19950, lr: 0.00046042, total_loss: 0.0474, loss_xy: 0.0158, loss_wh: 0.0258, loss_conf: 0.0058, loss_class: 0.0000
+Tue, 11 Jan 2022 08:05:06 INFO Epoch: 49, global_step: 20000, lr: 0.00046042, total_loss: 0.1229, loss_xy: 0.0328, loss_wh: 0.0234, loss_conf: 0.0667, loss_class: 0.0000
+Tue, 11 Jan 2022 08:05:06 INFO ===> batch recall: 1.0000, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 08:05:19 INFO ===> Epoch: 49, global_step: 20000, recall: 0.5217, precision: 0.8668, total_loss: 12.6258, loss_xy: 0.2109, loss_wh: 0.1692, loss_conf: 12.2456, loss_class: 0.0000
+Tue, 11 Jan 2022 08:05:24 INFO Epoch: 49, global_step: 20050, lr: 0.00046042, total_loss: 0.1525, loss_xy: 0.0153, loss_wh: 0.0337, loss_conf: 0.1035, loss_class: 0.0000
+Tue, 11 Jan 2022 08:05:30 INFO Epoch: 50, global_step: 20100, lr: 0.00046042, total_loss: 0.0430, loss_xy: 0.0174, loss_wh: 0.0172, loss_conf: 0.0085, loss_class: 0.0000
+Tue, 11 Jan 2022 08:05:36 INFO Epoch: 50, global_step: 20150, lr: 0.00046042, total_loss: 0.0563, loss_xy: 0.0206, loss_wh: 0.0282, loss_conf: 0.0074, loss_class: 0.0000
+Tue, 11 Jan 2022 08:05:43 INFO Epoch: 50, global_step: 20200, lr: 0.00046042, total_loss: 0.3777, loss_xy: 0.0228, loss_wh: 0.0264, loss_conf: 0.3285, loss_class: 0.0000
+Tue, 11 Jan 2022 08:05:49 INFO Epoch: 50, global_step: 20250, lr: 0.00046042, total_loss: 0.0547, loss_xy: 0.0167, loss_wh: 0.0228, loss_conf: 0.0152, loss_class: 0.0000
+Tue, 11 Jan 2022 08:05:55 INFO Epoch: 50, global_step: 20300, lr: 0.00046042, total_loss: 0.0527, loss_xy: 0.0200, loss_wh: 0.0219, loss_conf: 0.0108, loss_class: 0.0000
+Tue, 11 Jan 2022 08:06:01 INFO Epoch: 50, global_step: 20350, lr: 0.00046042, total_loss: 0.1463, loss_xy: 0.0191, loss_wh: 0.0262, loss_conf: 0.1010, loss_class: 0.0000
+Tue, 11 Jan 2022 08:06:07 INFO Epoch: 50, global_step: 20400, lr: 0.00046042, total_loss: 0.1880, loss_xy: 0.0399, loss_wh: 0.0312, loss_conf: 0.1169, loss_class: 0.0000
+Tue, 11 Jan 2022 08:06:13 INFO Epoch: 50, global_step: 20450, lr: 0.00044200, total_loss: 0.0876, loss_xy: 0.0221, loss_wh: 0.0270, loss_conf: 0.0385, loss_class: 0.0000
+Tue, 11 Jan 2022 08:06:20 INFO Epoch: 51, global_step: 20500, lr: 0.00044200, total_loss: 0.0486, loss_xy: 0.0169, loss_wh: 0.0244, loss_conf: 0.0074, loss_class: 0.0000
+Tue, 11 Jan 2022 08:06:20 INFO ===> batch recall: 0.9773, batch precision: 0.9773 <===
+Tue, 11 Jan 2022 08:06:26 INFO Epoch: 51, global_step: 20550, lr: 0.00044200, total_loss: 0.0473, loss_xy: 0.0161, loss_wh: 0.0239, loss_conf: 0.0073, loss_class: 0.0000
+Tue, 11 Jan 2022 08:06:32 INFO Epoch: 51, global_step: 20600, lr: 0.00044200, total_loss: 0.0418, loss_xy: 0.0151, loss_wh: 0.0173, loss_conf: 0.0095, loss_class: 0.0000
+Tue, 11 Jan 2022 08:06:38 INFO Epoch: 51, global_step: 20650, lr: 0.00044200, total_loss: 0.0462, loss_xy: 0.0147, loss_wh: 0.0267, loss_conf: 0.0048, loss_class: 0.0000
+Tue, 11 Jan 2022 08:06:44 INFO Epoch: 51, global_step: 20700, lr: 0.00044200, total_loss: 0.0969, loss_xy: 0.0331, loss_wh: 0.0413, loss_conf: 0.0225, loss_class: 0.0000
+Tue, 11 Jan 2022 08:06:50 INFO Epoch: 51, global_step: 20750, lr: 0.00044200, total_loss: 0.0634, loss_xy: 0.0281, loss_wh: 0.0302, loss_conf: 0.0051, loss_class: 0.0000
+Tue, 11 Jan 2022 08:06:56 INFO Epoch: 51, global_step: 20800, lr: 0.00044200, total_loss: 0.0390, loss_xy: 0.0168, loss_wh: 0.0183, loss_conf: 0.0038, loss_class: 0.0000
+Tue, 11 Jan 2022 08:07:03 INFO Epoch: 51, global_step: 20850, lr: 0.00044200, total_loss: 0.0638, loss_xy: 0.0209, loss_wh: 0.0272, loss_conf: 0.0158, loss_class: 0.0000
+Tue, 11 Jan 2022 08:07:09 INFO Epoch: 52, global_step: 20900, lr: 0.00044200, total_loss: 0.0499, loss_xy: 0.0231, loss_wh: 0.0219, loss_conf: 0.0050, loss_class: 0.0000
+Tue, 11 Jan 2022 08:07:15 INFO Epoch: 52, global_step: 20950, lr: 0.00044200, total_loss: 0.0659, loss_xy: 0.0216, loss_wh: 0.0230, loss_conf: 0.0214, loss_class: 0.0000
+Tue, 11 Jan 2022 08:07:21 INFO Epoch: 52, global_step: 21000, lr: 0.00044200, total_loss: 0.0734, loss_xy: 0.0223, loss_wh: 0.0253, loss_conf: 0.0258, loss_class: 0.0000
+Tue, 11 Jan 2022 08:07:21 INFO ===> batch recall: 1.0000, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 08:07:27 INFO Epoch: 52, global_step: 21050, lr: 0.00044200, total_loss: 0.0534, loss_xy: 0.0201, loss_wh: 0.0222, loss_conf: 0.0111, loss_class: 0.0000
+Tue, 11 Jan 2022 08:07:33 INFO Epoch: 52, global_step: 21100, lr: 0.00044200, total_loss: 0.0616, loss_xy: 0.0239, loss_wh: 0.0146, loss_conf: 0.0230, loss_class: 0.0000
+Tue, 11 Jan 2022 08:07:40 INFO Epoch: 52, global_step: 21150, lr: 0.00044200, total_loss: 0.0779, loss_xy: 0.0258, loss_wh: 0.0439, loss_conf: 0.0081, loss_class: 0.0000
+Tue, 11 Jan 2022 08:07:46 INFO Epoch: 52, global_step: 21200, lr: 0.00044200, total_loss: 0.1347, loss_xy: 0.0330, loss_wh: 0.0317, loss_conf: 0.0701, loss_class: 0.0000
+Tue, 11 Jan 2022 08:07:52 INFO Epoch: 52, global_step: 21250, lr: 0.00044200, total_loss: 0.4269, loss_xy: 0.0559, loss_wh: 0.0416, loss_conf: 0.3294, loss_class: 0.0000
+Tue, 11 Jan 2022 08:07:58 INFO Epoch: 53, global_step: 21300, lr: 0.00044200, total_loss: 0.1110, loss_xy: 0.0263, loss_wh: 0.0358, loss_conf: 0.0489, loss_class: 0.0000
+Tue, 11 Jan 2022 08:08:04 INFO Epoch: 53, global_step: 21350, lr: 0.00044200, total_loss: 0.1223, loss_xy: 0.0471, loss_wh: 0.0397, loss_conf: 0.0355, loss_class: 0.0000
+Tue, 11 Jan 2022 08:08:10 INFO Epoch: 53, global_step: 21400, lr: 0.00044200, total_loss: 0.0728, loss_xy: 0.0240, loss_wh: 0.0284, loss_conf: 0.0205, loss_class: 0.0000
+Tue, 11 Jan 2022 08:08:16 INFO Epoch: 53, global_step: 21450, lr: 0.00042432, total_loss: 0.1294, loss_xy: 0.0334, loss_wh: 0.0336, loss_conf: 0.0625, loss_class: 0.0000
+Tue, 11 Jan 2022 08:08:23 INFO Epoch: 53, global_step: 21500, lr: 0.00042432, total_loss: 0.1306, loss_xy: 0.0233, loss_wh: 0.0372, loss_conf: 0.0700, loss_class: 0.0000
+Tue, 11 Jan 2022 08:08:23 INFO ===> batch recall: 0.9821, batch precision: 0.9821 <===
+Tue, 11 Jan 2022 08:08:29 INFO Epoch: 53, global_step: 21550, lr: 0.00042432, total_loss: 0.2002, loss_xy: 0.0371, loss_wh: 0.0490, loss_conf: 0.1142, loss_class: 0.0000
+Tue, 11 Jan 2022 08:08:35 INFO Epoch: 53, global_step: 21600, lr: 0.00042432, total_loss: 0.0634, loss_xy: 0.0183, loss_wh: 0.0336, loss_conf: 0.0115, loss_class: 0.0000
+Tue, 11 Jan 2022 08:08:41 INFO Epoch: 53, global_step: 21650, lr: 0.00042432, total_loss: 0.0672, loss_xy: 0.0150, loss_wh: 0.0209, loss_conf: 0.0313, loss_class: 0.0000
+Tue, 11 Jan 2022 08:08:47 INFO Epoch: 54, global_step: 21700, lr: 0.00042432, total_loss: 0.0998, loss_xy: 0.0424, loss_wh: 0.0362, loss_conf: 0.0212, loss_class: 0.0000
+Tue, 11 Jan 2022 08:08:53 INFO Epoch: 54, global_step: 21750, lr: 0.00042432, total_loss: 0.0482, loss_xy: 0.0201, loss_wh: 0.0251, loss_conf: 0.0030, loss_class: 0.0000
+Tue, 11 Jan 2022 08:09:00 INFO Epoch: 54, global_step: 21800, lr: 0.00042432, total_loss: 0.0824, loss_xy: 0.0271, loss_wh: 0.0303, loss_conf: 0.0250, loss_class: 0.0000
+Tue, 11 Jan 2022 08:09:06 INFO Epoch: 54, global_step: 21850, lr: 0.00042432, total_loss: 0.2030, loss_xy: 0.0269, loss_wh: 0.0323, loss_conf: 0.1437, loss_class: 0.0000
+Tue, 11 Jan 2022 08:09:12 INFO Epoch: 54, global_step: 21900, lr: 0.00042432, total_loss: 0.1221, loss_xy: 0.0234, loss_wh: 0.0259, loss_conf: 0.0728, loss_class: 0.0000
+Tue, 11 Jan 2022 08:09:18 INFO Epoch: 54, global_step: 21950, lr: 0.00042432, total_loss: 0.1883, loss_xy: 0.0412, loss_wh: 0.0414, loss_conf: 0.1058, loss_class: 0.0000
+Tue, 11 Jan 2022 08:09:24 INFO Epoch: 54, global_step: 22000, lr: 0.00042432, total_loss: 0.0506, loss_xy: 0.0124, loss_wh: 0.0169, loss_conf: 0.0213, loss_class: 0.0000
+Tue, 11 Jan 2022 08:09:24 INFO ===> batch recall: 1.0000, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 08:09:37 INFO ===> Epoch: 54, global_step: 22000, recall: 0.5597, precision: 0.8098, total_loss: 12.0532, loss_xy: 0.2101, loss_wh: 0.1687, loss_conf: 11.6744, loss_class: 0.0000
+Tue, 11 Jan 2022 08:09:42 INFO Epoch: 54, global_step: 22050, lr: 0.00042432, total_loss: 0.0567, loss_xy: 0.0213, loss_wh: 0.0259, loss_conf: 0.0095, loss_class: 0.0000
+Tue, 11 Jan 2022 08:09:49 INFO Epoch: 55, global_step: 22100, lr: 0.00042432, total_loss: 0.0804, loss_xy: 0.0210, loss_wh: 0.0270, loss_conf: 0.0325, loss_class: 0.0000
+Tue, 11 Jan 2022 08:09:55 INFO Epoch: 55, global_step: 22150, lr: 0.00042432, total_loss: 0.0558, loss_xy: 0.0213, loss_wh: 0.0246, loss_conf: 0.0099, loss_class: 0.0000
+Tue, 11 Jan 2022 08:10:01 INFO Epoch: 55, global_step: 22200, lr: 0.00042432, total_loss: 0.1084, loss_xy: 0.0303, loss_wh: 0.0264, loss_conf: 0.0518, loss_class: 0.0000
+Tue, 11 Jan 2022 08:10:07 INFO Epoch: 55, global_step: 22250, lr: 0.00042432, total_loss: 0.1029, loss_xy: 0.0165, loss_wh: 0.0289, loss_conf: 0.0575, loss_class: 0.0000
+Tue, 11 Jan 2022 08:10:13 INFO Epoch: 55, global_step: 22300, lr: 0.00042432, total_loss: 0.0741, loss_xy: 0.0319, loss_wh: 0.0303, loss_conf: 0.0119, loss_class: 0.0000
+Tue, 11 Jan 2022 08:10:19 INFO Epoch: 55, global_step: 22350, lr: 0.00042432, total_loss: 0.0448, loss_xy: 0.0159, loss_wh: 0.0190, loss_conf: 0.0099, loss_class: 0.0000
+Tue, 11 Jan 2022 08:10:25 INFO Epoch: 55, global_step: 22400, lr: 0.00042432, total_loss: 0.0879, loss_xy: 0.0337, loss_wh: 0.0380, loss_conf: 0.0161, loss_class: 0.0000
+Tue, 11 Jan 2022 08:10:31 INFO Epoch: 55, global_step: 22450, lr: 0.00040735, total_loss: 0.0696, loss_xy: 0.0335, loss_wh: 0.0299, loss_conf: 0.0062, loss_class: 0.0000
+Tue, 11 Jan 2022 08:10:38 INFO Epoch: 56, global_step: 22500, lr: 0.00040735, total_loss: 0.0360, loss_xy: 0.0138, loss_wh: 0.0179, loss_conf: 0.0043, loss_class: 0.0000
+Tue, 11 Jan 2022 08:10:38 INFO ===> batch recall: 1.0000, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 08:10:44 INFO Epoch: 56, global_step: 22550, lr: 0.00040735, total_loss: 0.0430, loss_xy: 0.0135, loss_wh: 0.0148, loss_conf: 0.0147, loss_class: 0.0000
+Tue, 11 Jan 2022 08:10:50 INFO Epoch: 56, global_step: 22600, lr: 0.00040735, total_loss: 0.0844, loss_xy: 0.0203, loss_wh: 0.0223, loss_conf: 0.0418, loss_class: 0.0000
+Tue, 11 Jan 2022 08:10:56 INFO Epoch: 56, global_step: 22650, lr: 0.00040735, total_loss: 0.0629, loss_xy: 0.0244, loss_wh: 0.0326, loss_conf: 0.0058, loss_class: 0.0000
+Tue, 11 Jan 2022 08:11:02 INFO Epoch: 56, global_step: 22700, lr: 0.00040735, total_loss: 0.0369, loss_xy: 0.0183, loss_wh: 0.0168, loss_conf: 0.0018, loss_class: 0.0000
+Tue, 11 Jan 2022 08:11:08 INFO Epoch: 56, global_step: 22750, lr: 0.00040735, total_loss: 0.1601, loss_xy: 0.0265, loss_wh: 0.0223, loss_conf: 0.1113, loss_class: 0.0000
+Tue, 11 Jan 2022 08:11:14 INFO Epoch: 56, global_step: 22800, lr: 0.00040735, total_loss: 0.0822, loss_xy: 0.0272, loss_wh: 0.0341, loss_conf: 0.0209, loss_class: 0.0000
+Tue, 11 Jan 2022 08:11:20 INFO Epoch: 56, global_step: 22850, lr: 0.00040735, total_loss: 0.0652, loss_xy: 0.0227, loss_wh: 0.0293, loss_conf: 0.0132, loss_class: 0.0000
+Tue, 11 Jan 2022 08:11:26 INFO Epoch: 57, global_step: 22900, lr: 0.00040735, total_loss: 0.0713, loss_xy: 0.0282, loss_wh: 0.0311, loss_conf: 0.0121, loss_class: 0.0000
+Tue, 11 Jan 2022 08:11:32 INFO Epoch: 57, global_step: 22950, lr: 0.00040735, total_loss: 0.0877, loss_xy: 0.0372, loss_wh: 0.0344, loss_conf: 0.0161, loss_class: 0.0000
+Tue, 11 Jan 2022 08:11:38 INFO Epoch: 57, global_step: 23000, lr: 0.00040735, total_loss: 0.0862, loss_xy: 0.0209, loss_wh: 0.0268, loss_conf: 0.0385, loss_class: 0.0000
+Tue, 11 Jan 2022 08:11:38 INFO ===> batch recall: 1.0000, batch precision: 0.9767 <===
+Tue, 11 Jan 2022 08:11:44 INFO Epoch: 57, global_step: 23050, lr: 0.00040735, total_loss: 0.0380, loss_xy: 0.0136, loss_wh: 0.0128, loss_conf: 0.0116, loss_class: 0.0000
+Tue, 11 Jan 2022 08:11:50 INFO Epoch: 57, global_step: 23100, lr: 0.00040735, total_loss: 0.0456, loss_xy: 0.0185, loss_wh: 0.0177, loss_conf: 0.0094, loss_class: 0.0000
+Tue, 11 Jan 2022 08:11:56 INFO Epoch: 57, global_step: 23150, lr: 0.00040735, total_loss: 0.0394, loss_xy: 0.0131, loss_wh: 0.0084, loss_conf: 0.0179, loss_class: 0.0000
+Tue, 11 Jan 2022 08:12:02 INFO Epoch: 57, global_step: 23200, lr: 0.00040735, total_loss: 0.2087, loss_xy: 0.0235, loss_wh: 0.0274, loss_conf: 0.1578, loss_class: 0.0000
+Tue, 11 Jan 2022 08:12:08 INFO Epoch: 57, global_step: 23250, lr: 0.00040735, total_loss: 0.0750, loss_xy: 0.0209, loss_wh: 0.0272, loss_conf: 0.0268, loss_class: 0.0000
+Tue, 11 Jan 2022 08:12:14 INFO Epoch: 58, global_step: 23300, lr: 0.00040735, total_loss: 0.0730, loss_xy: 0.0218, loss_wh: 0.0244, loss_conf: 0.0268, loss_class: 0.0000
+Tue, 11 Jan 2022 08:12:20 INFO Epoch: 58, global_step: 23350, lr: 0.00040735, total_loss: 0.0292, loss_xy: 0.0142, loss_wh: 0.0128, loss_conf: 0.0022, loss_class: 0.0000
+Tue, 11 Jan 2022 08:12:27 INFO Epoch: 58, global_step: 23400, lr: 0.00040735, total_loss: 0.0265, loss_xy: 0.0093, loss_wh: 0.0154, loss_conf: 0.0018, loss_class: 0.0000
+Tue, 11 Jan 2022 08:12:33 INFO Epoch: 58, global_step: 23450, lr: 0.00039106, total_loss: 0.0389, loss_xy: 0.0202, loss_wh: 0.0176, loss_conf: 0.0011, loss_class: 0.0000
+Tue, 11 Jan 2022 08:12:39 INFO Epoch: 58, global_step: 23500, lr: 0.00039106, total_loss: 0.0400, loss_xy: 0.0141, loss_wh: 0.0183, loss_conf: 0.0077, loss_class: 0.0000
+Tue, 11 Jan 2022 08:12:39 INFO ===> batch recall: 1.0000, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 08:12:45 INFO Epoch: 58, global_step: 23550, lr: 0.00039106, total_loss: 0.0699, loss_xy: 0.0330, loss_wh: 0.0296, loss_conf: 0.0073, loss_class: 0.0000
+Tue, 11 Jan 2022 08:12:51 INFO Epoch: 58, global_step: 23600, lr: 0.00039106, total_loss: 0.0595, loss_xy: 0.0204, loss_wh: 0.0228, loss_conf: 0.0164, loss_class: 0.0000
+Tue, 11 Jan 2022 08:12:57 INFO Epoch: 58, global_step: 23650, lr: 0.00039106, total_loss: 0.0439, loss_xy: 0.0197, loss_wh: 0.0222, loss_conf: 0.0020, loss_class: 0.0000
+Tue, 11 Jan 2022 08:13:03 INFO Epoch: 59, global_step: 23700, lr: 0.00039106, total_loss: 0.0616, loss_xy: 0.0275, loss_wh: 0.0238, loss_conf: 0.0103, loss_class: 0.0000
+Tue, 11 Jan 2022 08:13:09 INFO Epoch: 59, global_step: 23750, lr: 0.00039106, total_loss: 0.0379, loss_xy: 0.0209, loss_wh: 0.0156, loss_conf: 0.0013, loss_class: 0.0000
+Tue, 11 Jan 2022 08:13:15 INFO Epoch: 59, global_step: 23800, lr: 0.00039106, total_loss: 0.0499, loss_xy: 0.0196, loss_wh: 0.0240, loss_conf: 0.0063, loss_class: 0.0000
+Tue, 11 Jan 2022 08:13:21 INFO Epoch: 59, global_step: 23850, lr: 0.00039106, total_loss: 0.0392, loss_xy: 0.0173, loss_wh: 0.0214, loss_conf: 0.0005, loss_class: 0.0000
+Tue, 11 Jan 2022 08:13:27 INFO Epoch: 59, global_step: 23900, lr: 0.00039106, total_loss: 0.0408, loss_xy: 0.0167, loss_wh: 0.0228, loss_conf: 0.0013, loss_class: 0.0000
+Tue, 11 Jan 2022 08:13:34 INFO Epoch: 59, global_step: 23950, lr: 0.00039106, total_loss: 0.0319, loss_xy: 0.0153, loss_wh: 0.0150, loss_conf: 0.0016, loss_class: 0.0000
+Tue, 11 Jan 2022 08:13:40 INFO Epoch: 59, global_step: 24000, lr: 0.00039106, total_loss: 0.0366, loss_xy: 0.0165, loss_wh: 0.0161, loss_conf: 0.0040, loss_class: 0.0000
+Tue, 11 Jan 2022 08:13:40 INFO ===> batch recall: 1.0000, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 08:13:52 INFO ===> Epoch: 59, global_step: 24000, recall: 0.5576, precision: 0.8269, total_loss: 12.8433, loss_xy: 0.2076, loss_wh: 0.1716, loss_conf: 12.4641, loss_class: 0.0000
+Tue, 11 Jan 2022 08:13:58 INFO Epoch: 59, global_step: 24050, lr: 0.00039106, total_loss: 0.0443, loss_xy: 0.0177, loss_wh: 0.0248, loss_conf: 0.0018, loss_class: 0.0000
+Tue, 11 Jan 2022 08:14:04 INFO Epoch: 60, global_step: 24100, lr: 0.00039106, total_loss: 0.0230, loss_xy: 0.0104, loss_wh: 0.0114, loss_conf: 0.0013, loss_class: 0.0000
+Tue, 11 Jan 2022 08:14:10 INFO Epoch: 60, global_step: 24150, lr: 0.00039106, total_loss: 0.0550, loss_xy: 0.0169, loss_wh: 0.0306, loss_conf: 0.0075, loss_class: 0.0000
+Tue, 11 Jan 2022 08:14:16 INFO Epoch: 60, global_step: 24200, lr: 0.00039106, total_loss: 0.4353, loss_xy: 0.0328, loss_wh: 0.0258, loss_conf: 0.3767, loss_class: 0.0000
+Tue, 11 Jan 2022 08:14:22 INFO Epoch: 60, global_step: 24250, lr: 0.00039106, total_loss: 0.0635, loss_xy: 0.0214, loss_wh: 0.0216, loss_conf: 0.0205, loss_class: 0.0000
+Tue, 11 Jan 2022 08:14:29 INFO Epoch: 60, global_step: 24300, lr: 0.00039106, total_loss: 0.0611, loss_xy: 0.0274, loss_wh: 0.0168, loss_conf: 0.0170, loss_class: 0.0000
+Tue, 11 Jan 2022 08:14:35 INFO Epoch: 60, global_step: 24350, lr: 0.00039106, total_loss: 0.2651, loss_xy: 0.0323, loss_wh: 0.0363, loss_conf: 0.1965, loss_class: 0.0000
+Tue, 11 Jan 2022 08:14:41 INFO Epoch: 60, global_step: 24400, lr: 0.00039106, total_loss: 0.1069, loss_xy: 0.0346, loss_wh: 0.0282, loss_conf: 0.0440, loss_class: 0.0000
+Tue, 11 Jan 2022 08:14:47 INFO Epoch: 60, global_step: 24450, lr: 0.00037541, total_loss: 0.1494, loss_xy: 0.0392, loss_wh: 0.0538, loss_conf: 0.0564, loss_class: 0.0000
+Tue, 11 Jan 2022 08:14:53 INFO Epoch: 61, global_step: 24500, lr: 0.00037541, total_loss: 0.2157, loss_xy: 0.0280, loss_wh: 0.0248, loss_conf: 0.1629, loss_class: 0.0000
+Tue, 11 Jan 2022 08:14:53 INFO ===> batch recall: 0.9714, batch precision: 0.9714 <===
+Tue, 11 Jan 2022 08:14:59 INFO Epoch: 61, global_step: 24550, lr: 0.00037541, total_loss: 0.1132, loss_xy: 0.0378, loss_wh: 0.0467, loss_conf: 0.0287, loss_class: 0.0000
+Tue, 11 Jan 2022 08:15:05 INFO Epoch: 61, global_step: 24600, lr: 0.00037541, total_loss: 0.1003, loss_xy: 0.0185, loss_wh: 0.0122, loss_conf: 0.0696, loss_class: 0.0000
+Tue, 11 Jan 2022 08:15:11 INFO Epoch: 61, global_step: 24650, lr: 0.00037541, total_loss: 0.0762, loss_xy: 0.0196, loss_wh: 0.0246, loss_conf: 0.0320, loss_class: 0.0000
+Tue, 11 Jan 2022 08:15:18 INFO Epoch: 61, global_step: 24700, lr: 0.00037541, total_loss: 0.0729, loss_xy: 0.0279, loss_wh: 0.0281, loss_conf: 0.0169, loss_class: 0.0000
+Tue, 11 Jan 2022 08:15:23 INFO Epoch: 61, global_step: 24750, lr: 0.00037541, total_loss: 0.1065, loss_xy: 0.0260, loss_wh: 0.0496, loss_conf: 0.0309, loss_class: 0.0000
+Tue, 11 Jan 2022 08:15:30 INFO Epoch: 61, global_step: 24800, lr: 0.00037541, total_loss: 0.0792, loss_xy: 0.0284, loss_wh: 0.0325, loss_conf: 0.0182, loss_class: 0.0000
+Tue, 11 Jan 2022 08:15:35 INFO Epoch: 61, global_step: 24850, lr: 0.00037541, total_loss: 0.0611, loss_xy: 0.0180, loss_wh: 0.0244, loss_conf: 0.0188, loss_class: 0.0000
+Tue, 11 Jan 2022 08:15:42 INFO Epoch: 62, global_step: 24900, lr: 0.00037541, total_loss: 0.1214, loss_xy: 0.0140, loss_wh: 0.0223, loss_conf: 0.0851, loss_class: 0.0000
+Tue, 11 Jan 2022 08:15:48 INFO Epoch: 62, global_step: 24950, lr: 0.00037541, total_loss: 0.0527, loss_xy: 0.0176, loss_wh: 0.0255, loss_conf: 0.0095, loss_class: 0.0000
+Tue, 11 Jan 2022 08:15:54 INFO Epoch: 62, global_step: 25000, lr: 0.00037541, total_loss: 0.0345, loss_xy: 0.0130, loss_wh: 0.0144, loss_conf: 0.0071, loss_class: 0.0000
+Tue, 11 Jan 2022 08:15:54 INFO ===> batch recall: 1.0000, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 08:16:00 INFO Epoch: 62, global_step: 25050, lr: 0.00037541, total_loss: 0.1719, loss_xy: 0.0315, loss_wh: 0.0284, loss_conf: 0.1120, loss_class: 0.0000
+Tue, 11 Jan 2022 08:16:06 INFO Epoch: 62, global_step: 25100, lr: 0.00037541, total_loss: 0.0635, loss_xy: 0.0314, loss_wh: 0.0211, loss_conf: 0.0110, loss_class: 0.0000
+Tue, 11 Jan 2022 08:16:12 INFO Epoch: 62, global_step: 25150, lr: 0.00037541, total_loss: 0.0519, loss_xy: 0.0285, loss_wh: 0.0172, loss_conf: 0.0062, loss_class: 0.0000
+Tue, 11 Jan 2022 08:16:18 INFO Epoch: 62, global_step: 25200, lr: 0.00037541, total_loss: 0.0334, loss_xy: 0.0130, loss_wh: 0.0157, loss_conf: 0.0046, loss_class: 0.0000
+Tue, 11 Jan 2022 08:16:24 INFO Epoch: 62, global_step: 25250, lr: 0.00037541, total_loss: 0.0370, loss_xy: 0.0156, loss_wh: 0.0172, loss_conf: 0.0043, loss_class: 0.0000
+Tue, 11 Jan 2022 08:16:30 INFO Epoch: 63, global_step: 25300, lr: 0.00037541, total_loss: 0.0288, loss_xy: 0.0109, loss_wh: 0.0155, loss_conf: 0.0024, loss_class: 0.0000
+Tue, 11 Jan 2022 08:16:36 INFO Epoch: 63, global_step: 25350, lr: 0.00037541, total_loss: 0.0423, loss_xy: 0.0143, loss_wh: 0.0218, loss_conf: 0.0061, loss_class: 0.0000
+Tue, 11 Jan 2022 08:16:42 INFO Epoch: 63, global_step: 25400, lr: 0.00037541, total_loss: 0.0452, loss_xy: 0.0140, loss_wh: 0.0131, loss_conf: 0.0181, loss_class: 0.0000
+Tue, 11 Jan 2022 08:16:48 INFO Epoch: 63, global_step: 25450, lr: 0.00036040, total_loss: 0.0578, loss_xy: 0.0256, loss_wh: 0.0196, loss_conf: 0.0127, loss_class: 0.0000
+Tue, 11 Jan 2022 08:16:54 INFO Epoch: 63, global_step: 25500, lr: 0.00036040, total_loss: 0.0465, loss_xy: 0.0157, loss_wh: 0.0166, loss_conf: 0.0143, loss_class: 0.0000
+Tue, 11 Jan 2022 08:16:54 INFO ===> batch recall: 1.0000, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 08:17:00 INFO Epoch: 63, global_step: 25550, lr: 0.00036040, total_loss: 0.0436, loss_xy: 0.0141, loss_wh: 0.0149, loss_conf: 0.0146, loss_class: 0.0000
+Tue, 11 Jan 2022 08:17:06 INFO Epoch: 63, global_step: 25600, lr: 0.00036040, total_loss: 0.0495, loss_xy: 0.0151, loss_wh: 0.0193, loss_conf: 0.0151, loss_class: 0.0000
+Tue, 11 Jan 2022 08:17:12 INFO Epoch: 63, global_step: 25650, lr: 0.00036040, total_loss: 0.0659, loss_xy: 0.0199, loss_wh: 0.0426, loss_conf: 0.0035, loss_class: 0.0000
+Tue, 11 Jan 2022 08:17:18 INFO Epoch: 64, global_step: 25700, lr: 0.00036040, total_loss: 0.0369, loss_xy: 0.0133, loss_wh: 0.0188, loss_conf: 0.0047, loss_class: 0.0000
+Tue, 11 Jan 2022 08:17:24 INFO Epoch: 64, global_step: 25750, lr: 0.00036040, total_loss: 0.0336, loss_xy: 0.0155, loss_wh: 0.0174, loss_conf: 0.0007, loss_class: 0.0000
+Tue, 11 Jan 2022 08:17:30 INFO Epoch: 64, global_step: 25800, lr: 0.00036040, total_loss: 0.0255, loss_xy: 0.0126, loss_wh: 0.0116, loss_conf: 0.0013, loss_class: 0.0000
+Tue, 11 Jan 2022 08:17:36 INFO Epoch: 64, global_step: 25850, lr: 0.00036040, total_loss: 0.0254, loss_xy: 0.0102, loss_wh: 0.0130, loss_conf: 0.0022, loss_class: 0.0000
+Tue, 11 Jan 2022 08:17:43 INFO Epoch: 64, global_step: 25900, lr: 0.00036040, total_loss: 0.0232, loss_xy: 0.0098, loss_wh: 0.0115, loss_conf: 0.0020, loss_class: 0.0000
+Tue, 11 Jan 2022 08:17:49 INFO Epoch: 64, global_step: 25950, lr: 0.00036040, total_loss: 0.0264, loss_xy: 0.0126, loss_wh: 0.0124, loss_conf: 0.0013, loss_class: 0.0000
+Tue, 11 Jan 2022 08:17:55 INFO Epoch: 64, global_step: 26000, lr: 0.00036040, total_loss: 0.0239, loss_xy: 0.0110, loss_wh: 0.0122, loss_conf: 0.0008, loss_class: 0.0000
+Tue, 11 Jan 2022 08:17:55 INFO ===> batch recall: 1.0000, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 08:18:08 INFO ===> Epoch: 64, global_step: 26000, recall: 0.5581, precision: 0.8309, total_loss: 12.7092, loss_xy: 0.2061, loss_wh: 0.1699, loss_conf: 12.3333, loss_class: 0.0000
+Tue, 11 Jan 2022 08:18:14 INFO Epoch: 64, global_step: 26050, lr: 0.00036040, total_loss: 0.0364, loss_xy: 0.0152, loss_wh: 0.0172, loss_conf: 0.0040, loss_class: 0.0000
+Tue, 11 Jan 2022 08:18:21 INFO Epoch: 65, global_step: 26100, lr: 0.00036040, total_loss: 0.0165, loss_xy: 0.0057, loss_wh: 0.0086, loss_conf: 0.0022, loss_class: 0.0000
+Tue, 11 Jan 2022 08:18:27 INFO Epoch: 65, global_step: 26150, lr: 0.00036040, total_loss: 0.0123, loss_xy: 0.0055, loss_wh: 0.0062, loss_conf: 0.0007, loss_class: 0.0000
+Tue, 11 Jan 2022 08:18:33 INFO Epoch: 65, global_step: 26200, lr: 0.00036040, total_loss: 0.0184, loss_xy: 0.0087, loss_wh: 0.0092, loss_conf: 0.0004, loss_class: 0.0000
+Tue, 11 Jan 2022 08:18:39 INFO Epoch: 65, global_step: 26250, lr: 0.00036040, total_loss: 0.0257, loss_xy: 0.0112, loss_wh: 0.0132, loss_conf: 0.0012, loss_class: 0.0000
+Tue, 11 Jan 2022 08:18:46 INFO Epoch: 65, global_step: 26300, lr: 0.00036040, total_loss: 0.0151, loss_xy: 0.0081, loss_wh: 0.0062, loss_conf: 0.0008, loss_class: 0.0000
+Tue, 11 Jan 2022 08:18:52 INFO Epoch: 65, global_step: 26350, lr: 0.00036040, total_loss: 0.0288, loss_xy: 0.0134, loss_wh: 0.0145, loss_conf: 0.0009, loss_class: 0.0000
+Tue, 11 Jan 2022 08:18:58 INFO Epoch: 65, global_step: 26400, lr: 0.00036040, total_loss: 0.0367, loss_xy: 0.0114, loss_wh: 0.0223, loss_conf: 0.0030, loss_class: 0.0000
+Tue, 11 Jan 2022 08:19:05 INFO Epoch: 65, global_step: 26450, lr: 0.00034598, total_loss: 0.0159, loss_xy: 0.0064, loss_wh: 0.0087, loss_conf: 0.0008, loss_class: 0.0000
+Tue, 11 Jan 2022 08:19:11 INFO Epoch: 66, global_step: 26500, lr: 0.00034598, total_loss: 0.0208, loss_xy: 0.0100, loss_wh: 0.0099, loss_conf: 0.0009, loss_class: 0.0000
+Tue, 11 Jan 2022 08:19:11 INFO ===> batch recall: 1.0000, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 08:19:17 INFO Epoch: 66, global_step: 26550, lr: 0.00034598, total_loss: 0.0206, loss_xy: 0.0082, loss_wh: 0.0110, loss_conf: 0.0015, loss_class: 0.0000
+Tue, 11 Jan 2022 08:19:24 INFO Epoch: 66, global_step: 26600, lr: 0.00034598, total_loss: 0.0153, loss_xy: 0.0067, loss_wh: 0.0080, loss_conf: 0.0006, loss_class: 0.0000
+Tue, 11 Jan 2022 08:19:30 INFO Epoch: 66, global_step: 26650, lr: 0.00034598, total_loss: 0.0222, loss_xy: 0.0092, loss_wh: 0.0124, loss_conf: 0.0007, loss_class: 0.0000
+Tue, 11 Jan 2022 08:19:36 INFO Epoch: 66, global_step: 26700, lr: 0.00034598, total_loss: 0.0324, loss_xy: 0.0126, loss_wh: 0.0163, loss_conf: 0.0036, loss_class: 0.0000
+Tue, 11 Jan 2022 08:19:43 INFO Epoch: 66, global_step: 26750, lr: 0.00034598, total_loss: 0.0432, loss_xy: 0.0078, loss_wh: 0.0135, loss_conf: 0.0219, loss_class: 0.0000
+Tue, 11 Jan 2022 08:19:49 INFO Epoch: 66, global_step: 26800, lr: 0.00034598, total_loss: 0.0310, loss_xy: 0.0115, loss_wh: 0.0148, loss_conf: 0.0048, loss_class: 0.0000
+Tue, 11 Jan 2022 08:19:55 INFO Epoch: 66, global_step: 26850, lr: 0.00034598, total_loss: 0.0307, loss_xy: 0.0118, loss_wh: 0.0105, loss_conf: 0.0084, loss_class: 0.0000
+Tue, 11 Jan 2022 08:20:01 INFO Epoch: 67, global_step: 26900, lr: 0.00034598, total_loss: 0.0174, loss_xy: 0.0072, loss_wh: 0.0092, loss_conf: 0.0010, loss_class: 0.0000
+Tue, 11 Jan 2022 08:20:07 INFO Epoch: 67, global_step: 26950, lr: 0.00034598, total_loss: 0.0260, loss_xy: 0.0110, loss_wh: 0.0099, loss_conf: 0.0052, loss_class: 0.0000
+Tue, 11 Jan 2022 08:20:14 INFO Epoch: 67, global_step: 27000, lr: 0.00034598, total_loss: 0.0192, loss_xy: 0.0096, loss_wh: 0.0090, loss_conf: 0.0006, loss_class: 0.0000
+Tue, 11 Jan 2022 08:20:14 INFO ===> batch recall: 1.0000, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 08:20:20 INFO Epoch: 67, global_step: 27050, lr: 0.00034598, total_loss: 0.0223, loss_xy: 0.0115, loss_wh: 0.0101, loss_conf: 0.0007, loss_class: 0.0000
+Tue, 11 Jan 2022 08:20:26 INFO Epoch: 67, global_step: 27100, lr: 0.00034598, total_loss: 0.0172, loss_xy: 0.0072, loss_wh: 0.0097, loss_conf: 0.0003, loss_class: 0.0000
+Tue, 11 Jan 2022 08:20:32 INFO Epoch: 67, global_step: 27150, lr: 0.00034598, total_loss: 0.0219, loss_xy: 0.0089, loss_wh: 0.0120, loss_conf: 0.0011, loss_class: 0.0000
+Tue, 11 Jan 2022 08:20:38 INFO Epoch: 67, global_step: 27200, lr: 0.00034598, total_loss: 0.0225, loss_xy: 0.0098, loss_wh: 0.0117, loss_conf: 0.0010, loss_class: 0.0000
+Tue, 11 Jan 2022 08:20:44 INFO Epoch: 67, global_step: 27250, lr: 0.00034598, total_loss: 0.0249, loss_xy: 0.0074, loss_wh: 0.0170, loss_conf: 0.0005, loss_class: 0.0000
+Tue, 11 Jan 2022 08:20:51 INFO Epoch: 68, global_step: 27300, lr: 0.00034598, total_loss: 0.0241, loss_xy: 0.0120, loss_wh: 0.0113, loss_conf: 0.0008, loss_class: 0.0000
+Tue, 11 Jan 2022 08:20:57 INFO Epoch: 68, global_step: 27350, lr: 0.00034598, total_loss: 0.0208, loss_xy: 0.0122, loss_wh: 0.0076, loss_conf: 0.0009, loss_class: 0.0000
+Tue, 11 Jan 2022 08:21:03 INFO Epoch: 68, global_step: 27400, lr: 0.00034598, total_loss: 0.0166, loss_xy: 0.0065, loss_wh: 0.0098, loss_conf: 0.0003, loss_class: 0.0000
+Tue, 11 Jan 2022 08:21:09 INFO Epoch: 68, global_step: 27450, lr: 0.00033214, total_loss: 0.0151, loss_xy: 0.0078, loss_wh: 0.0072, loss_conf: 0.0002, loss_class: 0.0000
+Tue, 11 Jan 2022 08:21:15 INFO Epoch: 68, global_step: 27500, lr: 0.00033214, total_loss: 0.0157, loss_xy: 0.0086, loss_wh: 0.0067, loss_conf: 0.0004, loss_class: 0.0000
+Tue, 11 Jan 2022 08:21:15 INFO ===> batch recall: 1.0000, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 08:21:21 INFO Epoch: 68, global_step: 27550, lr: 0.00033214, total_loss: 0.0317, loss_xy: 0.0136, loss_wh: 0.0173, loss_conf: 0.0008, loss_class: 0.0000
+Tue, 11 Jan 2022 08:21:28 INFO Epoch: 68, global_step: 27600, lr: 0.00033214, total_loss: 0.0129, loss_xy: 0.0050, loss_wh: 0.0077, loss_conf: 0.0002, loss_class: 0.0000
+Tue, 11 Jan 2022 08:21:34 INFO Epoch: 68, global_step: 27650, lr: 0.00033214, total_loss: 0.0242, loss_xy: 0.0092, loss_wh: 0.0132, loss_conf: 0.0018, loss_class: 0.0000
+Tue, 11 Jan 2022 08:21:40 INFO Epoch: 69, global_step: 27700, lr: 0.00033214, total_loss: 0.0260, loss_xy: 0.0109, loss_wh: 0.0073, loss_conf: 0.0078, loss_class: 0.0000
+Tue, 11 Jan 2022 08:21:46 INFO Epoch: 69, global_step: 27750, lr: 0.00033214, total_loss: 0.0177, loss_xy: 0.0068, loss_wh: 0.0094, loss_conf: 0.0015, loss_class: 0.0000
+Tue, 11 Jan 2022 08:21:52 INFO Epoch: 69, global_step: 27800, lr: 0.00033214, total_loss: 0.0504, loss_xy: 0.0252, loss_wh: 0.0219, loss_conf: 0.0033, loss_class: 0.0000
+Tue, 11 Jan 2022 08:21:58 INFO Epoch: 69, global_step: 27850, lr: 0.00033214, total_loss: 0.0460, loss_xy: 0.0164, loss_wh: 0.0245, loss_conf: 0.0051, loss_class: 0.0000
+Tue, 11 Jan 2022 08:22:04 INFO Epoch: 69, global_step: 27900, lr: 0.00033214, total_loss: 0.0358, loss_xy: 0.0154, loss_wh: 0.0099, loss_conf: 0.0105, loss_class: 0.0000
+Tue, 11 Jan 2022 08:22:10 INFO Epoch: 69, global_step: 27950, lr: 0.00033214, total_loss: 0.0415, loss_xy: 0.0161, loss_wh: 0.0238, loss_conf: 0.0015, loss_class: 0.0000
+Tue, 11 Jan 2022 08:22:16 INFO Epoch: 69, global_step: 28000, lr: 0.00033214, total_loss: 0.3092, loss_xy: 0.0281, loss_wh: 0.0276, loss_conf: 0.2534, loss_class: 0.0000
+Tue, 11 Jan 2022 08:22:17 INFO ===> batch recall: 0.9318, batch precision: 0.9318 <===
+Tue, 11 Jan 2022 08:22:29 INFO ===> Epoch: 69, global_step: 28000, recall: 0.5120, precision: 0.7986, total_loss: 14.1397, loss_xy: 0.2225, loss_wh: 0.1953, loss_conf: 13.7219, loss_class: 0.0000
+Tue, 11 Jan 2022 08:22:35 INFO Epoch: 69, global_step: 28050, lr: 0.00033214, total_loss: 0.2832, loss_xy: 0.0142, loss_wh: 0.0250, loss_conf: 0.2440, loss_class: 0.0000
+Tue, 11 Jan 2022 08:22:41 INFO Epoch: 70, global_step: 28100, lr: 0.00033214, total_loss: 0.0921, loss_xy: 0.0159, loss_wh: 0.0212, loss_conf: 0.0550, loss_class: 0.0000
+Tue, 11 Jan 2022 08:22:47 INFO Epoch: 70, global_step: 28150, lr: 0.00033214, total_loss: 0.1658, loss_xy: 0.0261, loss_wh: 0.0288, loss_conf: 0.1108, loss_class: 0.0000
+Tue, 11 Jan 2022 08:22:53 INFO Epoch: 70, global_step: 28200, lr: 0.00033214, total_loss: 0.2424, loss_xy: 0.0242, loss_wh: 0.0190, loss_conf: 0.1991, loss_class: 0.0000
+Tue, 11 Jan 2022 08:23:00 INFO Epoch: 70, global_step: 28250, lr: 0.00033214, total_loss: 0.2396, loss_xy: 0.0414, loss_wh: 0.0313, loss_conf: 0.1669, loss_class: 0.0000
+Tue, 11 Jan 2022 08:23:06 INFO Epoch: 70, global_step: 28300, lr: 0.00033214, total_loss: 0.1267, loss_xy: 0.0524, loss_wh: 0.0312, loss_conf: 0.0432, loss_class: 0.0000
+Tue, 11 Jan 2022 08:23:12 INFO Epoch: 70, global_step: 28350, lr: 0.00033214, total_loss: 0.0858, loss_xy: 0.0274, loss_wh: 0.0353, loss_conf: 0.0230, loss_class: 0.0000
+Tue, 11 Jan 2022 08:23:18 INFO Epoch: 70, global_step: 28400, lr: 0.00033214, total_loss: 0.0618, loss_xy: 0.0176, loss_wh: 0.0361, loss_conf: 0.0081, loss_class: 0.0000
+Tue, 11 Jan 2022 08:23:24 INFO Epoch: 70, global_step: 28450, lr: 0.00031886, total_loss: 0.1174, loss_xy: 0.0277, loss_wh: 0.0242, loss_conf: 0.0655, loss_class: 0.0000
+Tue, 11 Jan 2022 08:23:31 INFO Epoch: 71, global_step: 28500, lr: 0.00031886, total_loss: 0.0541, loss_xy: 0.0190, loss_wh: 0.0178, loss_conf: 0.0173, loss_class: 0.0000
+Tue, 11 Jan 2022 08:23:31 INFO ===> batch recall: 1.0000, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 08:23:37 INFO Epoch: 71, global_step: 28550, lr: 0.00031886, total_loss: 0.0422, loss_xy: 0.0081, loss_wh: 0.0110, loss_conf: 0.0231, loss_class: 0.0000
+Tue, 11 Jan 2022 08:23:43 INFO Epoch: 71, global_step: 28600, lr: 0.00031886, total_loss: 0.0447, loss_xy: 0.0127, loss_wh: 0.0161, loss_conf: 0.0159, loss_class: 0.0000
+Tue, 11 Jan 2022 08:23:49 INFO Epoch: 71, global_step: 28650, lr: 0.00031886, total_loss: 0.0507, loss_xy: 0.0219, loss_wh: 0.0197, loss_conf: 0.0092, loss_class: 0.0000
+Tue, 11 Jan 2022 08:23:55 INFO Epoch: 71, global_step: 28700, lr: 0.00031886, total_loss: 0.0351, loss_xy: 0.0121, loss_wh: 0.0187, loss_conf: 0.0043, loss_class: 0.0000
+Tue, 11 Jan 2022 08:24:01 INFO Epoch: 71, global_step: 28750, lr: 0.00031886, total_loss: 0.0375, loss_xy: 0.0165, loss_wh: 0.0174, loss_conf: 0.0036, loss_class: 0.0000
+Tue, 11 Jan 2022 08:24:07 INFO Epoch: 71, global_step: 28800, lr: 0.00031886, total_loss: 0.0452, loss_xy: 0.0126, loss_wh: 0.0181, loss_conf: 0.0145, loss_class: 0.0000
+Tue, 11 Jan 2022 08:24:14 INFO Epoch: 71, global_step: 28850, lr: 0.00031886, total_loss: 0.0538, loss_xy: 0.0206, loss_wh: 0.0194, loss_conf: 0.0137, loss_class: 0.0000
+Tue, 11 Jan 2022 08:24:20 INFO Epoch: 72, global_step: 28900, lr: 0.00031886, total_loss: 0.0311, loss_xy: 0.0128, loss_wh: 0.0178, loss_conf: 0.0005, loss_class: 0.0000
+Tue, 11 Jan 2022 08:24:26 INFO Epoch: 72, global_step: 28950, lr: 0.00031886, total_loss: 0.0294, loss_xy: 0.0140, loss_wh: 0.0138, loss_conf: 0.0016, loss_class: 0.0000
+Tue, 11 Jan 2022 08:24:32 INFO Epoch: 72, global_step: 29000, lr: 0.00031886, total_loss: 0.0197, loss_xy: 0.0082, loss_wh: 0.0102, loss_conf: 0.0013, loss_class: 0.0000
+Tue, 11 Jan 2022 08:24:32 INFO ===> batch recall: 1.0000, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 08:24:38 INFO Epoch: 72, global_step: 29050, lr: 0.00031886, total_loss: 0.0193, loss_xy: 0.0057, loss_wh: 0.0126, loss_conf: 0.0011, loss_class: 0.0000
+Tue, 11 Jan 2022 08:24:44 INFO Epoch: 72, global_step: 29100, lr: 0.00031886, total_loss: 0.0343, loss_xy: 0.0156, loss_wh: 0.0172, loss_conf: 0.0015, loss_class: 0.0000
+Tue, 11 Jan 2022 08:24:50 INFO Epoch: 72, global_step: 29150, lr: 0.00031886, total_loss: 0.0279, loss_xy: 0.0123, loss_wh: 0.0127, loss_conf: 0.0030, loss_class: 0.0000
+Tue, 11 Jan 2022 08:24:56 INFO Epoch: 72, global_step: 29200, lr: 0.00031886, total_loss: 0.0382, loss_xy: 0.0162, loss_wh: 0.0105, loss_conf: 0.0115, loss_class: 0.0000
+Tue, 11 Jan 2022 08:25:03 INFO Epoch: 72, global_step: 29250, lr: 0.00031886, total_loss: 0.0147, loss_xy: 0.0053, loss_wh: 0.0073, loss_conf: 0.0021, loss_class: 0.0000
+Tue, 11 Jan 2022 08:25:09 INFO Epoch: 73, global_step: 29300, lr: 0.00031886, total_loss: 0.0256, loss_xy: 0.0116, loss_wh: 0.0107, loss_conf: 0.0032, loss_class: 0.0000
+Tue, 11 Jan 2022 08:25:15 INFO Epoch: 73, global_step: 29350, lr: 0.00031886, total_loss: 0.0214, loss_xy: 0.0098, loss_wh: 0.0099, loss_conf: 0.0017, loss_class: 0.0000
+Tue, 11 Jan 2022 08:25:21 INFO Epoch: 73, global_step: 29400, lr: 0.00031886, total_loss: 0.0197, loss_xy: 0.0104, loss_wh: 0.0080, loss_conf: 0.0012, loss_class: 0.0000
+Tue, 11 Jan 2022 08:25:27 INFO Epoch: 73, global_step: 29450, lr: 0.00030610, total_loss: 0.0249, loss_xy: 0.0120, loss_wh: 0.0083, loss_conf: 0.0046, loss_class: 0.0000
+Tue, 11 Jan 2022 08:25:33 INFO Epoch: 73, global_step: 29500, lr: 0.00030610, total_loss: 0.0190, loss_xy: 0.0100, loss_wh: 0.0078, loss_conf: 0.0012, loss_class: 0.0000
+Tue, 11 Jan 2022 08:25:33 INFO ===> batch recall: 1.0000, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 08:25:39 INFO Epoch: 73, global_step: 29550, lr: 0.00030610, total_loss: 0.0247, loss_xy: 0.0114, loss_wh: 0.0121, loss_conf: 0.0012, loss_class: 0.0000
+Tue, 11 Jan 2022 08:25:45 INFO Epoch: 73, global_step: 29600, lr: 0.00030610, total_loss: 0.0241, loss_xy: 0.0103, loss_wh: 0.0126, loss_conf: 0.0012, loss_class: 0.0000
+Tue, 11 Jan 2022 08:25:51 INFO Epoch: 73, global_step: 29650, lr: 0.00030610, total_loss: 0.0208, loss_xy: 0.0117, loss_wh: 0.0087, loss_conf: 0.0004, loss_class: 0.0000
+Tue, 11 Jan 2022 08:25:58 INFO Epoch: 74, global_step: 29700, lr: 0.00030610, total_loss: 0.0146, loss_xy: 0.0082, loss_wh: 0.0054, loss_conf: 0.0010, loss_class: 0.0000
+Tue, 11 Jan 2022 08:26:04 INFO Epoch: 74, global_step: 29750, lr: 0.00030610, total_loss: 0.0155, loss_xy: 0.0075, loss_wh: 0.0070, loss_conf: 0.0010, loss_class: 0.0000
+Tue, 11 Jan 2022 08:26:10 INFO Epoch: 74, global_step: 29800, lr: 0.00030610, total_loss: 0.0405, loss_xy: 0.0127, loss_wh: 0.0269, loss_conf: 0.0009, loss_class: 0.0000
+Tue, 11 Jan 2022 08:26:16 INFO Epoch: 74, global_step: 29850, lr: 0.00030610, total_loss: 0.0141, loss_xy: 0.0052, loss_wh: 0.0075, loss_conf: 0.0014, loss_class: 0.0000
+Tue, 11 Jan 2022 08:26:22 INFO Epoch: 74, global_step: 29900, lr: 0.00030610, total_loss: 0.0183, loss_xy: 0.0077, loss_wh: 0.0099, loss_conf: 0.0007, loss_class: 0.0000
+Tue, 11 Jan 2022 08:26:28 INFO Epoch: 74, global_step: 29950, lr: 0.00030610, total_loss: 0.0230, loss_xy: 0.0103, loss_wh: 0.0109, loss_conf: 0.0017, loss_class: 0.0000
+Tue, 11 Jan 2022 08:26:34 INFO Epoch: 74, global_step: 30000, lr: 0.00030610, total_loss: 0.0209, loss_xy: 0.0094, loss_wh: 0.0104, loss_conf: 0.0012, loss_class: 0.0000
+Tue, 11 Jan 2022 08:26:34 INFO ===> batch recall: 1.0000, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 08:26:47 INFO ===> Epoch: 74, global_step: 30000, recall: 0.5372, precision: 0.8550, total_loss: 13.6751, loss_xy: 0.2116, loss_wh: 0.1650, loss_conf: 13.2985, loss_class: 0.0000
+Tue, 11 Jan 2022 08:26:53 INFO Epoch: 74, global_step: 30050, lr: 0.00030610, total_loss: 0.0362, loss_xy: 0.0135, loss_wh: 0.0212, loss_conf: 0.0015, loss_class: 0.0000
+Tue, 11 Jan 2022 08:26:59 INFO Epoch: 75, global_step: 30100, lr: 0.00030610, total_loss: 0.0145, loss_xy: 0.0069, loss_wh: 0.0069, loss_conf: 0.0008, loss_class: 0.0000
+Tue, 11 Jan 2022 08:27:05 INFO Epoch: 75, global_step: 30150, lr: 0.00030610, total_loss: 0.0251, loss_xy: 0.0127, loss_wh: 0.0115, loss_conf: 0.0010, loss_class: 0.0000
+Tue, 11 Jan 2022 08:27:11 INFO Epoch: 75, global_step: 30200, lr: 0.00030610, total_loss: 0.0224, loss_xy: 0.0109, loss_wh: 0.0106, loss_conf: 0.0009, loss_class: 0.0000
+Tue, 11 Jan 2022 08:27:17 INFO Epoch: 75, global_step: 30250, lr: 0.00030610, total_loss: 0.0240, loss_xy: 0.0107, loss_wh: 0.0110, loss_conf: 0.0023, loss_class: 0.0000
+Tue, 11 Jan 2022 08:27:23 INFO Epoch: 75, global_step: 30300, lr: 0.00030610, total_loss: 0.0203, loss_xy: 0.0070, loss_wh: 0.0127, loss_conf: 0.0006, loss_class: 0.0000
+Tue, 11 Jan 2022 08:27:29 INFO Epoch: 75, global_step: 30350, lr: 0.00030610, total_loss: 0.0221, loss_xy: 0.0099, loss_wh: 0.0116, loss_conf: 0.0007, loss_class: 0.0000
+Tue, 11 Jan 2022 08:27:35 INFO Epoch: 75, global_step: 30400, lr: 0.00030610, total_loss: 0.0114, loss_xy: 0.0067, loss_wh: 0.0044, loss_conf: 0.0003, loss_class: 0.0000
+Tue, 11 Jan 2022 08:27:42 INFO Epoch: 75, global_step: 30450, lr: 0.00029386, total_loss: 0.0159, loss_xy: 0.0093, loss_wh: 0.0060, loss_conf: 0.0006, loss_class: 0.0000
+Tue, 11 Jan 2022 08:27:48 INFO Epoch: 76, global_step: 30500, lr: 0.00029386, total_loss: 0.0223, loss_xy: 0.0088, loss_wh: 0.0119, loss_conf: 0.0016, loss_class: 0.0000
+Tue, 11 Jan 2022 08:27:48 INFO ===> batch recall: 1.0000, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 08:27:54 INFO Epoch: 76, global_step: 30550, lr: 0.00029386, total_loss: 0.0183, loss_xy: 0.0085, loss_wh: 0.0091, loss_conf: 0.0007, loss_class: 0.0000
+Tue, 11 Jan 2022 08:28:00 INFO Epoch: 76, global_step: 30600, lr: 0.00029386, total_loss: 0.0107, loss_xy: 0.0046, loss_wh: 0.0045, loss_conf: 0.0017, loss_class: 0.0000
+Tue, 11 Jan 2022 08:28:06 INFO Epoch: 76, global_step: 30650, lr: 0.00029386, total_loss: 0.0134, loss_xy: 0.0058, loss_wh: 0.0065, loss_conf: 0.0011, loss_class: 0.0000
+Tue, 11 Jan 2022 08:28:12 INFO Epoch: 76, global_step: 30700, lr: 0.00029386, total_loss: 0.0209, loss_xy: 0.0110, loss_wh: 0.0094, loss_conf: 0.0005, loss_class: 0.0000
+Tue, 11 Jan 2022 08:28:19 INFO Epoch: 76, global_step: 30750, lr: 0.00029386, total_loss: 0.0340, loss_xy: 0.0110, loss_wh: 0.0223, loss_conf: 0.0007, loss_class: 0.0000
+Tue, 11 Jan 2022 08:28:25 INFO Epoch: 76, global_step: 30800, lr: 0.00029386, total_loss: 0.0179, loss_xy: 0.0073, loss_wh: 0.0086, loss_conf: 0.0020, loss_class: 0.0000
+Tue, 11 Jan 2022 08:28:31 INFO Epoch: 76, global_step: 30850, lr: 0.00029386, total_loss: 0.0170, loss_xy: 0.0063, loss_wh: 0.0083, loss_conf: 0.0024, loss_class: 0.0000
+Tue, 11 Jan 2022 08:28:37 INFO Epoch: 77, global_step: 30900, lr: 0.00029386, total_loss: 0.0142, loss_xy: 0.0071, loss_wh: 0.0064, loss_conf: 0.0006, loss_class: 0.0000
+Tue, 11 Jan 2022 08:28:43 INFO Epoch: 77, global_step: 30950, lr: 0.00029386, total_loss: 0.0341, loss_xy: 0.0200, loss_wh: 0.0117, loss_conf: 0.0025, loss_class: 0.0000
+Tue, 11 Jan 2022 08:28:49 INFO Epoch: 77, global_step: 31000, lr: 0.00029386, total_loss: 0.0189, loss_xy: 0.0073, loss_wh: 0.0093, loss_conf: 0.0023, loss_class: 0.0000
+Tue, 11 Jan 2022 08:28:49 INFO ===> batch recall: 1.0000, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 08:28:55 INFO Epoch: 77, global_step: 31050, lr: 0.00029386, total_loss: 0.0206, loss_xy: 0.0079, loss_wh: 0.0106, loss_conf: 0.0020, loss_class: 0.0000
+Tue, 11 Jan 2022 08:29:01 INFO Epoch: 77, global_step: 31100, lr: 0.00029386, total_loss: 0.0427, loss_xy: 0.0214, loss_wh: 0.0174, loss_conf: 0.0039, loss_class: 0.0000
+Tue, 11 Jan 2022 08:29:08 INFO Epoch: 77, global_step: 31150, lr: 0.00029386, total_loss: 0.0277, loss_xy: 0.0069, loss_wh: 0.0110, loss_conf: 0.0098, loss_class: 0.0000
+Tue, 11 Jan 2022 08:29:14 INFO Epoch: 77, global_step: 31200, lr: 0.00029386, total_loss: 0.0212, loss_xy: 0.0091, loss_wh: 0.0115, loss_conf: 0.0006, loss_class: 0.0000
+Tue, 11 Jan 2022 08:29:20 INFO Epoch: 77, global_step: 31250, lr: 0.00029386, total_loss: 0.0289, loss_xy: 0.0143, loss_wh: 0.0122, loss_conf: 0.0024, loss_class: 0.0000
+Tue, 11 Jan 2022 08:29:26 INFO Epoch: 78, global_step: 31300, lr: 0.00029386, total_loss: 0.0092, loss_xy: 0.0039, loss_wh: 0.0050, loss_conf: 0.0003, loss_class: 0.0000
+Tue, 11 Jan 2022 08:29:32 INFO Epoch: 78, global_step: 31350, lr: 0.00029386, total_loss: 0.0267, loss_xy: 0.0101, loss_wh: 0.0153, loss_conf: 0.0012, loss_class: 0.0000
+Tue, 11 Jan 2022 08:29:39 INFO Epoch: 78, global_step: 31400, lr: 0.00029386, total_loss: 0.0474, loss_xy: 0.0152, loss_wh: 0.0117, loss_conf: 0.0206, loss_class: 0.0000
+Tue, 11 Jan 2022 08:29:45 INFO Epoch: 78, global_step: 31450, lr: 0.00028210, total_loss: 0.0562, loss_xy: 0.0124, loss_wh: 0.0133, loss_conf: 0.0305, loss_class: 0.0000
+Tue, 11 Jan 2022 08:29:51 INFO Epoch: 78, global_step: 31500, lr: 0.00028210, total_loss: 0.0372, loss_xy: 0.0130, loss_wh: 0.0119, loss_conf: 0.0122, loss_class: 0.0000
+Tue, 11 Jan 2022 08:29:51 INFO ===> batch recall: 1.0000, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 08:29:57 INFO Epoch: 78, global_step: 31550, lr: 0.00028210, total_loss: 0.0282, loss_xy: 0.0153, loss_wh: 0.0115, loss_conf: 0.0013, loss_class: 0.0000
+Tue, 11 Jan 2022 08:30:03 INFO Epoch: 78, global_step: 31600, lr: 0.00028210, total_loss: 0.0910, loss_xy: 0.0143, loss_wh: 0.0130, loss_conf: 0.0637, loss_class: 0.0000
+Tue, 11 Jan 2022 08:30:09 INFO Epoch: 78, global_step: 31650, lr: 0.00028210, total_loss: 0.0562, loss_xy: 0.0226, loss_wh: 0.0226, loss_conf: 0.0110, loss_class: 0.0000
+Tue, 11 Jan 2022 08:30:15 INFO Epoch: 79, global_step: 31700, lr: 0.00028210, total_loss: 0.0594, loss_xy: 0.0160, loss_wh: 0.0155, loss_conf: 0.0279, loss_class: 0.0000
+Tue, 11 Jan 2022 08:30:22 INFO Epoch: 79, global_step: 31750, lr: 0.00028210, total_loss: 0.1488, loss_xy: 0.0190, loss_wh: 0.0307, loss_conf: 0.0991, loss_class: 0.0000
+Tue, 11 Jan 2022 08:30:28 INFO Epoch: 79, global_step: 31800, lr: 0.00028210, total_loss: 0.0516, loss_xy: 0.0185, loss_wh: 0.0257, loss_conf: 0.0074, loss_class: 0.0000
+Tue, 11 Jan 2022 08:30:34 INFO Epoch: 79, global_step: 31850, lr: 0.00028210, total_loss: 0.0632, loss_xy: 0.0273, loss_wh: 0.0287, loss_conf: 0.0073, loss_class: 0.0000
+Tue, 11 Jan 2022 08:30:40 INFO Epoch: 79, global_step: 31900, lr: 0.00028210, total_loss: 0.0446, loss_xy: 0.0154, loss_wh: 0.0151, loss_conf: 0.0141, loss_class: 0.0000
+Tue, 11 Jan 2022 08:30:46 INFO Epoch: 79, global_step: 31950, lr: 0.00028210, total_loss: 0.0515, loss_xy: 0.0252, loss_wh: 0.0198, loss_conf: 0.0065, loss_class: 0.0000
+Tue, 11 Jan 2022 08:30:52 INFO Epoch: 79, global_step: 32000, lr: 0.00028210, total_loss: 0.2412, loss_xy: 0.0222, loss_wh: 0.0288, loss_conf: 0.1901, loss_class: 0.0000
+Tue, 11 Jan 2022 08:30:52 INFO ===> batch recall: 0.9661, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 08:31:05 INFO ===> Epoch: 79, global_step: 32000, recall: 0.5551, precision: 0.8098, total_loss: 13.3267, loss_xy: 0.2090, loss_wh: 0.1696, loss_conf: 12.9482, loss_class: 0.0000
+Tue, 11 Jan 2022 08:31:11 INFO Epoch: 79, global_step: 32050, lr: 0.00028210, total_loss: 0.1060, loss_xy: 0.0408, loss_wh: 0.0308, loss_conf: 0.0345, loss_class: 0.0000
+Tue, 11 Jan 2022 08:31:17 INFO Epoch: 80, global_step: 32100, lr: 0.00028210, total_loss: 0.0272, loss_xy: 0.0103, loss_wh: 0.0116, loss_conf: 0.0053, loss_class: 0.0000
+Tue, 11 Jan 2022 08:31:23 INFO Epoch: 80, global_step: 32150, lr: 0.00028210, total_loss: 0.0828, loss_xy: 0.0252, loss_wh: 0.0181, loss_conf: 0.0395, loss_class: 0.0000
+Tue, 11 Jan 2022 08:31:29 INFO Epoch: 80, global_step: 32200, lr: 0.00028210, total_loss: 0.0717, loss_xy: 0.0186, loss_wh: 0.0185, loss_conf: 0.0345, loss_class: 0.0000
+Tue, 11 Jan 2022 08:31:36 INFO Epoch: 80, global_step: 32250, lr: 0.00028210, total_loss: 0.0319, loss_xy: 0.0142, loss_wh: 0.0141, loss_conf: 0.0035, loss_class: 0.0000
+Tue, 11 Jan 2022 08:31:42 INFO Epoch: 80, global_step: 32300, lr: 0.00028210, total_loss: 0.0287, loss_xy: 0.0123, loss_wh: 0.0134, loss_conf: 0.0031, loss_class: 0.0000
+Tue, 11 Jan 2022 08:31:48 INFO Epoch: 80, global_step: 32350, lr: 0.00028210, total_loss: 0.0464, loss_xy: 0.0146, loss_wh: 0.0089, loss_conf: 0.0229, loss_class: 0.0000
+Tue, 11 Jan 2022 08:31:54 INFO Epoch: 80, global_step: 32400, lr: 0.00028210, total_loss: 0.0435, loss_xy: 0.0139, loss_wh: 0.0191, loss_conf: 0.0106, loss_class: 0.0000
+Tue, 11 Jan 2022 08:32:00 INFO Epoch: 80, global_step: 32450, lr: 0.00027082, total_loss: 0.0465, loss_xy: 0.0084, loss_wh: 0.0109, loss_conf: 0.0273, loss_class: 0.0000
+Tue, 11 Jan 2022 08:32:07 INFO Epoch: 81, global_step: 32500, lr: 0.00027082, total_loss: 0.0321, loss_xy: 0.0138, loss_wh: 0.0165, loss_conf: 0.0018, loss_class: 0.0000
+Tue, 11 Jan 2022 08:32:07 INFO ===> batch recall: 1.0000, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 08:32:13 INFO Epoch: 81, global_step: 32550, lr: 0.00027082, total_loss: 0.0331, loss_xy: 0.0148, loss_wh: 0.0140, loss_conf: 0.0043, loss_class: 0.0000
+Tue, 11 Jan 2022 08:32:19 INFO Epoch: 81, global_step: 32600, lr: 0.00027082, total_loss: 0.0277, loss_xy: 0.0104, loss_wh: 0.0107, loss_conf: 0.0066, loss_class: 0.0000
+Tue, 11 Jan 2022 08:32:25 INFO Epoch: 81, global_step: 32650, lr: 0.00027082, total_loss: 0.0273, loss_xy: 0.0120, loss_wh: 0.0140, loss_conf: 0.0012, loss_class: 0.0000
+Tue, 11 Jan 2022 08:32:31 INFO Epoch: 81, global_step: 32700, lr: 0.00027082, total_loss: 0.0456, loss_xy: 0.0100, loss_wh: 0.0130, loss_conf: 0.0226, loss_class: 0.0000
+Tue, 11 Jan 2022 08:32:37 INFO Epoch: 81, global_step: 32750, lr: 0.00027082, total_loss: 0.0239, loss_xy: 0.0147, loss_wh: 0.0078, loss_conf: 0.0013, loss_class: 0.0000
+Tue, 11 Jan 2022 08:32:44 INFO Epoch: 81, global_step: 32800, lr: 0.00027082, total_loss: 0.0195, loss_xy: 0.0080, loss_wh: 0.0094, loss_conf: 0.0020, loss_class: 0.0000
+Tue, 11 Jan 2022 08:32:50 INFO Epoch: 81, global_step: 32850, lr: 0.00027082, total_loss: 0.0220, loss_xy: 0.0093, loss_wh: 0.0115, loss_conf: 0.0013, loss_class: 0.0000
+Tue, 11 Jan 2022 08:32:56 INFO Epoch: 82, global_step: 32900, lr: 0.00027082, total_loss: 0.0195, loss_xy: 0.0088, loss_wh: 0.0091, loss_conf: 0.0016, loss_class: 0.0000
+Tue, 11 Jan 2022 08:33:02 INFO Epoch: 82, global_step: 32950, lr: 0.00027082, total_loss: 0.0260, loss_xy: 0.0085, loss_wh: 0.0134, loss_conf: 0.0041, loss_class: 0.0000
+Tue, 11 Jan 2022 08:33:08 INFO Epoch: 82, global_step: 33000, lr: 0.00027082, total_loss: 0.0189, loss_xy: 0.0095, loss_wh: 0.0087, loss_conf: 0.0008, loss_class: 0.0000
+Tue, 11 Jan 2022 08:33:08 INFO ===> batch recall: 1.0000, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 08:33:15 INFO Epoch: 82, global_step: 33050, lr: 0.00027082, total_loss: 0.0166, loss_xy: 0.0069, loss_wh: 0.0085, loss_conf: 0.0011, loss_class: 0.0000
+Tue, 11 Jan 2022 08:33:21 INFO Epoch: 82, global_step: 33100, lr: 0.00027082, total_loss: 0.0239, loss_xy: 0.0098, loss_wh: 0.0108, loss_conf: 0.0032, loss_class: 0.0000
+Tue, 11 Jan 2022 08:33:27 INFO Epoch: 82, global_step: 33150, lr: 0.00027082, total_loss: 0.0433, loss_xy: 0.0202, loss_wh: 0.0215, loss_conf: 0.0017, loss_class: 0.0000
+Tue, 11 Jan 2022 08:33:33 INFO Epoch: 82, global_step: 33200, lr: 0.00027082, total_loss: 0.0200, loss_xy: 0.0087, loss_wh: 0.0097, loss_conf: 0.0016, loss_class: 0.0000
+Tue, 11 Jan 2022 08:33:39 INFO Epoch: 82, global_step: 33250, lr: 0.00027082, total_loss: 0.0186, loss_xy: 0.0091, loss_wh: 0.0090, loss_conf: 0.0006, loss_class: 0.0000
+Tue, 11 Jan 2022 08:33:45 INFO Epoch: 83, global_step: 33300, lr: 0.00027082, total_loss: 0.0148, loss_xy: 0.0076, loss_wh: 0.0065, loss_conf: 0.0007, loss_class: 0.0000
+Tue, 11 Jan 2022 08:33:51 INFO Epoch: 83, global_step: 33350, lr: 0.00027082, total_loss: 0.0109, loss_xy: 0.0043, loss_wh: 0.0057, loss_conf: 0.0009, loss_class: 0.0000
+Tue, 11 Jan 2022 08:33:57 INFO Epoch: 83, global_step: 33400, lr: 0.00027082, total_loss: 0.0130, loss_xy: 0.0065, loss_wh: 0.0062, loss_conf: 0.0003, loss_class: 0.0000
+Tue, 11 Jan 2022 08:34:04 INFO Epoch: 83, global_step: 33450, lr: 0.00025999, total_loss: 0.0085, loss_xy: 0.0040, loss_wh: 0.0042, loss_conf: 0.0003, loss_class: 0.0000
+Tue, 11 Jan 2022 08:34:10 INFO Epoch: 83, global_step: 33500, lr: 0.00025999, total_loss: 0.0218, loss_xy: 0.0085, loss_wh: 0.0109, loss_conf: 0.0024, loss_class: 0.0000
+Tue, 11 Jan 2022 08:34:10 INFO ===> batch recall: 1.0000, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 08:34:16 INFO Epoch: 83, global_step: 33550, lr: 0.00025999, total_loss: 0.0264, loss_xy: 0.0111, loss_wh: 0.0143, loss_conf: 0.0010, loss_class: 0.0000
+Tue, 11 Jan 2022 08:34:22 INFO Epoch: 83, global_step: 33600, lr: 0.00025999, total_loss: 0.0159, loss_xy: 0.0076, loss_wh: 0.0073, loss_conf: 0.0009, loss_class: 0.0000
+Tue, 11 Jan 2022 08:34:28 INFO Epoch: 83, global_step: 33650, lr: 0.00025999, total_loss: 0.0152, loss_xy: 0.0062, loss_wh: 0.0088, loss_conf: 0.0002, loss_class: 0.0000
+Tue, 11 Jan 2022 08:34:34 INFO Epoch: 84, global_step: 33700, lr: 0.00025999, total_loss: 0.0228, loss_xy: 0.0094, loss_wh: 0.0111, loss_conf: 0.0022, loss_class: 0.0000
+Tue, 11 Jan 2022 08:34:41 INFO Epoch: 84, global_step: 33750, lr: 0.00025999, total_loss: 0.0138, loss_xy: 0.0056, loss_wh: 0.0078, loss_conf: 0.0005, loss_class: 0.0000
+Tue, 11 Jan 2022 08:34:47 INFO Epoch: 84, global_step: 33800, lr: 0.00025999, total_loss: 0.0187, loss_xy: 0.0102, loss_wh: 0.0065, loss_conf: 0.0020, loss_class: 0.0000
+Tue, 11 Jan 2022 08:34:53 INFO Epoch: 84, global_step: 33850, lr: 0.00025999, total_loss: 0.0115, loss_xy: 0.0042, loss_wh: 0.0070, loss_conf: 0.0003, loss_class: 0.0000
+Tue, 11 Jan 2022 08:34:59 INFO Epoch: 84, global_step: 33900, lr: 0.00025999, total_loss: 0.0216, loss_xy: 0.0090, loss_wh: 0.0116, loss_conf: 0.0009, loss_class: 0.0000
+Tue, 11 Jan 2022 08:35:05 INFO Epoch: 84, global_step: 33950, lr: 0.00025999, total_loss: 0.0158, loss_xy: 0.0069, loss_wh: 0.0085, loss_conf: 0.0005, loss_class: 0.0000
+Tue, 11 Jan 2022 08:35:11 INFO Epoch: 84, global_step: 34000, lr: 0.00025999, total_loss: 0.0157, loss_xy: 0.0080, loss_wh: 0.0062, loss_conf: 0.0015, loss_class: 0.0000
+Tue, 11 Jan 2022 08:35:11 INFO ===> batch recall: 1.0000, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 08:35:24 INFO ===> Epoch: 84, global_step: 34000, recall: 0.5564, precision: 0.8394, total_loss: 13.6623, loss_xy: 0.2058, loss_wh: 0.1691, loss_conf: 13.2875, loss_class: 0.0000
+Tue, 11 Jan 2022 08:35:29 INFO Epoch: 84, global_step: 34050, lr: 0.00025999, total_loss: 0.0127, loss_xy: 0.0058, loss_wh: 0.0067, loss_conf: 0.0003, loss_class: 0.0000
+Tue, 11 Jan 2022 08:35:36 INFO Epoch: 85, global_step: 34100, lr: 0.00025999, total_loss: 0.0149, loss_xy: 0.0069, loss_wh: 0.0074, loss_conf: 0.0006, loss_class: 0.0000
+Tue, 11 Jan 2022 08:35:42 INFO Epoch: 85, global_step: 34150, lr: 0.00025999, total_loss: 0.0116, loss_xy: 0.0055, loss_wh: 0.0057, loss_conf: 0.0004, loss_class: 0.0000
+Tue, 11 Jan 2022 08:35:48 INFO Epoch: 85, global_step: 34200, lr: 0.00025999, total_loss: 0.0147, loss_xy: 0.0090, loss_wh: 0.0051, loss_conf: 0.0006, loss_class: 0.0000
+Tue, 11 Jan 2022 08:35:54 INFO Epoch: 85, global_step: 34250, lr: 0.00025999, total_loss: 0.0168, loss_xy: 0.0070, loss_wh: 0.0092, loss_conf: 0.0006, loss_class: 0.0000
+Tue, 11 Jan 2022 08:36:00 INFO Epoch: 85, global_step: 34300, lr: 0.00025999, total_loss: 0.0157, loss_xy: 0.0072, loss_wh: 0.0082, loss_conf: 0.0003, loss_class: 0.0000
+Tue, 11 Jan 2022 08:36:06 INFO Epoch: 85, global_step: 34350, lr: 0.00025999, total_loss: 0.0105, loss_xy: 0.0045, loss_wh: 0.0056, loss_conf: 0.0003, loss_class: 0.0000
+Tue, 11 Jan 2022 08:36:13 INFO Epoch: 85, global_step: 34400, lr: 0.00025999, total_loss: 0.0122, loss_xy: 0.0055, loss_wh: 0.0064, loss_conf: 0.0002, loss_class: 0.0000
+Tue, 11 Jan 2022 08:36:19 INFO Epoch: 85, global_step: 34450, lr: 0.00024959, total_loss: 0.0101, loss_xy: 0.0070, loss_wh: 0.0029, loss_conf: 0.0002, loss_class: 0.0000
+Tue, 11 Jan 2022 08:36:25 INFO Epoch: 86, global_step: 34500, lr: 0.00024959, total_loss: 0.0131, loss_xy: 0.0064, loss_wh: 0.0063, loss_conf: 0.0004, loss_class: 0.0000
+Tue, 11 Jan 2022 08:36:25 INFO ===> batch recall: 1.0000, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 08:36:31 INFO Epoch: 86, global_step: 34550, lr: 0.00024959, total_loss: 0.0100, loss_xy: 0.0044, loss_wh: 0.0050, loss_conf: 0.0006, loss_class: 0.0000
+Tue, 11 Jan 2022 08:36:37 INFO Epoch: 86, global_step: 34600, lr: 0.00024959, total_loss: 0.0102, loss_xy: 0.0049, loss_wh: 0.0051, loss_conf: 0.0002, loss_class: 0.0000
+Tue, 11 Jan 2022 08:36:43 INFO Epoch: 86, global_step: 34650, lr: 0.00024959, total_loss: 0.0108, loss_xy: 0.0045, loss_wh: 0.0052, loss_conf: 0.0010, loss_class: 0.0000
+Tue, 11 Jan 2022 08:36:49 INFO Epoch: 86, global_step: 34700, lr: 0.00024959, total_loss: 0.0101, loss_xy: 0.0060, loss_wh: 0.0040, loss_conf: 0.0001, loss_class: 0.0000
+Tue, 11 Jan 2022 08:36:55 INFO Epoch: 86, global_step: 34750, lr: 0.00024959, total_loss: 0.0180, loss_xy: 0.0075, loss_wh: 0.0099, loss_conf: 0.0005, loss_class: 0.0000
+Tue, 11 Jan 2022 08:37:01 INFO Epoch: 86, global_step: 34800, lr: 0.00024959, total_loss: 0.0153, loss_xy: 0.0077, loss_wh: 0.0072, loss_conf: 0.0004, loss_class: 0.0000
+Tue, 11 Jan 2022 08:37:08 INFO Epoch: 86, global_step: 34850, lr: 0.00024959, total_loss: 0.0291, loss_xy: 0.0078, loss_wh: 0.0092, loss_conf: 0.0122, loss_class: 0.0000
+Tue, 11 Jan 2022 08:37:14 INFO Epoch: 87, global_step: 34900, lr: 0.00024959, total_loss: 0.0156, loss_xy: 0.0064, loss_wh: 0.0089, loss_conf: 0.0003, loss_class: 0.0000
+Tue, 11 Jan 2022 08:37:20 INFO Epoch: 87, global_step: 34950, lr: 0.00024959, total_loss: 0.0139, loss_xy: 0.0072, loss_wh: 0.0059, loss_conf: 0.0008, loss_class: 0.0000
+Tue, 11 Jan 2022 08:37:26 INFO Epoch: 87, global_step: 35000, lr: 0.00024959, total_loss: 0.0142, loss_xy: 0.0066, loss_wh: 0.0072, loss_conf: 0.0004, loss_class: 0.0000
+Tue, 11 Jan 2022 08:37:26 INFO ===> batch recall: 1.0000, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 08:37:32 INFO Epoch: 87, global_step: 35050, lr: 0.00024959, total_loss: 0.0118, loss_xy: 0.0030, loss_wh: 0.0048, loss_conf: 0.0040, loss_class: 0.0000
+Tue, 11 Jan 2022 08:37:38 INFO Epoch: 87, global_step: 35100, lr: 0.00024959, total_loss: 0.0160, loss_xy: 0.0081, loss_wh: 0.0074, loss_conf: 0.0006, loss_class: 0.0000
+Tue, 11 Jan 2022 08:37:44 INFO Epoch: 87, global_step: 35150, lr: 0.00024959, total_loss: 0.0171, loss_xy: 0.0070, loss_wh: 0.0099, loss_conf: 0.0003, loss_class: 0.0000
+Tue, 11 Jan 2022 08:37:51 INFO Epoch: 87, global_step: 35200, lr: 0.00024959, total_loss: 0.0134, loss_xy: 0.0060, loss_wh: 0.0062, loss_conf: 0.0012, loss_class: 0.0000
+Tue, 11 Jan 2022 08:37:57 INFO Epoch: 87, global_step: 35250, lr: 0.00024959, total_loss: 0.0150, loss_xy: 0.0065, loss_wh: 0.0081, loss_conf: 0.0005, loss_class: 0.0000
+Tue, 11 Jan 2022 08:38:03 INFO Epoch: 88, global_step: 35300, lr: 0.00024959, total_loss: 0.0104, loss_xy: 0.0050, loss_wh: 0.0043, loss_conf: 0.0010, loss_class: 0.0000
+Tue, 11 Jan 2022 08:38:09 INFO Epoch: 88, global_step: 35350, lr: 0.00024959, total_loss: 0.0087, loss_xy: 0.0048, loss_wh: 0.0037, loss_conf: 0.0002, loss_class: 0.0000
+Tue, 11 Jan 2022 08:38:15 INFO Epoch: 88, global_step: 35400, lr: 0.00024959, total_loss: 0.0114, loss_xy: 0.0047, loss_wh: 0.0064, loss_conf: 0.0002, loss_class: 0.0000
+Tue, 11 Jan 2022 08:38:22 INFO Epoch: 88, global_step: 35450, lr: 0.00023960, total_loss: 0.0095, loss_xy: 0.0052, loss_wh: 0.0037, loss_conf: 0.0006, loss_class: 0.0000
+Tue, 11 Jan 2022 08:38:28 INFO Epoch: 88, global_step: 35500, lr: 0.00023960, total_loss: 0.0178, loss_xy: 0.0089, loss_wh: 0.0071, loss_conf: 0.0018, loss_class: 0.0000
+Tue, 11 Jan 2022 08:38:28 INFO ===> batch recall: 1.0000, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 08:38:34 INFO Epoch: 88, global_step: 35550, lr: 0.00023960, total_loss: 0.0156, loss_xy: 0.0084, loss_wh: 0.0067, loss_conf: 0.0006, loss_class: 0.0000
+Tue, 11 Jan 2022 08:38:40 INFO Epoch: 88, global_step: 35600, lr: 0.00023960, total_loss: 0.0235, loss_xy: 0.0062, loss_wh: 0.0162, loss_conf: 0.0011, loss_class: 0.0000
+Tue, 11 Jan 2022 08:38:46 INFO Epoch: 88, global_step: 35650, lr: 0.00023960, total_loss: 0.0135, loss_xy: 0.0059, loss_wh: 0.0059, loss_conf: 0.0016, loss_class: 0.0000
+Tue, 11 Jan 2022 08:38:52 INFO Epoch: 89, global_step: 35700, lr: 0.00023960, total_loss: 0.0332, loss_xy: 0.0112, loss_wh: 0.0215, loss_conf: 0.0005, loss_class: 0.0000
+Tue, 11 Jan 2022 08:38:58 INFO Epoch: 89, global_step: 35750, lr: 0.00023960, total_loss: 0.0137, loss_xy: 0.0081, loss_wh: 0.0049, loss_conf: 0.0006, loss_class: 0.0000
+Tue, 11 Jan 2022 08:39:04 INFO Epoch: 89, global_step: 35800, lr: 0.00023960, total_loss: 0.0291, loss_xy: 0.0115, loss_wh: 0.0092, loss_conf: 0.0084, loss_class: 0.0000
+Tue, 11 Jan 2022 08:39:10 INFO Epoch: 89, global_step: 35850, lr: 0.00023960, total_loss: 0.0479, loss_xy: 0.0157, loss_wh: 0.0163, loss_conf: 0.0160, loss_class: 0.0000
+Tue, 11 Jan 2022 08:39:16 INFO Epoch: 89, global_step: 35900, lr: 0.00023960, total_loss: 0.0624, loss_xy: 0.0179, loss_wh: 0.0161, loss_conf: 0.0284, loss_class: 0.0000
+Tue, 11 Jan 2022 08:39:23 INFO Epoch: 89, global_step: 35950, lr: 0.00023960, total_loss: 0.1080, loss_xy: 0.0183, loss_wh: 0.0174, loss_conf: 0.0724, loss_class: 0.0000
+Tue, 11 Jan 2022 08:39:29 INFO Epoch: 89, global_step: 36000, lr: 0.00023960, total_loss: 0.0636, loss_xy: 0.0242, loss_wh: 0.0235, loss_conf: 0.0159, loss_class: 0.0000
+Tue, 11 Jan 2022 08:39:29 INFO ===> batch recall: 1.0000, batch precision: 0.9836 <===
+Tue, 11 Jan 2022 08:39:42 INFO ===> Epoch: 89, global_step: 36000, recall: 0.5402, precision: 0.8257, total_loss: 14.4068, loss_xy: 0.2122, loss_wh: 0.1712, loss_conf: 14.0234, loss_class: 0.0000
+Tue, 11 Jan 2022 08:39:47 INFO Epoch: 89, global_step: 36050, lr: 0.00023960, total_loss: 0.0426, loss_xy: 0.0167, loss_wh: 0.0174, loss_conf: 0.0085, loss_class: 0.0000
+Tue, 11 Jan 2022 08:39:54 INFO Epoch: 90, global_step: 36100, lr: 0.00023960, total_loss: 0.0357, loss_xy: 0.0133, loss_wh: 0.0197, loss_conf: 0.0028, loss_class: 0.0000
+Tue, 11 Jan 2022 08:40:00 INFO Epoch: 90, global_step: 36150, lr: 0.00023960, total_loss: 0.0430, loss_xy: 0.0148, loss_wh: 0.0154, loss_conf: 0.0128, loss_class: 0.0000
+Tue, 11 Jan 2022 08:40:06 INFO Epoch: 90, global_step: 36200, lr: 0.00023960, total_loss: 0.0408, loss_xy: 0.0203, loss_wh: 0.0176, loss_conf: 0.0030, loss_class: 0.0000
+Tue, 11 Jan 2022 08:40:12 INFO Epoch: 90, global_step: 36250, lr: 0.00023960, total_loss: 0.1153, loss_xy: 0.0276, loss_wh: 0.0259, loss_conf: 0.0617, loss_class: 0.0000
+Tue, 11 Jan 2022 08:40:18 INFO Epoch: 90, global_step: 36300, lr: 0.00023960, total_loss: 0.0270, loss_xy: 0.0127, loss_wh: 0.0111, loss_conf: 0.0032, loss_class: 0.0000
+Tue, 11 Jan 2022 08:40:24 INFO Epoch: 90, global_step: 36350, lr: 0.00023960, total_loss: 0.0717, loss_xy: 0.0298, loss_wh: 0.0182, loss_conf: 0.0237, loss_class: 0.0000
+Tue, 11 Jan 2022 08:40:30 INFO Epoch: 90, global_step: 36400, lr: 0.00023960, total_loss: 0.0310, loss_xy: 0.0120, loss_wh: 0.0145, loss_conf: 0.0045, loss_class: 0.0000
+Tue, 11 Jan 2022 08:40:36 INFO Epoch: 90, global_step: 36450, lr: 0.00023002, total_loss: 0.0346, loss_xy: 0.0165, loss_wh: 0.0149, loss_conf: 0.0033, loss_class: 0.0000
+Tue, 11 Jan 2022 08:40:42 INFO Epoch: 91, global_step: 36500, lr: 0.00023002, total_loss: 0.0420, loss_xy: 0.0087, loss_wh: 0.0092, loss_conf: 0.0241, loss_class: 0.0000
+Tue, 11 Jan 2022 08:40:42 INFO ===> batch recall: 1.0000, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 08:40:49 INFO Epoch: 91, global_step: 36550, lr: 0.00023002, total_loss: 0.0220, loss_xy: 0.0097, loss_wh: 0.0109, loss_conf: 0.0013, loss_class: 0.0000
+Tue, 11 Jan 2022 08:40:55 INFO Epoch: 91, global_step: 36600, lr: 0.00023002, total_loss: 0.0297, loss_xy: 0.0127, loss_wh: 0.0143, loss_conf: 0.0026, loss_class: 0.0000
+Tue, 11 Jan 2022 08:41:01 INFO Epoch: 91, global_step: 36650, lr: 0.00023002, total_loss: 0.0300, loss_xy: 0.0084, loss_wh: 0.0110, loss_conf: 0.0106, loss_class: 0.0000
+Tue, 11 Jan 2022 08:41:07 INFO Epoch: 91, global_step: 36700, lr: 0.00023002, total_loss: 0.0250, loss_xy: 0.0109, loss_wh: 0.0115, loss_conf: 0.0027, loss_class: 0.0000
+Tue, 11 Jan 2022 08:41:13 INFO Epoch: 91, global_step: 36750, lr: 0.00023002, total_loss: 0.0170, loss_xy: 0.0073, loss_wh: 0.0092, loss_conf: 0.0005, loss_class: 0.0000
+Tue, 11 Jan 2022 08:41:19 INFO Epoch: 91, global_step: 36800, lr: 0.00023002, total_loss: 0.0209, loss_xy: 0.0070, loss_wh: 0.0132, loss_conf: 0.0007, loss_class: 0.0000
+Tue, 11 Jan 2022 08:41:25 INFO Epoch: 91, global_step: 36850, lr: 0.00023002, total_loss: 0.0291, loss_xy: 0.0138, loss_wh: 0.0145, loss_conf: 0.0008, loss_class: 0.0000
+Tue, 11 Jan 2022 08:41:31 INFO Epoch: 92, global_step: 36900, lr: 0.00023002, total_loss: 0.0132, loss_xy: 0.0057, loss_wh: 0.0066, loss_conf: 0.0009, loss_class: 0.0000
+Tue, 11 Jan 2022 08:41:37 INFO Epoch: 92, global_step: 36950, lr: 0.00023002, total_loss: 0.0107, loss_xy: 0.0048, loss_wh: 0.0058, loss_conf: 0.0002, loss_class: 0.0000
+Tue, 11 Jan 2022 08:41:43 INFO Epoch: 92, global_step: 37000, lr: 0.00023002, total_loss: 0.0254, loss_xy: 0.0102, loss_wh: 0.0110, loss_conf: 0.0042, loss_class: 0.0000
+Tue, 11 Jan 2022 08:41:43 INFO ===> batch recall: 1.0000, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 08:41:50 INFO Epoch: 92, global_step: 37050, lr: 0.00023002, total_loss: 0.0190, loss_xy: 0.0106, loss_wh: 0.0077, loss_conf: 0.0007, loss_class: 0.0000
+Tue, 11 Jan 2022 08:41:56 INFO Epoch: 92, global_step: 37100, lr: 0.00023002, total_loss: 0.0148, loss_xy: 0.0077, loss_wh: 0.0061, loss_conf: 0.0010, loss_class: 0.0000
+Tue, 11 Jan 2022 08:42:02 INFO Epoch: 92, global_step: 37150, lr: 0.00023002, total_loss: 0.0151, loss_xy: 0.0072, loss_wh: 0.0071, loss_conf: 0.0008, loss_class: 0.0000
+Tue, 11 Jan 2022 08:42:08 INFO Epoch: 92, global_step: 37200, lr: 0.00023002, total_loss: 0.0162, loss_xy: 0.0058, loss_wh: 0.0096, loss_conf: 0.0007, loss_class: 0.0000
+Tue, 11 Jan 2022 08:42:14 INFO Epoch: 92, global_step: 37250, lr: 0.00023002, total_loss: 0.0215, loss_xy: 0.0112, loss_wh: 0.0083, loss_conf: 0.0020, loss_class: 0.0000
+Tue, 11 Jan 2022 08:42:20 INFO Epoch: 93, global_step: 37300, lr: 0.00023002, total_loss: 0.0164, loss_xy: 0.0086, loss_wh: 0.0070, loss_conf: 0.0008, loss_class: 0.0000
+Tue, 11 Jan 2022 08:42:26 INFO Epoch: 93, global_step: 37350, lr: 0.00023002, total_loss: 0.0334, loss_xy: 0.0119, loss_wh: 0.0139, loss_conf: 0.0076, loss_class: 0.0000
+Tue, 11 Jan 2022 08:42:32 INFO Epoch: 93, global_step: 37400, lr: 0.00023002, total_loss: 0.0238, loss_xy: 0.0091, loss_wh: 0.0095, loss_conf: 0.0052, loss_class: 0.0000
+Tue, 11 Jan 2022 08:42:38 INFO Epoch: 93, global_step: 37450, lr: 0.00022082, total_loss: 0.0151, loss_xy: 0.0062, loss_wh: 0.0073, loss_conf: 0.0016, loss_class: 0.0000
+Tue, 11 Jan 2022 08:42:44 INFO Epoch: 93, global_step: 37500, lr: 0.00022082, total_loss: 0.0179, loss_xy: 0.0075, loss_wh: 0.0080, loss_conf: 0.0024, loss_class: 0.0000
+Tue, 11 Jan 2022 08:42:44 INFO ===> batch recall: 1.0000, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 08:42:51 INFO Epoch: 93, global_step: 37550, lr: 0.00022082, total_loss: 0.0124, loss_xy: 0.0060, loss_wh: 0.0057, loss_conf: 0.0008, loss_class: 0.0000
+Tue, 11 Jan 2022 08:42:57 INFO Epoch: 93, global_step: 37600, lr: 0.00022082, total_loss: 0.0216, loss_xy: 0.0107, loss_wh: 0.0092, loss_conf: 0.0016, loss_class: 0.0000
+Tue, 11 Jan 2022 08:43:03 INFO Epoch: 93, global_step: 37650, lr: 0.00022082, total_loss: 0.0167, loss_xy: 0.0068, loss_wh: 0.0097, loss_conf: 0.0003, loss_class: 0.0000
+Tue, 11 Jan 2022 08:43:09 INFO Epoch: 94, global_step: 37700, lr: 0.00022082, total_loss: 0.0121, loss_xy: 0.0050, loss_wh: 0.0067, loss_conf: 0.0004, loss_class: 0.0000
+Tue, 11 Jan 2022 08:43:15 INFO Epoch: 94, global_step: 37750, lr: 0.00022082, total_loss: 0.0066, loss_xy: 0.0030, loss_wh: 0.0033, loss_conf: 0.0003, loss_class: 0.0000
+Tue, 11 Jan 2022 08:43:21 INFO Epoch: 94, global_step: 37800, lr: 0.00022082, total_loss: 0.0134, loss_xy: 0.0055, loss_wh: 0.0076, loss_conf: 0.0003, loss_class: 0.0000
+Tue, 11 Jan 2022 08:43:27 INFO Epoch: 94, global_step: 37850, lr: 0.00022082, total_loss: 0.0094, loss_xy: 0.0045, loss_wh: 0.0045, loss_conf: 0.0003, loss_class: 0.0000
+Tue, 11 Jan 2022 08:43:33 INFO Epoch: 94, global_step: 37900, lr: 0.00022082, total_loss: 0.0106, loss_xy: 0.0038, loss_wh: 0.0060, loss_conf: 0.0008, loss_class: 0.0000
+Tue, 11 Jan 2022 08:43:39 INFO Epoch: 94, global_step: 37950, lr: 0.00022082, total_loss: 0.0154, loss_xy: 0.0071, loss_wh: 0.0075, loss_conf: 0.0008, loss_class: 0.0000
+Tue, 11 Jan 2022 08:43:46 INFO Epoch: 94, global_step: 38000, lr: 0.00022082, total_loss: 0.0128, loss_xy: 0.0039, loss_wh: 0.0084, loss_conf: 0.0006, loss_class: 0.0000
+Tue, 11 Jan 2022 08:43:46 INFO ===> batch recall: 1.0000, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 08:43:58 INFO ===> Epoch: 94, global_step: 38000, recall: 0.5492, precision: 0.8508, total_loss: 14.2662, loss_xy: 0.2080, loss_wh: 0.1652, loss_conf: 13.8929, loss_class: 0.0000
+Tue, 11 Jan 2022 08:44:04 INFO Epoch: 94, global_step: 38050, lr: 0.00022082, total_loss: 0.0197, loss_xy: 0.0098, loss_wh: 0.0085, loss_conf: 0.0014, loss_class: 0.0000
+Tue, 11 Jan 2022 08:44:10 INFO Epoch: 95, global_step: 38100, lr: 0.00022082, total_loss: 0.0097, loss_xy: 0.0044, loss_wh: 0.0049, loss_conf: 0.0005, loss_class: 0.0000
+Tue, 11 Jan 2022 08:44:16 INFO Epoch: 95, global_step: 38150, lr: 0.00022082, total_loss: 0.0161, loss_xy: 0.0076, loss_wh: 0.0075, loss_conf: 0.0010, loss_class: 0.0000
+Tue, 11 Jan 2022 08:44:23 INFO Epoch: 95, global_step: 38200, lr: 0.00022082, total_loss: 0.0171, loss_xy: 0.0076, loss_wh: 0.0091, loss_conf: 0.0003, loss_class: 0.0000
+Tue, 11 Jan 2022 08:44:29 INFO Epoch: 95, global_step: 38250, lr: 0.00022082, total_loss: 0.0077, loss_xy: 0.0042, loss_wh: 0.0032, loss_conf: 0.0003, loss_class: 0.0000
+Tue, 11 Jan 2022 08:44:35 INFO Epoch: 95, global_step: 38300, lr: 0.00022082, total_loss: 0.0082, loss_xy: 0.0042, loss_wh: 0.0035, loss_conf: 0.0006, loss_class: 0.0000
+Tue, 11 Jan 2022 08:44:41 INFO Epoch: 95, global_step: 38350, lr: 0.00022082, total_loss: 0.0129, loss_xy: 0.0065, loss_wh: 0.0061, loss_conf: 0.0003, loss_class: 0.0000
+Tue, 11 Jan 2022 08:44:47 INFO Epoch: 95, global_step: 38400, lr: 0.00022082, total_loss: 0.0082, loss_xy: 0.0038, loss_wh: 0.0042, loss_conf: 0.0003, loss_class: 0.0000
+Tue, 11 Jan 2022 08:44:53 INFO Epoch: 95, global_step: 38450, lr: 0.00021199, total_loss: 0.0119, loss_xy: 0.0033, loss_wh: 0.0078, loss_conf: 0.0008, loss_class: 0.0000
+Tue, 11 Jan 2022 08:44:59 INFO Epoch: 96, global_step: 38500, lr: 0.00021199, total_loss: 0.0107, loss_xy: 0.0058, loss_wh: 0.0048, loss_conf: 0.0002, loss_class: 0.0000
+Tue, 11 Jan 2022 08:44:59 INFO ===> batch recall: 1.0000, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 08:45:05 INFO Epoch: 96, global_step: 38550, lr: 0.00021199, total_loss: 0.0077, loss_xy: 0.0019, loss_wh: 0.0055, loss_conf: 0.0003, loss_class: 0.0000
+Tue, 11 Jan 2022 08:45:12 INFO Epoch: 96, global_step: 38600, lr: 0.00021199, total_loss: 0.0122, loss_xy: 0.0062, loss_wh: 0.0056, loss_conf: 0.0004, loss_class: 0.0000
+Tue, 11 Jan 2022 08:45:18 INFO Epoch: 96, global_step: 38650, lr: 0.00021199, total_loss: 0.0058, loss_xy: 0.0020, loss_wh: 0.0037, loss_conf: 0.0002, loss_class: 0.0000
+Tue, 11 Jan 2022 08:45:24 INFO Epoch: 96, global_step: 38700, lr: 0.00021199, total_loss: 0.0057, loss_xy: 0.0023, loss_wh: 0.0032, loss_conf: 0.0002, loss_class: 0.0000
+Tue, 11 Jan 2022 08:45:30 INFO Epoch: 96, global_step: 38750, lr: 0.00021199, total_loss: 0.0140, loss_xy: 0.0068, loss_wh: 0.0069, loss_conf: 0.0003, loss_class: 0.0000
+Tue, 11 Jan 2022 08:45:36 INFO Epoch: 96, global_step: 38800, lr: 0.00021199, total_loss: 0.0071, loss_xy: 0.0032, loss_wh: 0.0038, loss_conf: 0.0002, loss_class: 0.0000
+Tue, 11 Jan 2022 08:45:42 INFO Epoch: 96, global_step: 38850, lr: 0.00021199, total_loss: 0.0120, loss_xy: 0.0053, loss_wh: 0.0064, loss_conf: 0.0003, loss_class: 0.0000
+Tue, 11 Jan 2022 08:45:48 INFO Epoch: 97, global_step: 38900, lr: 0.00021199, total_loss: 0.0038, loss_xy: 0.0021, loss_wh: 0.0016, loss_conf: 0.0002, loss_class: 0.0000
+Tue, 11 Jan 2022 08:45:54 INFO Epoch: 97, global_step: 38950, lr: 0.00021199, total_loss: 0.0141, loss_xy: 0.0066, loss_wh: 0.0068, loss_conf: 0.0007, loss_class: 0.0000
+Tue, 11 Jan 2022 08:46:00 INFO Epoch: 97, global_step: 39000, lr: 0.00021199, total_loss: 0.0068, loss_xy: 0.0034, loss_wh: 0.0033, loss_conf: 0.0002, loss_class: 0.0000
+Tue, 11 Jan 2022 08:46:00 INFO ===> batch recall: 1.0000, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 08:46:06 INFO Epoch: 97, global_step: 39050, lr: 0.00021199, total_loss: 0.0063, loss_xy: 0.0031, loss_wh: 0.0030, loss_conf: 0.0001, loss_class: 0.0000
+Tue, 11 Jan 2022 08:46:13 INFO Epoch: 97, global_step: 39100, lr: 0.00021199, total_loss: 0.0091, loss_xy: 0.0043, loss_wh: 0.0045, loss_conf: 0.0003, loss_class: 0.0000
+Tue, 11 Jan 2022 08:46:19 INFO Epoch: 97, global_step: 39150, lr: 0.00021199, total_loss: 0.0105, loss_xy: 0.0053, loss_wh: 0.0050, loss_conf: 0.0002, loss_class: 0.0000
+Tue, 11 Jan 2022 08:46:25 INFO Epoch: 97, global_step: 39200, lr: 0.00021199, total_loss: 0.0090, loss_xy: 0.0045, loss_wh: 0.0042, loss_conf: 0.0003, loss_class: 0.0000
+Tue, 11 Jan 2022 08:46:31 INFO Epoch: 97, global_step: 39250, lr: 0.00021199, total_loss: 0.0105, loss_xy: 0.0055, loss_wh: 0.0048, loss_conf: 0.0002, loss_class: 0.0000
+Tue, 11 Jan 2022 08:46:37 INFO Epoch: 98, global_step: 39300, lr: 0.00021199, total_loss: 0.0078, loss_xy: 0.0032, loss_wh: 0.0044, loss_conf: 0.0002, loss_class: 0.0000
+Tue, 11 Jan 2022 08:46:43 INFO Epoch: 98, global_step: 39350, lr: 0.00021199, total_loss: 0.0067, loss_xy: 0.0029, loss_wh: 0.0034, loss_conf: 0.0003, loss_class: 0.0000
+Tue, 11 Jan 2022 08:46:49 INFO Epoch: 98, global_step: 39400, lr: 0.00021199, total_loss: 0.0126, loss_xy: 0.0057, loss_wh: 0.0064, loss_conf: 0.0005, loss_class: 0.0000
+Tue, 11 Jan 2022 08:46:55 INFO Epoch: 98, global_step: 39450, lr: 0.00020351, total_loss: 0.0078, loss_xy: 0.0045, loss_wh: 0.0031, loss_conf: 0.0001, loss_class: 0.0000
+Tue, 11 Jan 2022 08:47:01 INFO Epoch: 98, global_step: 39500, lr: 0.00020351, total_loss: 0.0087, loss_xy: 0.0046, loss_wh: 0.0039, loss_conf: 0.0003, loss_class: 0.0000
+Tue, 11 Jan 2022 08:47:01 INFO ===> batch recall: 1.0000, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 08:47:07 INFO Epoch: 98, global_step: 39550, lr: 0.00020351, total_loss: 0.0056, loss_xy: 0.0020, loss_wh: 0.0034, loss_conf: 0.0001, loss_class: 0.0000
+Tue, 11 Jan 2022 08:47:14 INFO Epoch: 98, global_step: 39600, lr: 0.00020351, total_loss: 0.0105, loss_xy: 0.0026, loss_wh: 0.0067, loss_conf: 0.0013, loss_class: 0.0000
+Tue, 11 Jan 2022 08:47:20 INFO Epoch: 98, global_step: 39650, lr: 0.00020351, total_loss: 0.0129, loss_xy: 0.0065, loss_wh: 0.0062, loss_conf: 0.0003, loss_class: 0.0000
+Tue, 11 Jan 2022 08:47:26 INFO Epoch: 99, global_step: 39700, lr: 0.00020351, total_loss: 0.0115, loss_xy: 0.0039, loss_wh: 0.0073, loss_conf: 0.0002, loss_class: 0.0000
+Tue, 11 Jan 2022 08:47:32 INFO Epoch: 99, global_step: 39750, lr: 0.00020351, total_loss: 0.0087, loss_xy: 0.0040, loss_wh: 0.0045, loss_conf: 0.0002, loss_class: 0.0000
+Tue, 11 Jan 2022 08:47:38 INFO Epoch: 99, global_step: 39800, lr: 0.00020351, total_loss: 0.0130, loss_xy: 0.0045, loss_wh: 0.0082, loss_conf: 0.0003, loss_class: 0.0000
+Tue, 11 Jan 2022 08:47:44 INFO Epoch: 99, global_step: 39850, lr: 0.00020351, total_loss: 0.0074, loss_xy: 0.0037, loss_wh: 0.0034, loss_conf: 0.0003, loss_class: 0.0000
+Tue, 11 Jan 2022 08:47:51 INFO Epoch: 99, global_step: 39900, lr: 0.00020351, total_loss: 0.0100, loss_xy: 0.0058, loss_wh: 0.0038, loss_conf: 0.0003, loss_class: 0.0000
+Tue, 11 Jan 2022 08:47:57 INFO Epoch: 99, global_step: 39950, lr: 0.00020351, total_loss: 0.0085, loss_xy: 0.0048, loss_wh: 0.0035, loss_conf: 0.0002, loss_class: 0.0000
+Tue, 11 Jan 2022 08:48:03 INFO Epoch: 99, global_step: 40000, lr: 0.00020351, total_loss: 0.0138, loss_xy: 0.0053, loss_wh: 0.0082, loss_conf: 0.0003, loss_class: 0.0000
+Tue, 11 Jan 2022 08:48:03 INFO ===> batch recall: 1.0000, batch precision: 1.0000 <===
+Tue, 11 Jan 2022 08:48:16 INFO ===> Epoch: 99, global_step: 40000, recall: 0.5433, precision: 0.8514, total_loss: 14.5740, loss_xy: 0.2078, loss_wh: 0.1662, loss_conf: 14.1999, loss_class: 0.0000
+Tue, 11 Jan 2022 08:48:21 INFO Epoch: 99, global_step: 40050, lr: 0.00020351, total_loss: 0.0137, loss_xy: 0.0068, loss_wh: 0.0067, loss_conf: 0.0002, loss_class: 0.0000
+Tue, 11 Jan 2022 08:48:27 INFO Epoch: 99, global_step: 40100, lr: 0.00020351, total_loss: 0.0163, loss_xy: 0.0059, loss_wh: 0.0100, loss_conf: 0.0004, loss_class: 0.0000
+Tue, 11 Jan 2022 08:48:27 WARNING From train.py:336: convert_variables_to_constants (from tensorflow.python.framework.graph_util_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.compat.v1.graph_util.convert_variables_to_constants`
+Tue, 11 Jan 2022 08:48:27 WARNING From /home/ubuntu/anaconda3/envs/tf15_keras/lib/python3.6/site-packages/tensorflow/python/framework/graph_util_impl.py:270: extract_sub_graph (from tensorflow.python.framework.graph_util_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.compat.v1.graph_util.extract_sub_graph`
+Tue, 11 Jan 2022 08:48:27 INFO Froze 59 variables.
+Tue, 11 Jan 2022 08:48:28 INFO Converted 59 variables to const ops.
+Tue, 11 Jan 2022 08:48:28 WARNING From train.py:337: FastGFile.__init__ (from tensorflow.python.platform.gfile) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.gfile.GFile.
