@@ -71,7 +71,7 @@ if __name__ == '__main__':
     yolov3_lt_graph = lt.import_graph(yolov3_lt_graph_path, config)
     facenet_lt_graph = lt.import_graph(facenet_lt_graph_path, config)
 
-    image_path = "./facedata_test/YangHuang/DSC04748.jpg"
+    image_path = "./facedata_test/YangHuang/DSC08216.jpg"
     anchor_path = 'data/yolov3_tiny_widerface_anchors.txt'
     class_name_path = 'data/widerface.names'
     input_image = image_path
@@ -112,17 +112,16 @@ if __name__ == '__main__':
         x0, y0, x1, y1 = boxes_[i]
         face_crop = img_ori[int(y0):int(y1), int(x0):int(x1)]
         face_crop = cv2.resize(face_crop, image_shape)
+        
+        ########### face landmark detection start ###########
         input_pfld = read_img_input(face_crop, 112, 112)
         pfld_outs = pfld_infer_process(pfld_lt_graph, input_pfld, config)
         landmarks = pfld_outs[0][0]
         theatas = pfld_outs[1][0]
-        print("1 landmarks shape = ", landmarks.shape)
         landmarks = Coordinate_landmarks_map(landmarks, boxes_[i])
-        print("2 landmarks shape = ", landmarks.shape)
-
         for p in range(int(landmarks.shape[1]/2)):
             cv2.circle(img_ori, (int(landmarks[0][p*2+0]), int(landmarks[0][p*2+1])), 2, (0, 0, 255), -1)
-        
+        ########### face landmark detection end #############
         features, _ = facenet_process(facenet_lt_graph, face_crop, config, image_shape)
         fea_map = features[0].tolist()[0]
         name = face_recognition(fea_map, feas_map_list)
